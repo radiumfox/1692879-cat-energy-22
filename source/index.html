@@ -7,7 +7,6 @@
   <body class="page__body">
     <header class="page-header">
       <a class="page-header__logo" href="#">
-        <img src="img/cat-energy_logo.svg" width="33" height="38" alt="Логотип Cat Energy">
         <span>Cat Energy</span>
       </a>
       <nav class="main-nav">
@@ -27,30 +26,33 @@
         </div>
       </nav>
     </header>
+
     <main class="page-main">
       <h1 class="visually-hidden">Cat Energy</h1>
+
       <section class="promo">
         <div class="promo__wrapper">
           <h2 class="promo__title">Функциональное питание для котов</h2>
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
-          <img class="promo__image" src="img/index-can.png" width="280" height="270" alt="Консервы Cat Energy Pro с курицей">
         </div>
       </section>
+
       <section class="programs">
         <div class="programs__wrapper">
           <h2 class="visually-hidden">Направления программы питания</h2>
-          <article class="programs__direction direction">
-            <h3 class="direction__title direction__slim">Похудение</h3>
+          <section class="programs__direction direction">
+            <h3 class="direction__title direction__title--slim">Похудение</h3>
             <p class="direction__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="direction__link" href="catalog.html">Каталог Slim</a>
-          </article>
-          <article class="programs__direction direction">
-            <h3 class="direction__title direction__pro">Набор массы</h3>
+          </section>
+          <section class="programs__direction direction">
+            <h3 class="direction__title direction__title--pro">Набор массы</h3>
             <p class="direction__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
             <a class="direction__link" href="catalog.html">Каталог Pro</a>
-          </article>
+          </section>
         </div>
       </section>
+
       <section class="features">
         <div class="features__wrapper">
           <h2 class="features__title">Как это работает</h2>
@@ -70,6 +72,7 @@
           </ul>
         </div>
       </section>
+
       <section class="example">
         <div class="example__wrapper">
           <h2 class="example__title">Живой пример</h2>
@@ -83,28 +86,30 @@
               <dt class="example__number">60 дней</dt>
               <dd class="example__description">затрачено времени</dd>
             </div>
-            <div class="example__item">
-              <dt class="example__number">Затраты на питание:</dt>
-              <dd class="example__description">15 000 руб.</dd>
-            </div>
           </dl>
-          <img class="example__image" src="img/cat-before.png" width="311" height="232" alt="Пушистая картоха, питающаяся обычным кормом">
-          <img class="example__image" src="img/cat-after.png" width="251" height="240" alt="Фитоняшка, перешедший на Cat Energy Slim">
-          <button class="example__button" type="button">Было</button>
-          <input class="example__range" type="range" id="before-after" name="before-after"><label class="visually-hidden" for="before-after">Переключатель</label>
-          <button class="example__button" type="button">Стало</button>
+          <div class="example__expenses expenses">
+            <p class="expenses__text">Затраты на питание:</p>
+            <p class="expenses__cost">15 000 руб.</p>
+          </div>
+          <div class="example__slider cat-slider">
+            <button class="cat-slider__button" type="button">Было</button>
+            <input class="cat-slider__range" type="range" id="before-after" name="before-after"><label class="visually-hidden" for="before-after">Переключатель</label>
+            <button class="cat-slider__button" type="button">Стало</button>
+          </div>
         </div>
       </section>
+
     </main>
+
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__contacts contacts">
           <p class="contacts__proposal">Приглашаем к сотрудничеству дилеров!</p>
           <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
-        <iframe class="page-footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533273!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1614701867694!5m2!1sru!2sru" width="768" height="400" style="border:0;" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+        <iframe class="page-footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533273!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1614701867694!5m2!1sru!2sru" width="768" height="400" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
         <div class="page-footer__social social">
-          <p class="social__logo-text">Cat Energy</p>
+          <a class="social__logo">Cat Energy</a>
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--vkontakte">Вконтакте</a>
@@ -116,7 +121,7 @@
               <a class="social__link social__link--facebook">Facebook</a>
             </li>
           </ul>
-          <a class="social__copyright social__copyright--logo" href="#">HTML Academy</a>
+          <a class="social__copyright social__copyright--logo" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         </div>
       </div>
     </footer>
