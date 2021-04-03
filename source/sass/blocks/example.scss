@@ -1,0 +1,47 @@
+.example {
+  background-color: $basic-grey2;
+}
+
+.example__wrapper {
+  padding-top: 27px;
+  padding-bottom: 25px;
+}
+
+.example__title {
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 40px;
+  margin: 0;
+  margin-bottom: 33px;
+}
+
+.example__text {
+  color: $secondary-dark;
+  font-family: "Arial", sans-serif;
+  margin-bottom: 25px;
+}
+
+.example__number {
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.example__description {
+  color: $secondary-dark;
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  margin-bottom: 21px;
+}
+
+.example__expenses-text {
+  line-height: 20px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.example__expenses {
+  margin-bottom: 42px;
+}
