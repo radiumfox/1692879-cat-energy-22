@@ -1,5 +1,6 @@
 //global
 
+@import "../css/global/normalize.css";
 @import "global/global.scss";
 @import "global/fonts.scss";
 @import "global/variables.scss";
@@ -9,6 +10,8 @@
 @import "blocks/page-body.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/page-main.scss";
+@import "global/buttons.scss";
+@import "global/mixins.scss";
 
 // index.html
 
@@ -17,4 +20,8 @@
 @import "blocks/direction.scss";
 @import "blocks/features.scss";
 @import "blocks/example.scss";
-@import "blocks/cat-slider.scss"
+@import "blocks/cat-slider.scss";
+
+//catalog.html
+
+@import "blocks/select-program.scss";
