@@ -1,0 +1,26 @@
+.button {
+  border-style: none;
+  background-color: $basic-green;
+  color: $basic-light;
+  font-family: "Oswald", "Arrial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 11px;
+  padding: 10px 109px 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button-send {
+  border-style: none;
+  background-color: $basic-green;
+  color: $basic-light;
+  font-family: "Oswald", "Arrial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 11px;
+  padding: 10px 0 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 280px;
+}
