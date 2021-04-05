@@ -159,11 +159,11 @@
                 <a class="catalog__button button" href="#">Заказать</a>
               </section>
             </li>
-            <li class="catalog__item">
-              <div class="show-more">
+            <li class="catalog__item show-more">
+              <div class="show-more__wrapper">
                 <p class="show-more__lead-text">Показать ещё 100500 товаров</p>
                 <p class="show-more__text">На самом деле вкусов гораздо больше!</p>
-                <button class="catalog__button button button--show-more" type="button">Показать все</button>
+                <button class="catalog__button catalog__button--show-more button" type="button">Показать все</button>
               </div>
             </li>
           </ul>
@@ -176,32 +176,40 @@
                 <a class="additional__link" href="#">
                   <h3 class="additional__name">Сахарозаменитель</h3>
                 </a>
-                <span class="additional__key">1 упаковка (100 г)</span>
-                <span class="additional__value">50 Р.</span>
+                <div class="additional__description">
+                  <span class="additional__key">1 упаковка (100 г)</span>
+                  <span class="additional__value">50 Р.</span>
+                </div>
                 <a class="catalog__button button" href="#">Заказать</a>
               </li>
               <li class="additional__item">
                 <a class="additional__link" href="#">
                   <h3 class="additional__name">Питьевая вода</h3>
                 </a>
-                <span class="additional__key">5 литров</span>
-                <span class="additional__value">50 Р.</span>
+                <div class="additional__description">
+                  <span class="additional__key">5 литров</span>
+                  <span class="additional__value">50 Р.</span>
+                </div>
                 <a class="catalog__button button" href="#">Заказать</a>
               </li>
               <li class="additional__item">
                 <a class="additional__link" href="#">
                   <h3 class="additional__name">Молоко</h3>
                 </a>
-                <span class="additional__key">1 литр</span>
-                <span class="additional__value">100 Р.</span>
+                <div class="additional__description">
+                  <span class="additional__key">1 литр</span>
+                  <span class="additional__value">100 Р.</span>
+                </div>
                 <a class="catalog__button button" href="#">Заказать</a>
               </li>
               <li class="additional__item">
                 <a class="additional__link" href="#">
                   <h3 class="additional__name">Витамины</h3>
                 </a>
-                <span class="additional__key">1 упаковка (30 г)</span>
-                <span class="additional__value">300 Р.</span>
+                <div class="additional__description">
+                  <span class="additional__key">1 упаковка (30 г)</span>
+                  <span class="additional__value">300 Р.</span>
+                </div>
                 <a class="catalog__button button" href="#">Заказать</a>
               </li>
             </ul>
@@ -209,9 +217,12 @@
         </section>
       </section>
 
-      <div class="promo-stock">
-        <p class="promo-stock__text">Закажите все и получите чехол для кота в подарок!</p>
-      </div>
+      <section class="promo-stock">
+        <h2 class="visually-hidden">Промо-акция</h2>
+        <div class="promo-stock__wrapper">
+          <p class="promo-stock__text">Закажите все и получите чехол для кота в подарок!</p>
+        </div>
+      </section>
 
     </main>
 

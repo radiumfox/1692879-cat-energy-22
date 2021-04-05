@@ -23,16 +23,13 @@
 }
 
 .select-program__label {
+  @include font-size(16px, 18px, normal);
   color: $secondary-dark;
-  font-size: 16px;
-  line-height: 18px;
   text-transform: uppercase;
 }
 
 .select-program__title {
-  font-size: 24px;
-  font-weight: normal;
-  line-height: 26px;
+  @include font-size(24px, 26px, normal);
   margin: 0;
   margin-bottom: 34px;
 }

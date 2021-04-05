@@ -2,10 +2,13 @@
   margin-top: 22px;
 }
 
+.page-footer__contacts {
+  background-color: $basic-grey3;
+}
+
 .page-footer__proposal {
+  @include font-size(16px, 18px, normal);
   color: $secondary-dark2;
-  font-size: 16px;
-  line-height: 18px;
   text-transform: uppercase;
 }
 
@@ -30,8 +33,7 @@
 }
 
 .page-footer__copyright {
+  @include font-size(16px, auto, normal);
   color: $secondary-dark;
-  font-size: 16px;
-  line-height: auto;
   text-decoration: none;
 }
