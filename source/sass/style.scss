@@ -1,17 +1,20 @@
-//global
+// global
 
-@import "../css/global/normalize.css";
+@import "global/normalize.scss";
 @import "global/global.scss";
 @import "global/fonts.scss";
 @import "global/variables.scss";
+@import "global/mixins.scss";
+
+// common for all pages
+
+@import "blocks/button.scss";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/site-list.scss";
 @import "blocks/page-body.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/page-main.scss";
-@import "global/buttons.scss";
-@import "global/mixins.scss";
 
 // index.html
 
@@ -22,6 +25,6 @@
 @import "blocks/example.scss";
 @import "blocks/cat-slider.scss";
 
-//catalog.html
+// catalog.html
 
 @import "blocks/select-program.scss";

@@ -8,6 +8,6 @@
 }
 
 .cat-slider__list {
-  list-style: none;
+  @include reset-list;
   margin-bottom: 23px;
 }
