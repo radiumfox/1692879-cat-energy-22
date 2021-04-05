@@ -1,8 +1,14 @@
-//global
+// global
 
+@import "global/normalize.scss";
 @import "global/global.scss";
 @import "global/fonts.scss";
 @import "global/variables.scss";
+@import "global/mixins.scss";
+
+// common for all pages
+
+@import "blocks/button.scss";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/site-list.scss";
@@ -17,4 +23,8 @@
 @import "blocks/direction.scss";
 @import "blocks/features.scss";
 @import "blocks/example.scss";
-@import "blocks/cat-slider.scss"
+@import "blocks/cat-slider.scss";
+
+// catalog.html
+
+@import "blocks/select-program.scss";

@@ -26,8 +26,7 @@
 }
 
 .page-footer__social-list {
-  list-style: none;
-  padding: 0;
+  @include reset-list;
 }
 
 .page-footer__copyright {

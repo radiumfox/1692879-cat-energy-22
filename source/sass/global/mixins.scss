@@ -1,0 +1,14 @@
+@mixin placeholder {
+  &::placeholder {
+    color: $secondary-dark;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+}
+
+@mixin reset-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}

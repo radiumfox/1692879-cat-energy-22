@@ -8,13 +8,13 @@
   font-weight: normal;
   line-height: 40px;
   margin: 0;
+  margin-bottom: 38px;
 }
 
 .features__list {
+  @include reset-list;
   color: $secondary-dark;
   font-family: "Arial", sans-serif;
-  list-style: none;
-  padding: 0;
 }
 
 .features__item {

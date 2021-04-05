@@ -1,12 +1,12 @@
 .site-list {
-  list-style: none;
-  padding: 0;
+  @include reset-list;
   text-transform: uppercase;
 }
 
 .site-list__item {
   padding-top: 24px;
   padding-bottom: 24px;
+  border-bottom: 1px solid $basic-grey;
 }
 
 .site-list__link {
