@@ -5,8 +5,8 @@
 .select-program__fieldset {
   border-style: none;
   padding: 0;
-  padding-bottom: 23px;
-  padding-top: 23px;
+  margin-bottom: 23px;
+  margin-top: 23px;
 }
 
 .select-program__fieldset--padding-bigger {
@@ -15,9 +15,7 @@
 }
 
 .select-program__control-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  @include reset-list;
 }
 
 .select-program__control-item:not(:last-child) {
@@ -44,20 +42,17 @@
   border: 1px solid $special-grey3;
 }
 
-.select-program__input {
+.select-program__text-input {
   @include placeholder;
-}
-
-.select-program__input--field {
   border: 1px solid $special-grey3;
   height: 45px;
   margin-left: 12px;
 }
 
-.select-program__input::-webkit-outer-spin-button,
-.select-program__input::-webkit-inner-spin-button {
-  display: none;
-  margin: 0;
+.select-program__button {
+  margin-top: 11px;
+  padding: 10px 0 10px;
+  width: 280px;
 }
 
 .select-program__legend {
