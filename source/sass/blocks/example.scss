@@ -7,6 +7,30 @@
   padding-bottom: 25px;
 }
 
+.example__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 707px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 366px;
+  }
+}
+
+.example__list {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    width: 366px;
+  }
+}
+
 .example__title {
   font-size: 36px;
   font-weight: normal;
@@ -29,6 +53,7 @@
 }
 
 .example__description {
+  @include reset-list;
   color: $secondary-dark;
   font-family: "Arial", sans-serif;
   font-size: 12px;

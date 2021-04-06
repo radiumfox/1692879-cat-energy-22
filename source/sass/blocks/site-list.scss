@@ -1,12 +1,24 @@
 .site-list {
   @include reset-list;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .site-list__item {
   padding-top: 24px;
   padding-bottom: 24px;
   border-bottom: 1px solid $basic-grey;
+
+  @media (min-width: $tablet-width) {
+    border-style: none;
+    margin-left: 35px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .site-list__link {
@@ -15,4 +27,9 @@
   font-weight: 500;
   line-height: 20px;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }

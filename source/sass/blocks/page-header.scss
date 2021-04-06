@@ -1,4 +1,18 @@
 .page-header__wrapper {
-  padding-top: 11px;
-  padding-bottom: 75px;
+  margin-top: 11px;
+  margin-bottom: 75px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 24px;
+  }
 }
+
+.page-header__logo {
+  height: 38px;
+  text-decoration: none;
+}
+

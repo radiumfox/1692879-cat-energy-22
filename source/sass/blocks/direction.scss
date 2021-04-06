@@ -4,11 +4,20 @@
   line-height: 37px;
   margin: 0;
   text-transform: uppercase;
+  width: 200px;
+  text-align: left;
 }
 
 .direction__description {
   color: $secondary-dark;
   font-family: "Arial", sans-serif;
+  padding-bottom: 22px;
+  border-bottom: 1px solid $basic-grey;
+
+  @media (min-width: $tablet-width) {
+    width: 350px;
+    border-style: none;
+  }
 }
 
 .direction__link {

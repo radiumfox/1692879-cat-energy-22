@@ -1,5 +1,21 @@
 .page-footer__wrapper {
   margin-top: 22px;
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
+}
+
+.page-footer__contacts {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    width: 405px;
+    background-color: $basic-light;
+    padding: 62px 89px 51px 76px;
+  }
 }
 
 .page-footer__proposal {
@@ -7,6 +23,10 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    width: 170px;
+  }
 }
 
 .page-footer__address {
@@ -14,6 +34,10 @@
   font-family: "Arial", sans-serif;
   font-style: normal;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 160px;
+  }
 }
 
 .page-footer__map {
@@ -23,10 +47,20 @@
 .page-footer__links-container {
   background-color: $basic-grey3;
   padding-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
 }
 
 .page-footer__social-list {
   @include reset-list;
+  display: flex;
+  justify-content: space-between;
+  width: 131px;
 }
 
 .page-footer__copyright {

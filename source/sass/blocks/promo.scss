@@ -1,11 +1,21 @@
 .promo {
   background: linear-gradient(rgba(($basic-green), 0.85), rgba(($basic-green), 0.85)), url("../img/index-promo-bg.jpg") center / cover;
   color: $basic-light;
+
+  @media (min-width: $tablet-width) {
+    background: none;
+    color: $basic-dark;
+  }
 }
 
 .promo__wrapper {
   padding-top: 27px;
   margin-bottom: 125px;
+
+  @media (min-width: $tablet-width) {
+    width: 544px;
+    margin: 0 auto 125px;
+  }
 }
 
 .promo__title {
@@ -21,4 +31,14 @@
   margin: 0;
   margin-top: 25px;
   text-transform: uppercase;
+}
+
+.promo__button {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    margin-top: 49px;
+    width: 244px;
+  }
 }
