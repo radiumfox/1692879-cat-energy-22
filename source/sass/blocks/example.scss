@@ -1,42 +1,46 @@
 .example {
   background-color: $basic-grey2;
+
+  @media (min-width: $tablet-width) {
+    background-color: $basic-light;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $basic-grey3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 134px;
+  }
 }
 
 .example__wrapper {
   padding-top: 27px;
-  padding-bottom: 25px;
-}
-
-.example__container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 280px;
 
   @media (min-width: $tablet-width) {
-    width: 707px;
+    padding-top: 0;
+  }
+}
+
+.example__features {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
   }
 
   @media (min-width: $desktop-width) {
-    width: 366px;
+    grid-template-rows: 1fr 1fr;
   }
 }
 
 .example__list {
   display: flex;
-  justify-content: space-between;
-
-  @media (min-width: $tablet-width) {
-    width: 366px;
-  }
 }
 
 .example__title {
   font-size: 36px;
   font-weight: normal;
   line-height: 40px;
-  margin: 0;
-  margin-bottom: 33px;
+  margin: 0 0 33px;
 }
 
 .example__text {
@@ -46,18 +50,16 @@
 }
 
 .example__number {
-  font-size: 24px;
-  line-height: 24px;
+  @include font(24px, 24px, normal);
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
 .example__description {
   @include reset-list;
+  @include font(12px, 12px, normal);
   color: $secondary-dark;
   font-family: "Arial", sans-serif;
-  font-size: 12px;
-  line-height: 12px;
   margin-bottom: 21px;
 }
 
@@ -69,4 +71,8 @@
 
 .example__expenses {
   margin-bottom: 42px;
+
+  @media (min-width: $desktop-width) {
+    grid-row: 2 / 3;
+  }
 }

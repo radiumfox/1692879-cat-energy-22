@@ -1,18 +1,24 @@
 .page-header__wrapper {
-  margin-top: 11px;
-  margin-bottom: 75px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 75px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 24px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 42px;
   }
 }
 
 .page-header__logo {
+  border-bottom: 1px solid $basic-grey;
   height: 38px;
+  padding-top: 12px;
+  padding-bottom: 16px;
   text-decoration: none;
-}
 
+  @media (min-width: $tablet-width) {
+    border-style: none;
+  }
+}

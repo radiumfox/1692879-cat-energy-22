@@ -1,9 +1,21 @@
+.cat-slider {
+  padding-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    background-color: $basic-grey2;
+    padding-bottom: 67px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: unset;
+  }
+}
+
 .cat-slider__button {
+  @include font(16px, 18px, normal);
   border-style: none;
   cursor: pointer;
   font-family: "Oswald", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 18px;
   text-transform: uppercase;
 }
 

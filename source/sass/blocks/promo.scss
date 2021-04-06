@@ -10,26 +10,26 @@
 
 .promo__wrapper {
   padding-top: 27px;
-  margin-bottom: 125px;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
-    width: 544px;
-    margin: 0 auto 125px;
+    padding: 0;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 82px;
   }
 }
 
 .promo__title {
-  font-size: 36px;
-  font-weight: normal;
-  line-height: 36px;
+  @include font(36px, 36px, normal);
   margin: 0;
 }
 
 .promo__slogan {
-  font-size: 14px;
-  line-height: 14px;
-  margin: 0;
-  margin-top: 25px;
+  @include font(14px, 14px, normal);
+  margin: 25px 0 0;
   text-transform: uppercase;
 }
 

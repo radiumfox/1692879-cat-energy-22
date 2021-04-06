@@ -7,6 +7,7 @@
 }
 
 .page-footer__contacts {
+  background-color: $basic-grey3;
   display: flex;
   justify-content: space-between;
 
@@ -19,9 +20,8 @@
 }
 
 .page-footer__proposal {
+  @include font(16px, 18px, normal);
   color: $secondary-dark2;
-  font-size: 16px;
-  line-height: 18px;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
@@ -64,8 +64,7 @@
 }
 
 .page-footer__copyright {
+  @include font(16px, auto, normal);
   color: $secondary-dark;
-  font-size: 16px;
-  line-height: auto;
   text-decoration: none;
 }

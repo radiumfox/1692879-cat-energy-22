@@ -3,14 +3,18 @@
 }
 
 .page-main__header-title {
-  font-size: 36px;
-  font-weight: normal;
-  line-height: 36px;
-  margin: 0;
-  margin-bottom: 37px;
+  @include font(36px, 36px, normal);
+  margin: 0 0 37px;
 }
 
 .page-main__header-text {
-  text-transform: uppercase;
   margin: 0;
+  text-transform: uppercase;
+}
+
+.page-main__title {
+  @include font(36px, 36px, normal);
+  border-bottom: 1px solid $basic-grey;
+  margin: 28px 0 0;
+  padding: 0 0 40px;
 }

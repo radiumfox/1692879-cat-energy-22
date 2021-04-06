@@ -1,0 +1,10 @@
+.show-more__lead-text {
+  @include font(16px, 20px, normal);
+  color: $secondary-dark2;
+}
+
+.show-more__text {
+  @include font(12px, 16px, normal);
+  color: $secondary-dark;
+  font-family: "Arial", sans-serif;
+}
