@@ -4,11 +4,8 @@
 }
 
 .features__title {
-  font-size: 36px;
-  font-weight: normal;
-  line-height: 40px;
-  margin: 0;
-  margin-bottom: 38px;
+  @include font(36px, 40px, normal);
+  margin: 0 0 38px;
 }
 
 .features__list {

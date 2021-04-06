@@ -1,0 +1,24 @@
+.additional__list {
+  @include reset-list;
+}
+
+.additional__title {
+  @include font(24px, 24px, normal);
+}
+
+.additional__link {
+  color: $secondary-dark3;
+  text-decoration: none;
+}
+
+.additional__name {
+  @include font(16px, 16px, normal);
+  text-transform: uppercase;
+}
+
+.additional__key,
+.additional__value {
+  @include font(14px, 14px, normal);
+  color: $secondary-dark;
+  font-family: "Arial", sans-serif;
+}

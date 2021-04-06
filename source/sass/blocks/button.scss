@@ -1,10 +1,11 @@
 .button {
+  @include font(16px, 20px, normal);
   border-style: none;
   background-color: $basic-green;
   color: $basic-light;
+  cursor: pointer;
+  display: inline-block;
   font-family: "Oswald", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
   padding: 10px 109px 10px;
   text-decoration: none;
   text-transform: uppercase;

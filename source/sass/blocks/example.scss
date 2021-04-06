@@ -11,8 +11,7 @@
   font-size: 36px;
   font-weight: normal;
   line-height: 40px;
-  margin: 0;
-  margin-bottom: 33px;
+  margin: 0 0 33px;
 }
 
 .example__text {
@@ -22,17 +21,15 @@
 }
 
 .example__number {
-  font-size: 24px;
-  line-height: 24px;
+  @include font(24px, 24px, normal);
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
 .example__description {
+  @include font(12px, 12px, normal);
   color: $secondary-dark;
   font-family: "Arial", sans-serif;
-  font-size: 12px;
-  line-height: 12px;
   margin-bottom: 21px;
 }
 
