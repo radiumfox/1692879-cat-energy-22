@@ -10,7 +10,7 @@
 }
 
 .site-list__link {
-  @include font-size(20px, 20px, 500);
+  @include font(20px, 20px, 500);
   color: $basic-dark;
   text-decoration: none;
 }

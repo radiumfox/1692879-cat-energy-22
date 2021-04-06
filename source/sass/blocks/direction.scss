@@ -1,5 +1,5 @@
 .direction__title {
-  @include font-size(24px, 37px, normal);
+  @include font(24px, 37px, normal);
   margin: 0;
   text-transform: uppercase;
 }
@@ -10,7 +10,7 @@
 }
 
 .direction__link {
-  @include font-size(16px, 16px, normal);
+  @include font(16px, 16px, normal);
   color: $basic-dark;
   text-decoration: none;
   text-transform: uppercase;

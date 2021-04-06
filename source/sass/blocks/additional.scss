@@ -3,7 +3,7 @@
 }
 
 .additional__title {
-  @include font-size(24px, 24px, normal);
+  @include font(24px, 24px, normal);
 }
 
 .additional__link {
@@ -12,13 +12,13 @@
 }
 
 .additional__name {
-  @include font-size(16px, 16px, normal);
+  @include font(16px, 16px, normal);
   text-transform: uppercase;
 }
 
 .additional__key,
 .additional__value {
-  @include font-size(14px, 14px, normal);
+  @include font(14px, 14px, normal);
   color: $secondary-dark;
   font-family: "Arial", sans-serif;
 }

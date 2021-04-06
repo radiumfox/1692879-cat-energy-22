@@ -1,5 +1,5 @@
 .button {
-  @include font-size(16px, 20px, normal);
+  @include font(16px, 20px, normal);
   border-style: none;
   background-color: $basic-green;
   color: $basic-light;

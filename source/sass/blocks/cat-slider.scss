@@ -1,5 +1,5 @@
 .cat-slider__button {
-  @include font-size(16px, 18px, normal);
+  @include font(16px, 18px, normal);
   border-style: none;
   cursor: pointer;
   font-family: "Oswald", "Arial", sans-serif;
