@@ -18,6 +18,8 @@
   padding-bottom: 16px;
   text-decoration: none;
 
+  outline: 3px solid rgb(253, 3, 3);
+
   @media (min-width: $tablet-width) {
     border-style: none;
   }
