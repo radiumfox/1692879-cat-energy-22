@@ -9,15 +9,18 @@
 }
 
 .promo__wrapper {
+  margin-top: 75px;
   padding-top: 27px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
+    margin-top: 62px;
     padding: 0;
     text-align: left;
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 32px;
     margin-bottom: 82px;
   }
 }
