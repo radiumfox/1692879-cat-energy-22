@@ -1,17 +1,19 @@
 .features__wrapper {
   margin-top: 27px;
   margin-bottom: 42px;
+  padding: 0 20px 0;
 
   @media (min-width: $tablet-width) {
     border-bottom: 1px solid $basic-grey;
     margin-top: 45px;
-    padding-bottom: 47px;
+    padding: 0 30px 47px;
   }
 
   @media (min-width: $desktop-width) {
     border-style: none;
     margin-top: 71px;
     margin-bottom: 69px;
+    padding: 0 110px 0;
   }
 }
 

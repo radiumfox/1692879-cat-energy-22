@@ -10,9 +10,9 @@
 }
 
 .site-list__item {
-  border-bottom: 1px solid $basic-grey;
   padding-top: 24px;
   padding-bottom: 24px;
+  border-bottom: 1px solid $basic-grey;
 
   &:first-child {
     border-top: 1px solid $basic-grey;

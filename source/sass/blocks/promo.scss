@@ -10,18 +10,22 @@
 
 .promo__wrapper {
   margin-top: 75px;
-  padding-top: 27px;
+  padding: 27px 20px 0;
+  position: relative;
   text-align: center;
+  height: 302px;
 
   @media (min-width: $tablet-width) {
     margin-top: 62px;
-    padding: 0;
+    padding: 0 112px 0;
     text-align: left;
+    height: unset;
   }
 
   @media (min-width: $desktop-width) {
     margin-top: 32px;
     margin-bottom: 82px;
+    padding: 0 110px 0;
   }
 }
 
@@ -37,11 +41,14 @@
 }
 
 .promo__button {
-  display: none;
+  display: inline-block;
+  margin-top: 138px;
+  position: absolute;
+  left: calc(50vw - 140px);
+  width: 244px;
 
   @media (min-width: $tablet-width) {
-    display: inline-block;
     margin-top: 49px;
-    width: 244px;
+    left: 112px;
   }
 }

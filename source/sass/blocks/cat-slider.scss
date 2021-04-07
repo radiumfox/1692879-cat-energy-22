@@ -1,13 +1,26 @@
 .cat-slider {
-  padding-bottom: 25px;
-
   @media (min-width: $tablet-width) {
     background-color: $basic-grey2;
-    padding-bottom: 67px;
   }
 
   @media (min-width: $desktop-width) {
+    align-items: flex-end;
     background-color: unset;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.cat-slider__wrapper {
+  padding: 0 20px 25px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px 67px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 64px;
+    padding: 0 110px 0;
   }
 }
 
