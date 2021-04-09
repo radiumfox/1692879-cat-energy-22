@@ -1,4 +1,4 @@
-.page-header {
+.page-header--background {
   @media (min-width: $desktop-width) {
     &::before {
       background: linear-gradient(rgba(($basic-green), 0.85), rgba(($basic-green), 0.85)), url("../img/index-promo-bg.jpg") 35% / cover;
