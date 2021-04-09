@@ -1,9 +1,37 @@
 .page-footer__wrapper {
-  margin-top: 22px;
+  margin-top: 28px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    position: relative;
+  }
 }
 
 .page-footer__contacts {
-  background-color: $basic-grey3;
+  background-color: $basic-light;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 26px;
+  padding: 0 20px 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 51px;
+    padding: 0 30px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    box-sizing: border-box;
+    margin-left: -610px;
+    margin-top: 95px;
+    left: 50%;
+    position: absolute;
+    padding: 62px 89px 51px 76px;
+    width: 570px;
+  }
 }
 
 .page-footer__proposal {
@@ -21,15 +49,38 @@
 
 .page-footer__map {
   border-style: none;
+  display: block;
+  height: 362px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
 }
 
 .page-footer__links-container {
   background-color: $basic-grey3;
-  padding-bottom: 28px;
+  padding: 39px 20px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 55px 30px 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 57px 110px 58px;
+  }
 }
 
 .page-footer__social-list {
   @include reset-list;
+  display: flex;
+  justify-content: space-between;
+  width: 131px;
 }
 
 .page-footer__copyright {

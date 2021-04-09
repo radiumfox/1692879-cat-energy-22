@@ -1,4 +1,7 @@
 .page-body {
   @include font(14px, 18px, normal);
   font-family: "Oswald", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
 }

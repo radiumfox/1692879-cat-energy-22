@@ -2,11 +2,13 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
     <header class="page-header">
+      <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
           <img class="page-header__logo-image" src="#" width="33" height="38" alt="Логотип">
           <img class="page-header__logo-text" src="#" width="101" height="18" alt="Cat Energy">
@@ -29,6 +31,7 @@
             </ul>
           </div>
         </nav>
+      </div>
     </header>
 
     <main class="page-main">
@@ -38,52 +41,55 @@
       </header>
 
       <form class="select-program" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="select-program__fieldset">
-          <ul class="select-program__control-list">
-            <li class="select-program__control-item">
-              <label class="select-program__label">
-                Имя:<sup>*</sup>
-                <input class="select-program__text-input" type="text" placeholder="Барсик" name="pet-name" required>
-              </label>
-            </li>
-            <li class="select-program__control-item">
-              <label class="select-program__label">
-                Вес (кг):<sup>*</sup>
-                <input class="select-program__text-input" type="text" placeholder="7" name="pet-weight" required>
-              </label>
-            </li>
-            <li class="select-program__control-item">
-              <label class="select-program__label">
-                Возраст (лет):<sup>*</sup>
-                <input class="select-program__text-input" type="text" placeholder="7" name="pet-age" required>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
+        <div class="select-program__fieldset-group">
+          <fieldset class="select-program__fieldset">
+            <ul class="select-program__control-list">
+              <li class="select-program__control-item">
+                <label class="select-program__label">
+                  Имя:<sup>*</sup>
+                  <input class="select-program__text-input" type="text" placeholder="Барсик" name="pet-name" required>
+                </label>
+              </li>
+              <li class="select-program__control-item">
+                <label class="select-program__label">
+                  Вес (кг):<sup>*</sup>
+                  <input class="select-program__text-input" type="text" placeholder="7" name="pet-weight" required>
+                </label>
+              </li>
+              <li class="select-program__control-item">
+                <label class="select-program__label">
+                  Возраст (лет):<sup>*</sup>
+                  <input class="select-program__text-input" type="text" placeholder="7" name="pet-age" required>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
 
-        <fieldset class="select-program__fieldset">
-          <ul class="select-program__control-list">
-            <li class="select-program__control-item">
-              <input class="select-program__radio" type="radio" id="slim" name="direction" value="slim" checked>
-              <label class="select-program__label select-program__label--radio" for="slim">
-              Похудение</label>
-            </li>
-            <li class="select-program__control-item">
-              <input class="select-program__radio" type="radio" id="pro" name="direction" value="pro">
-              <label class="select-program__label select-program__label--radio" for="pro">
-              Набор массы</label>
-            </li>
-            <li class="select-program__control-item">
-              <input class="select-program__radio" type="radio" id="unclear" name="direction" value="unclear">
-              <label class="select-program__label select-program__label--radio" for="unclear">
-              Не знаю (нужен ваш совет)</label>
-            </li>
-          </ul>
-        </fieldset>
+          <fieldset class="select-program__fieldset">
+            <ul class="select-program__control-list">
+              <li class="select-program__control-item">
+                <input class="select-program__radio" type="radio" id="slim" name="direction" value="slim" checked>
+                <label class="select-program__label select-program__label--radio" for="slim">
+                Похудение</label>
+              </li>
+              <li class="select-program__control-item">
+                <input class="select-program__radio" type="radio" id="pro" name="direction" value="pro">
+                <label class="select-program__label select-program__label--radio" for="pro">
+                Набор массы</label>
+              </li>
+              <li class="select-program__control-item">
+                <input class="select-program__radio" type="radio" id="unclear" name="direction" value="unclear">
+                <label class="select-program__label select-program__label--radio" for="unclear">
+                Не знаю (нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+
+        </div>
 
         <fieldset class="select-program__fieldset select-program__fieldset--padding-bigger">
           <legend class="select-program__title">Контактные данные (владельца кота)</legend>
-          <ul class="select-program__control-list">
+          <ul class="select-program__control-list select-program__control-list--flex">
             <li class="select-program__control-item">
               <label class="select-program__label">
                 E-mail:<sup>*</sup>
@@ -110,7 +116,7 @@
           <div class="select-program__title">
             <legend>Дополнительно</legend>
           </div>
-          <ul class="select-program__control-list">
+          <ul class="select-program__control-list select-program__control-list--grid">
             <li class="select-program__control-item">
               <input class="select-program__checkbox" type="checkbox" id="sugar-substitute" name="extra" value="sugar-substitute" checked>
               <label class="select-program__label select-program__label--checkbox" for="sugar-substitute">

@@ -54,3 +54,30 @@
   font-family: "Arial", sans-serif;
   line-height: 16px;
 }
+
+.select-program__control-list--grid {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 123px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 104px;
+  }
+}
+
+.select-program__control-list--flex {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.select-program__fieldset-group {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}

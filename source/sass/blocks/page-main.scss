@@ -1,10 +1,26 @@
 .page-main__header {
-  padding-top: 27px;
+  margin-top: 27px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 74px;
+  }
 }
 
 .page-main__header-title {
   @include font(36px, 36px, normal);
   margin: 0 0 37px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 56px;
+  }
 }
 
 .page-main__header-text {
