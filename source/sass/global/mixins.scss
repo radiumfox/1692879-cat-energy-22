@@ -3,7 +3,13 @@
     color: $secondary-dark;
     font-family: "Oswald", "Arial", sans-serif;
     font-size: 16px;
+    line-height: 18px;
     text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: auto;
+    }
   }
 }
 

@@ -38,7 +38,9 @@
   @media (min-width: $tablet-width) {
     @include font(18px, 24px, 400);
   }
+}
 
+.site-list__link--white-font {
   @media (min-width: $desktop-width) {
     @include font(20px, auto, 400);
     color: $basic-light;
