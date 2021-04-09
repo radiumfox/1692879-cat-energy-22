@@ -1,3 +1,18 @@
+.page-header {
+  @media (min-width: $desktop-width) {
+    &::before {
+      background: linear-gradient(rgba(($basic-green), 0.85), rgba(($basic-green), 0.85)), url("../img/index-promo-bg.jpg") 35% / cover;
+      content: "";
+      height: 694px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 720px;
+      z-index: -1;
+    }
+  }
+}
+
 .page-header__wrapper {
   display: flex;
   flex-direction: column;
@@ -5,9 +20,13 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    justify-content: space-between;
-    margin-top: 42px;
+    margin-top: 24px;
     padding: 0 30px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 53px;
+    padding: 0 110px 0;
   }
 }
 
@@ -20,8 +39,13 @@
   width: 93%;
 
   @media (min-width: $tablet-width) {
+    height: 54px;
+    margin: 0;
     padding: 0;
     width: 174px;
-    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 59px;
   }
 }

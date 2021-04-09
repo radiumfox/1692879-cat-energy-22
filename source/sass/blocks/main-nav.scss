@@ -11,3 +11,10 @@
     display: none;
   }
 }
+
+.main-nav {
+  @media (min-width: $tablet-width) {
+    align-self: center;
+    margin-left: auto;
+  }
+}
