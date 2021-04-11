@@ -1,19 +1,96 @@
-.additional__list {
-  @include reset-list;
+.additional__wrapper {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .additional__title {
   @include font(24px, 24px, normal);
+  margin: 0 0 36px;
+
+  @media (min-width: $tablet-width) {
+    @include font(36px, 36px, normal);
+    margin-bottom: 80px;
+  }
+}
+
+.additional__list {
+  @include reset-list;
+  border-top: 1px solid $basic-grey;
+
+  @media (min-width: $tablet-width) {
+    border-left: 1px solid $basic-grey;
+    border-right: 1px solid $basic-grey;
+  }
+
+  @media (min-width: $desktop-width) {
+    border-left: none;
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+    width: 896px;
+  }
+}
+
+.additional__item {
+  border-bottom: 1px solid $basic-grey;
+  padding: 12px 0 18px;
+
+  @media (min-width: $tablet-width) {
+    padding: 26px 38px 28px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 48px;
+    padding: 15px 0 18px;
+    align-items: center;
+  }
 }
 
 .additional__link {
   color: $secondary-dark3;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    margin-right: auto;
+  }
 }
 
 .additional__name {
   @include font(16px, 16px, normal);
+  margin: 0 0 10px;
+  padding: 0;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include font(20px, 20px, normal);
+    margin: 0;
+  }
+}
+
+.additional__description {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .additional__key,
@@ -21,4 +98,20 @@
   @include font(14px, 14px, normal);
   color: $secondary-dark;
   font-family: "Arial", sans-serif;
+
+  @media (min-width: $tablet-width) {
+    @include font(16px, 20px, normal);
+  }
+}
+
+.additional__value {
+  @media (min-width: $tablet-width) {
+    margin-left: 50px;
+  }
+}
+
+.additional__button {
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+  }
 }

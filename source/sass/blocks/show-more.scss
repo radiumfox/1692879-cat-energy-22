@@ -1,3 +1,12 @@
+.show-more {
+  padding: 0 20px 0;
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    text-align: center;
+  }
+}
+
 .show-more__lead-text {
   @include font(16px, 20px, normal);
   color: $secondary-dark2;
