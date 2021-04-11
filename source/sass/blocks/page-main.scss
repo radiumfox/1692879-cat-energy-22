@@ -1,33 +1,16 @@
 .page-main__header {
-  margin-top: 27px;
   padding: 0 20px 0;
 
   @media (min-width: $tablet-width) {
-    margin-top: 64px;
     padding: 0 70px 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 74px;
     padding: 0 110px 0;
   }
 }
 
-.page-main__header-title {
-  @include font(36px, 36px, normal);
-  margin: 0 0 37px;
-
-  @media (min-width: $tablet-width) {
-    @include font(60px, 60px, normal);
-    margin: 0 0 54px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin: 0 0 56px;
-  }
-}
-
-.page-main__header-text {
+.page-main__text {
   @include font(14px, 18px, normal);
   margin: 0;
   text-transform: uppercase;
@@ -40,6 +23,22 @@
 .page-main__title {
   @include font(36px, 36px, normal);
   border-bottom: 1px solid $basic-grey;
-  margin: 28px 0 0;
-  padding: 0 0 40px;
+  margin: 0;
+  padding: 27px 20px 40px;
+
+  @media (min-width: $tablet-width) {
+    @include font(60px, 60px, normal);
+    border-style: none;
+    padding: 65px 30px 84px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 74px 0 84px 110px;
+  }
+}
+
+.page-main__title--no-border {
+  border-style: none;
+  padding-left: 0;
+  padding-right: 0;
 }

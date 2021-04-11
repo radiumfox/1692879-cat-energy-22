@@ -6,6 +6,19 @@
     background: none;
     color: $basic-dark;
   }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      background: linear-gradient(rgba(($basic-green), 0.85), rgba(($basic-green), 0.85)), url("../img/index-promo-bg.jpg") left / cover;
+      content: "";
+      height: 694px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 50%;
+      z-index: -1;
+    }
+  }
 }
 
 .promo__wrapper {

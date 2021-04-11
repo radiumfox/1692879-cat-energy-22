@@ -16,11 +16,11 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 26px;
-  padding: 0 20px 0;
+  padding: 28px 20px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 51px;
-    padding: 0 70px 0;
+    padding: 60px 70px;
   }
 
   @media (min-width: $desktop-width) {
@@ -46,7 +46,12 @@
 .page-footer__proposal {
   @include font(16px, 18px, normal);
   color: $secondary-dark2;
+  margin: 0;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    width: 170px;
+  }
 }
 
 .page-footer__address {
@@ -54,6 +59,11 @@
   font-family: "Arial", sans-serif;
   font-style: normal;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    text-align: right;
+    width: 160px;
+  }
 }
 
 .page-footer__map {
