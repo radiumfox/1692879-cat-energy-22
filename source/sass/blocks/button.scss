@@ -11,4 +11,12 @@
   text-transform: uppercase;
   vertical-align: middle;
   text-align: center;
+
+  &:hover {
+    background-color: $basic-green-hover;
+  }
+
+  &:active {
+    color: $basic-light-active;
+  }
 }

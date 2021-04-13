@@ -1,20 +1,36 @@
 .direction__title {
-  @include font(24px, 37px, normal);
-  margin: 0;
-  text-transform: uppercase;
-  width: 200px;
+  @include font(24px, 36px, normal);
+  margin: 0 0 30px;
+  padding: 5px 0 7px 70px;
+  position: relative;
   text-align: left;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include font(36px, 36px, normal);
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 36px 0 0 162px;
+  }
 }
 
 .direction__description {
+  border-bottom: 1px solid $basic-grey;
   color: $secondary-dark;
   font-family: "Arial", sans-serif;
+  margin-bottom: 20px;
   padding-bottom: 22px;
-  border-bottom: 1px solid $basic-grey;
 
   @media (min-width: $tablet-width) {
-    width: 350px;
+    @include font(16px, 24px, normal);
     border-style: none;
+    margin: 0 280px 20px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 73px 0 20px 0;
   }
 }
 
@@ -23,4 +39,20 @@
   color: $basic-dark;
   text-decoration: none;
   text-transform: uppercase;
+  padding-right: 48px;
+  position: relative;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.direction__arrow-icon {
+  position: absolute;
+  right: 0;
+  top: 6px;
+
+  &:active {
+    opacity: 0.3;
+  }
 }

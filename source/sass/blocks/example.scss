@@ -27,17 +27,59 @@
 
 .example__features {
   @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-rows: 1fr 1fr;
+    flex-direction: column;
   }
 }
 
 .example__list {
   display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 368px;
+  }
+}
+
+.example__item {
+  width: 124px;
+  position: relative;
+  padding-top: 14px;
+
+  &:not(:nth-child(2n)) {
+    margin-right: 30px;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 42px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 124px;
+    height: 56px;
+    border: 1px solid $special-grey;
+    border-radius: 3px;
+    top: 0;
+    left: 0;
+
+    @media (min-width: $tablet-width) {
+      width: 162px;
+      height: 70px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
+  }
 }
 
 .example__title {
@@ -51,12 +93,21 @@
   color: $secondary-dark;
   font-family: "Arial", sans-serif;
   margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
 }
 
 .example__number {
   @include font(24px, 24px, normal);
   text-transform: uppercase;
   margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    @include font(30px, 37px, normal);
+    margin-bottom: 14px;
+  }
 }
 
 .example__description {
@@ -64,19 +115,31 @@
   @include font(12px, 12px, normal);
   color: $secondary-dark;
   font-family: "Arial", sans-serif;
-  margin-bottom: 21px;
+  padding: 0 22px 0;
 }
 
 .example__expenses-text {
   line-height: 20px;
   text-transform: uppercase;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    @include font(20px, 20px, normal);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 63px;
+    margin-top: 55px;
+  }
 }
 
 .example__expenses {
+  margin-top: 27px;
   margin-bottom: 42px;
+  display: flex;
+  justify-content: center;
 
   @media (min-width: $desktop-width) {
-    grid-row: 2 / 3;
+    justify-content: space-between;
   }
 }
