@@ -7,14 +7,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    min-width: 442px;
     max-width: 470px;
+    min-width: 442px;
   }
 }
 
 .site-list__item {
-  padding-top: 24px;
   padding-bottom: 24px;
+  padding-top: 24px;
 
   @media (max-width: $mobile-width-only) {
     border-bottom: 1px solid $basic-grey;
@@ -31,8 +31,8 @@
     padding-bottom: 12px;
 
     &--active {
-      padding-bottom: 10px;
       border-bottom: 2px solid $basic-green;
+      padding-bottom: 10px;
     }
   }
 

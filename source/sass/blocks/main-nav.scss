@@ -12,12 +12,16 @@
 }
 
 .main-nav__toggle {
+  background-color: transparent;
+  outline-color: transparent;
   border: none;
   cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 0;
+  height: 18px;
   padding: 0;
+  position: absolute;
+  right: 23px;
+  top: -40px;
+  width: 24px;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -28,13 +32,13 @@
 .main-nav--opened .main-nav__toggle {
   &::before,
   &::after {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 2px;
     background-color: $basic-dark;
-    top: -33px;
-    right: 23px;
+    content: "";
+    height: 2px;
+    position: absolute;
+    top: 9px;
+    right: 0;
+    width: 25px;
   }
 
   &::before {
@@ -48,24 +52,24 @@
 
 .main-nav--closed .main-nav__toggle {
   &::before {
-    content: "";
-    position: absolute;
-    width: 24px;
-    height: 2px;
     background-color: $basic-dark;
-    top: -43px;
-    right: 23px;
     box-shadow: 0 8px 0 0 $basic-dark, 0 16px 0 0 $basic-dark;
+    content: "";
+    height: 2px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
   }
 
   &::after {
-    content: "";
-    position: absolute;
-    width: 24px;
-    height: 18px;
     background-color: transparent;
-    top: -43px;
+    content: "";
+    height: 18px;
+    position: absolute;
     right: 23px;
+    top: -43px;
+    width: 24px;
   }
 }
 
