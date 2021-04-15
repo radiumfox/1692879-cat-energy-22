@@ -28,49 +28,18 @@
   }
 }
 
-
 .main-nav--opened .main-nav__toggle {
-  &::before,
-  &::after {
-    background-color: $basic-dark;
-    content: "";
-    height: 2px;
-    position: absolute;
-    top: 9px;
-    right: 0;
-    width: 25px;
-  }
-
-  &::before {
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    transform: rotate(-45deg);
-  }
+  background-image: url("../img/main-nav__toggle--opened.svg");
+  background-repeat: no-repeat;
+  height: 20px;
+  right: 23px;
 }
 
 .main-nav--closed .main-nav__toggle {
-  &::before {
-    background-color: $basic-dark;
-    box-shadow: 0 8px 0 0 $basic-dark, 0 16px 0 0 $basic-dark;
-    content: "";
-    height: 2px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 24px;
-  }
-
-  &::after {
-    background-color: transparent;
-    content: "";
-    height: 18px;
-    position: absolute;
-    right: 23px;
-    top: -43px;
-    width: 24px;
-  }
+  background-image: url("../img/main-nav__toggle--closed.svg");
+  background-repeat: no-repeat;
+  height: 18px;
+  width: 24px;
 }
 
 .main-nav--closed .site-list__item {
