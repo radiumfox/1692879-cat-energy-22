@@ -1,26 +1,70 @@
 .direction__title {
-  @include font(24px, 37px, normal);
+  @include font(24px, 36px, normal);
   margin: 0;
-  text-transform: uppercase;
-  width: 200px;
+  padding-bottom: 30px;
+  padding-left: 90px;
+  position: relative;
   text-align: left;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include font(36px, 36px, normal);
+    padding: 0 0 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 36px 0 0 162px;
+  }
 }
 
 .direction__description {
+  border-bottom: 1px solid $basic-grey;
   color: $secondary-dark;
   font-family: "Arial", sans-serif;
+  margin: 0;
   padding-bottom: 22px;
-  border-bottom: 1px solid $basic-grey;
 
   @media (min-width: $tablet-width) {
-    width: 350px;
+    @include font(16px, 24px, normal);
     border-style: none;
+    padding: 0 0 48px;
+    width: 377px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 73px 0 22px 0;
+    width: 460px;
   }
 }
 
 .direction__link {
   @include font(16px, 16px, normal);
   color: $basic-dark;
+  display: inline-block;
+  padding: 18px 48px 0 0;
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0 48px 0 0;
+  }
+}
+
+.direction__arrow-icon {
+  position: absolute;
+  right: 0;
+  top: 18px;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    top: 0;
+  }
 }

@@ -24,3 +24,7 @@
   line-height: $line-height;
   font-weight: $font-weight;
 }
+
+@mixin outline ($color) {
+  outline: 3px solid $color;
+}

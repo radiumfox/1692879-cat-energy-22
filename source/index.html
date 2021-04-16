@@ -13,13 +13,13 @@
           <img class="page-header__logo-image" src="#" width="33" height="38" alt="Логотип">
           <img class="page-header__logo-text" src="#" width="101" height="18" alt="Cat Energy">
         </a>
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
-              <li class="site-list__item site-list__item--active">
+              <li class="site-list__item site-list__item--active site-list__item--white-font">
                 <a class="site-list__link site-list__link--white-font">Главная</a>
               </li>
               <li class="site-list__item">
@@ -42,7 +42,7 @@
           <h2 class="promo__title">Функциональное питание для котов</h2>
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
           <img class="promo__image" src="#" width="280" height="270" alt="Консервы Cat Energy Pro с курицей">
-          <a class="promo__button button">Подобрать программу</a>
+          <a class="promo__button button" href="catalog.html">Подобрать программу</a>
         </div>
       </section>
 
@@ -52,12 +52,24 @@
           <section class="programs__direction direction">
             <h3 class="direction__title direction__title--slim">Похудение</h3>
             <p class="direction__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="direction__link" href="catalog.html">Каталог Slim</a>
+            <a class="direction__link" href="catalog.html">
+              Каталог Slim
+              <svg class="direction__arrow-icon" width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/>
+                <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>
+              </svg>
+            </a>
           </section>
           <section class="programs__direction direction">
             <h3 class="direction__title direction__title--pro">Набор массы</h3>
             <p class="direction__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="direction__link" href="catalog.html">Каталог Pro</a>
+            <a class="direction__link" href="catalog.html">
+              Каталог Pro
+              <svg class="direction__arrow-icon" width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/>
+                <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>
+              </svg>
+            </a>
           </section>
         </div>
       </section>
@@ -98,7 +110,7 @@
               </div>
             </dl>
             <div class="example__expenses">
-              <p class="example__expenses-text">Затраты на питание:</p>
+              <p class="example__expenses-text">Затраты на питание:&nbsp;</p>
               <p class="example__expenses-text">15 000 руб.</p>
             </div>
           </div>
@@ -113,9 +125,17 @@
                 <img class="cat-slider__image" src="#" width="251" height="240" alt="Фитоняшка, перешедший на Cat Energy Slim">
               </li>
             </ul>
-            <button class="cat-slider__button" type="button">Было</button>
-            <input class="cat-slider__range" type="range" id="before-after" name="before-after"><label class="visually-hidden" for="before-after">Переключатель</label>
-            <button class="cat-slider__button" type="button">Стало</button>
+            <div class="cat-slider__range-wrapper">
+              <button class="cat-slider__button cat-slider__button--before" type="button">Было</button>
+              <div class="cat-slider__scale">
+                <div class="cat-slider__bar cat-slider__bar--before"></div>
+                <svg class="cat-slider__toggle" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" tabindex="0">
+                  <circle class="cat-slider__toggle-circle" cx="17" cy="17" r="16.5" fill="white" stroke="#CDCDCD"/>
+                  <circle cx="17" cy="17" r="4" fill="#68B738"/>
+                </svg>
+              </div>
+              <button class="cat-slider__button cat-slider__button--after" type="button">Стало</button>
+            </div>
           </div>
         </div>
       </section>
@@ -126,10 +146,10 @@
       <div class="page-footer__wrapper">
         <div class="page-footer__contacts">
           <p class="page-footer__proposal">Приглашаем к сотрудничеству дилеров!</p>
-          <address class="page-footer__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+          <address class="page-footer__address">ул. Большая Конюшенная, д. 19/8 <span class="page-footer__city">Санкт-Петербург</span></address>
         </div>
         <iframe class="page-footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533273!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1614701867694!5m2!1sru!2sru" width="768" height="400" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
-        <div class="page-footer__links-container">
+        <div class="page-footer__links-wrapper">
           <a class="page-footer__logo" href="#">
             <img class="page-footer__logo-text" src="#" width="101" height="18" alt="Cat Energy">
           </a>
@@ -147,11 +167,13 @@
             </ul>
           </div>
           <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
-            <span>HTML Academy</span>
-            <img src="#" width="27" height="34" alt="Логотип">
+            <span class="page-footer__copyright-text">HTML Academy</span>
+            <img class="page-footer__copyright-logo" src="#" width="27" height="34" alt="Логотип">
           </a>
         </div>
       </div>
     </footer>
+
+    <script src="js/main-nav.js"> </script>
   </body>
 </html>

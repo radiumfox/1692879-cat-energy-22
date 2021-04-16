@@ -26,13 +26,98 @@
 
 .cat-slider__button {
   @include font(16px, 18px, normal);
+  border-bottom: 1px dotted $special-grey;
   border-style: none;
   cursor: pointer;
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
+
+  &:hover {
+    border-bottom: 1px solid rgba($basic-dark, 0.4);
+  }
+
+  &:active,
+  &:focus {
+    border-style: none;
+    outline: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include font(20px, auto, normal);
+    padding: 0 0 6px;
+  }
 }
 
 .cat-slider__list {
   @include reset-list;
-  margin-bottom: 23px;
+  padding-bottom: 23px;
+}
+
+.cat-slider__range-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.cat-slider__scale {
+  background-color: $basic-light;
+  border: 1px solid $special-grey;
+  border-radius: 6px;
+  height: 14px;
+  margin: 5px 12px;
+  position: relative;
+  width: 84px;
+
+  @media (min-width: $tablet-width) {
+    background-color: $special-grey;
+    border-style: none;
+    height: 6px;
+    width: 428px;
+  }
+}
+
+.cat-slider__bar {
+  @media (max-width: $mobile-width-only) {
+    background-color: $basic-green;
+    border-radius: 6px;
+    height: 6px;
+    margin-top: 4px;
+    width: 35px;
+
+    &--before {
+      margin-left: 6px;
+    }
+
+    &--after {
+      float: right;
+      margin-right: 6px;
+    }
+  }
+}
+
+.cat-slider__toggle {
+  box-shadow: 0 1px 3px rgba($basic-dark, 0.16);
+  border-radius: 50%;
+
+  &:hover {
+    box-shadow: 0 2px 4px rgba($basic-dark, 0.16);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba($basic-dark, 0.16);
+  }
+
+  &-circle:active {
+    stroke: $basic-green;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    left: calc(50% - 17px);
+    top: -16px;
+  }
 }
