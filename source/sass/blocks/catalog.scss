@@ -34,14 +34,14 @@
 
   @media (min-width: $tablet-width) {
     border-style: none;
-    background-color: $basic-grey3;
+    background-color: $basic-grey2;
     box-sizing: border-box;
     padding: 0 36px 40px;
     width: 324px;
 
     &:last-child {
       background-color: $basic-light;
-      border: 2px solid $basic-grey3;
+      border: 2px solid $basic-grey2;
       padding: 160px 38px 38px;
     }
   }
@@ -61,7 +61,7 @@
 }
 
 .catalog__button--show-more {
-  background-color: $basic-grey3;
+  background-color: $basic-grey2;
   color: $secondary-dark;
   padding: 10px 0 10px;
 }

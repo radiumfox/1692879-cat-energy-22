@@ -15,7 +15,7 @@
   padding: 28px 20px;
 
   &--grey {
-    background-color: $basic-grey3;
+    background-color: $basic-grey2;
     margin-bottom: 0;
 
     @media (min-width: $desktop-width) {
@@ -88,7 +88,7 @@
 
 .page-footer__links-wrapper {
   align-items: center;
-  background-color: $basic-grey3;
+  background-color: $basic-grey2;
   display: flex;
   flex-direction: column;
   padding: 39px 20px 28px;
