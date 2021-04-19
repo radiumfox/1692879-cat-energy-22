@@ -1,6 +1,5 @@
 .select-program__wrapper {
-  margin-top: 40px;
-  margin-bottom: 32px;
+  margin: 40px 0 32px;
 
   @media (min-width: $tablet-width) {
     margin-top: 66px;
@@ -9,12 +8,19 @@
 
 .select-program__fieldset {
   border-style: none;
-  padding: 0 20px 0;
   margin-bottom: 24px;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+  }
+}
+
+.select-program__fieldset-wrapper {
+  padding: 0 20px 0;
 
   @media (min-width: $tablet-width) {
     padding: 0 70px 0;
-    margin-bottom: 65px;
   }
 
   @media (min-width: $desktop-width) {
@@ -26,6 +32,14 @@
   }
 }
 
+.select-program__fieldset-group {
+  @media (min-width: $desktop-width) {
+    column-gap: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .select-program__fieldset--grey-border {
   border-bottom: 1px solid $special-grey3;
   border-top: 1px solid $special-grey3;
@@ -34,23 +48,11 @@
   @media (min-width: $tablet-width) {
     border: 1px solid $special-grey3;
     margin: 0 70px 70px;
-    padding: 25px;
+    padding: 25px 28px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 65px;
-  }
-}
-
-.select-program__fieldset-group {
-  @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 80px;
-
-    .select-program__fieldset--programs {
-      width: 560px;
-    }
+    margin: 0 110px 65px 0;
   }
 }
 
@@ -59,6 +61,8 @@
 }
 
 .select-program__control-item {
+  align-items: center;
+  display: flex;
   margin-bottom: 14px;
 
   @media (min-width: $tablet-width) {
@@ -68,54 +72,56 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  &--no-margin-bottom {
+    margin-bottom: 0;
+  }
 }
 
 .select-program__title {
   @include font(24px, 26px, normal);
-  background: $basic-light;
+  background-color: $basic-light;
   display: inline-block;
   margin: 0;
-  padding: 0 23px 34px 0;
-  position: relative;
+  max-width: 187px;
+  padding: 0 23px 34px 20px;
   vertical-align: middle;
+  width: auto;
+
+  @media (min-width: $tablet-width) {
+    @include font(36px, 36px, normal);
+    display: block;
+    margin-left: 30px;
+    max-width: fit-content;
+    padding: 0 40px 76px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 70px;
+  }
+}
+
+.select-program__title-wrapper {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
 
   &::after {
     background-color: $basic-green;
     content: "";
     height: 2px;
-    left: 0;
     position: absolute;
     top: 14px;
-    width: 100vw;
-    z-index: -2;
-
-    @media (min-width: $tablet-width) {
-      left: -70px;
-      top: 18px;
-      width: 140vw;
-    }
-  }
-
-  @media (min-width: $tablet-width) {
-    @include font(36px, 36px, normal);
-    padding: 0 40px 76px;
-    margin-left: -40px;
-  }
-}
-
-.select-program__title-wrapper {
-  width: 188px;
-
-  @media (min-width: $tablet-width) {
-    width: auto;
+    width: 100%;
+    z-index: -1;
   }
 }
 
 .select-program__label {
   @include font(16px, 18px, normal);
-  align-items: center;
   color: $secondary-dark;
-  display: flex;
+  max-width: 120px;
   text-transform: uppercase;
   white-space: nowrap;
 
@@ -126,24 +132,45 @@
 
 .select-program__text-input {
   @include placeholder;
-  border: 1px solid $special-grey3;
+  border: 2px solid transparent;
   box-sizing: border-box;
   height: 45px;
   margin-left: 12px;
+  outline: 1px solid $special-grey3;
+  outline-offset: -2px;
   padding: 14px;
   width: 100%;
 
   &:hover {
-    border-color: $special-grey;
+    outline-color: $special-grey;
   }
 
   &:focus {
-    border: 2px solid $secondary-dark;
-    outline: none;
+    outline: 2px solid $secondary-dark;
   }
 
   &--invalid {
     border-color: $status-error;
+  }
+
+  &--email {
+    background: url("../img/icon-email.svg") no-repeat;
+    background-size: 18px 13px;
+    background-position: 92%;
+
+    @media (min-width: $tablet-width) {
+      background-position: 95%;
+    }
+  }
+
+  &--phone {
+    background: url("../img/icon-phone.svg") no-repeat;
+    background-size: 19px 19px;
+    background-position: 92%;
+
+    @media (min-width: $tablet-width) {
+      background-position: 95%;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -154,19 +181,20 @@
 
 .select-program__textarea {
   @include placeholder;
-  border: 1px solid $special-grey3;
+  border: 2px solid transparent;
   box-sizing: border-box;
   height: 150px;
+  outline: 1px solid $special-grey3;
+  outline-offset: -2px;
   width: 100%;
-  padding: 10px 15px;
+  padding: 10px;
 
   &:hover {
-    border-color: $special-grey;
+    outline-color: $special-grey;
   }
 
   &:focus {
-    border: 2px solid $secondary-dark;
-    outline: none;
+    outline: 2px solid $secondary-dark;
   }
 
   @media (min-width: $tablet-width) {
@@ -240,6 +268,7 @@
     height: 30px;
     left: 0;
     position: absolute;
+    top: 0;
     width: 30px;
 
     @media (min-width: $tablet-width) {
@@ -259,14 +288,14 @@
     height: 12px;
     left: 10px;
     position: absolute;
-    top: 11px;
+    top: 10px;
     width: 12px;
 
     @media (min-width: $tablet-width) {
       height: 18px;
       width: 18px;
-      top: 9px;
-      left: 13px;
+      top: 12px;
+      left: 12px;
     }
   }
 
@@ -276,21 +305,6 @@
 
   @media (min-width: $tablet-width) {
     padding: 10px 0 10px 60px;
-  }
-}
-
-.select-program__text-input--email {
-  &::placeholder {
-    background: url("../img/select-programm__icon-email.svg") no-repeat 100%;
-    background-size: 18px 13px;
-    padding-right: -2px;
-  }
-}
-
-.select-program__text-input--phone {
-  &::placeholder {
-    background: url("../img/select-programm__icon-phone.svg") no-repeat 100%;
-    background-size: 19px 19px;
   }
 }
 
@@ -346,7 +360,7 @@
   }
 
   .select-program__checkbox:checked + &::after {
-    background-image: url("../img/select-program__icon-checkbox.svg");
+    background-image: url("../img/icon-checkbox.svg");
     content: "";
     height: 14px;
     left: 7px;

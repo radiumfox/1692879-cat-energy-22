@@ -43,27 +43,29 @@
       <form class="select-program" action="https://echo.htmlacademy.ru" method="post">
         <div class="select-program__wrapper">
           <div class="select-program__fieldset-group">
-            <fieldset class="select-program__fieldset select-program__fieldset--no-padding-right">
-              <ul class="select-program__control-list">
-                <li class="select-program__control-item">
-                  <label class="select-program__label">
-                    Имя:<sup>*</sup>
-                    <input class="select-program__text-input" type="text" placeholder="Барсик" name="pet-name" required>
-                  </label>
-                </li>
-                <li class="select-program__control-item">
-                  <label class="select-program__label">
-                    Вес (кг):<sup>*</sup>
-                    <input class="select-program__text-input" type="text" placeholder="7" name="pet-weight" required>
-                  </label>
-                </li>
-                <li class="select-program__control-item">
-                  <label class="select-program__label">
-                    Возраст (лет):<sup>*</sup>
-                    <input class="select-program__text-input" type="text" placeholder="7" name="pet-age" required>
-                  </label>
-                </li>
-              </ul>
+            <fieldset class="select-program__fieldset">
+              <div class="select-program__fieldset-wrapper select-program__fieldset-wrapper--no-padding-right">
+                <ul class="select-program__control-list">
+                  <li class="select-program__control-item">
+                    <label class="select-program__label" for="pet-name">
+                      Имя:<sup>*</sup>
+                    </label>
+                    <input class="select-program__text-input" type="text" id="pet-name" placeholder="Барсик" name="pet-name" required>
+                  </li>
+                  <li class="select-program__control-item">
+                    <label class="select-program__label" for="pet-weight">
+                      Вес (кг):<sup>*</sup>
+                    </label>
+                      <input class="select-program__text-input" type="text" id="pet-weight" placeholder="7" name="pet-weight" required>
+                  </li>
+                  <li class="select-program__control-item">
+                    <label class="select-program__label" for="pet-age">
+                      Возраст (лет):<sup>*</sup>
+                    </label>
+                    <input class="select-program__text-input" type="text" id="pet-age" placeholder="7" name="pet-age" required>
+                  </li>
+                </ul>
+              </div>
             </fieldset>
 
             <fieldset class="select-program__fieldset select-program__fieldset--grey-border select-program__fieldset--programs">
@@ -89,58 +91,66 @@
           </div>
 
           <fieldset class="select-program__fieldset">
-            <div class="select-program__title">
-              <legend class="select-program__title-wrapper">Контактные данные (владельца кота)</legend>
+            <div class="select-program__title-wrapper">
+              <h2 class="select-program__title">Контактные данные (владельца кота)</h2>
             </div>
-            <ul class="select-program__control-list select-program__control-list--contacts">
-              <li class="select-program__control-item">
-                <label class="select-program__label">
-                  E-mail:<sup>*</sup>
-                  <input class="select-program__text-input select-program__text-input--email" type="email" placeholder="kuklachev@gmail.com" required>
-                </label>
-              </li>
-              <li class="select-program__control-item">
-                <label class="select-program__label">
-                  Телефон:<sup>*</sup>
-                  <input class="select-program__text-input select-program__text-input--phone" type="tel" placeholder="8 (960) 900-60-90" name="phone" required>
-                </label>
-              </li>
-            </ul>
+            <div class="select-program__fieldset-wrapper">
+              <ul class="select-program__control-list select-program__control-list--contacts">
+                <li class="select-program__control-item select-program__control-item--no-margin-bottom">
+                  <label class="select-program__label" for="owner-email">
+                    E-mail:<sup>*</sup>
+                  </label>
+                  <input class="select-program__text-input select-program__text-input--email" type="email" id="owner-email" placeholder="kuklachev@gmail.com" required>
+                </li>
+                <li class="select-program__control-item">
+                  <label class="select-program__label" for="owner-phone">
+                    Телефон:<sup>*</sup>
+                  </label>
+                  <input class="select-program__text-input select-program__text-input--phone" type="tel" id="owner-phone" placeholder="8 (960) 900-60-90" name="phone" required>
+                </li>
+              </ul>
+            </div>
           </fieldset>
 
           <div class="select-program__fieldset">
-            <h2 class="select-program__title">Комментарий</h2>
-            <label class="select-program__label visually-hidden" for="textarea">
-            Комментарий</label>
-            <textarea class="select-program__textarea" id="textarea" name="message" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <div class="select-program__title-wrapper">
+              <h2 class="select-program__title">Комментарий</h2>
+            </div>
+            <div class="select-program__fieldset-wrapper">
+              <label class="select-program__label visually-hidden" for="textarea">
+              Комментарий</label>
+              <textarea class="select-program__textarea" id="textarea" name="message" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
           </div>
 
           <fieldset class="select-program__fieldset">
-            <div class="select-program__title">
-              <legend>Дополнительно</legend>
+            <div class="select-program__title-wrapper">
+              <h2 class="select-program__title">Дополнительно</h2>
             </div>
-            <ul class="select-program__control-list select-program__control-list--additional">
-              <li class="select-program__control-item select-program__control-item--additional">
-                <input class="select-program__checkbox visually-hidden" type="checkbox" id="sugar-substitute" name="extra" value="sugar-substitute" checked>
-                <label class="select-program__label select-program__label--checkbox" for="sugar-substitute">
-                Сахарозаменитель</label>
-              </li>
-              <li class="select-program__control-item select-program__control-item--additional">
-                <input class="select-program__checkbox visually-hidden" type="checkbox" id="clean-water" name="extra" value="clean-water">
-                <label class="select-program__label select-program__label--checkbox" for="clean-water">
-                Питьевая вода</label>
-              </li>
-              <li class="select-program__control-item select-program__control-item--additional">
-                <input class="select-program__checkbox visually-hidden" type="checkbox" id="milk" name="extra" value="milk">
-                <label class="select-program__label select-program__label--checkbox" for="milk">
-                Молоко</label>
-              </li>
-              <li class="select-program__control-item select-program__control-item--additional">
-                <input class="select-program__checkbox visually-hidden" type="checkbox" id="vitamins" name="extra" value="vitamins">
-                <label class="select-program__label select-program__label--checkbox" for="vitamins">
-                Витамины</label>
-              </li>
-            </ul>
+            <div class="select-program__fieldset-wrapper">
+              <ul class="select-program__control-list select-program__control-list--additional">
+                <li class="select-program__control-item select-program__control-item--additional">
+                  <input class="select-program__checkbox visually-hidden" type="checkbox" id="sugar-substitute" name="extra" value="sugar-substitute" checked>
+                  <label class="select-program__label select-program__label--checkbox" for="sugar-substitute">
+                  Сахарозаменитель</label>
+                </li>
+                <li class="select-program__control-item select-program__control-item--additional">
+                  <input class="select-program__checkbox visually-hidden" type="checkbox" id="clean-water" name="extra" value="clean-water">
+                  <label class="select-program__label select-program__label--checkbox" for="clean-water">
+                  Питьевая вода</label>
+                </li>
+                <li class="select-program__control-item select-program__control-item--additional">
+                  <input class="select-program__checkbox visually-hidden" type="checkbox" id="milk" name="extra" value="milk">
+                  <label class="select-program__label select-program__label--checkbox" for="milk">
+                  Молоко</label>
+                </li>
+                <li class="select-program__control-item select-program__control-item--additional">
+                  <input class="select-program__checkbox visually-hidden" type="checkbox" id="vitamins" name="extra" value="vitamins">
+                  <label class="select-program__label select-program__label--checkbox" for="vitamins">
+                  Витамины</label>
+                </li>
+              </ul>
+            </div>
           </fieldset>
           <div class="select-program__button-box">
             <button class="select-program__button button" type="submit">Отправить заявку</button>
