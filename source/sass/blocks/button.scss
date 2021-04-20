@@ -16,7 +16,12 @@
     background-color: $basic-green-hover;
   }
 
+  &:focus {
+    outline: none;
+  }
+
   &:active {
     color: $basic-light-active;
+    outline: none;
   }
 }

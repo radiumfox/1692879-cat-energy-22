@@ -29,14 +29,14 @@
 }
 
 .main-nav--opened .main-nav__toggle {
-  background-image: url("../img/main-nav__toggle--opened.svg");
+  background-image: url("../img/toggle-cross.svg");
   background-repeat: no-repeat;
   height: 20px;
   right: 23px;
 }
 
 .main-nav--closed .main-nav__toggle {
-  background-image: url("../img/main-nav__toggle--closed.svg");
+  background-image: url("../img/toggle-burger.svg");
   background-repeat: no-repeat;
   height: 18px;
   width: 24px;

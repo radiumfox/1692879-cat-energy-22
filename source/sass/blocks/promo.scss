@@ -1,5 +1,5 @@
 .promo {
-  background: linear-gradient(rgba(($basic-green), 0.85), rgba(($basic-green), 0.85)), url("../img/index-promo-bg.jpg") center / cover;
+  background: linear-gradient(rgba(($basic-green), 0.85), rgba(($basic-green), 0.85)), url("../img/promo-bg.jpg") center / cover;
   color: $basic-light;
 
   @media (min-width: $tablet-width) {
@@ -9,7 +9,7 @@
 
   @media (min-width: $desktop-width) {
     &::before {
-      background: linear-gradient(rgba(($basic-green), 0.85), rgba(($basic-green), 0.85)), url("../img/index-promo-bg-desktop.jpg") 40% / cover;
+      background: linear-gradient(rgba(($basic-green), 0.85), rgba(($basic-green), 0.85)), url("../img/promo-bg-small.jpg") 40% / cover;
       background-repeat: no-repeat;
       content: "";
       height: 694px;
