@@ -3,18 +3,21 @@
   display: flex;
   flex-direction: column-reverse;
   height: 290px;
+  margin: 0 20px 0;
 
   @media (min-width: $tablet-width) {
     align-items: center;
     flex-direction: row;
     height: 200px;
     justify-content: flex-end;
+    margin: 0 30px 0;
   }
 
   @media (min-width: $desktop-width) {
     flex-direction: column;
     height: 290px;
     justify-content: flex-end;
+    margin-right: 110px;
   }
 }
 
@@ -22,17 +25,18 @@
   @include font(16px, 20px, normal);
   color: $basic-light;
   font-family: "Arial", sans-serif;
-  margin: 0 60px 43px;
+  margin: 0;
+  padding: 0 60px 43px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    margin: 0 124px 0 0;
+    padding: 0 124px 0 0;
     text-align: left;
     width: 162px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 42px 42px;
+    padding: 0 42px 42px;
     text-align: center;
   }
 }

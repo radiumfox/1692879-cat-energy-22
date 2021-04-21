@@ -1,6 +1,4 @@
 .catalog__wrapper {
-  margin-top: 28px;
-
   @media (min-width: $tablet-width) {
     padding: 0 30px 0;
   }
@@ -17,6 +15,7 @@
     column-gap: 60px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-items: center;
     row-gap: 60px;
   }
 
@@ -29,20 +28,23 @@
 }
 
 .catalog__item {
-  border-bottom: 1px solid $basic-grey;
+  border-bottom: 1px solid $special-grey3;
   padding: 20px 20px 25px;
 
+  &:first-child {
+    border-top: 1px solid $basic-grey;
+  }
+
   @media (min-width: $tablet-width) {
-    border-style: none;
     background-color: $basic-grey2;
+    border-style: none;
     box-sizing: border-box;
     padding: 0 36px 40px;
     width: 324px;
 
     &:last-child {
-      background-color: $basic-light;
+      background-color: unset;
       border: 2px solid $basic-grey2;
-      padding: 160px 38px 38px;
     }
   }
 
@@ -52,35 +54,47 @@
 }
 
 .catalog__button {
-  margin-top: 17px;
+  grid-area: btn;
   width: 100%;
 
-  @media (min-width: $tablet-width) {
-    margin-top: 33px;
+  &--show-more {
+    background-color: $basic-grey2;
+    color: $secondary-dark;
+    padding: 10px 0 10px;
+
+    &:hover {
+      background-color: $special-grey3;
+    }
+
+    &:active {
+      color: rgba($secondary-dark, 0.3);
+    }
   }
 }
 
-.catalog__button--show-more {
-  background-color: $basic-grey2;
-  color: $secondary-dark;
-  padding: 10px 0 10px;
-}
-
 .catalog__additional-wrapper {
-  margin-top: 25px;
-  margin-bottom: 30px;
-  padding: 0 20px 0;
+  margin: 25px 0 30px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 68px;
-    margin-bottom: 68px;
-    padding: 0 30px 0;
+    margin: 68px 0;
+    position: relative;
+    width: 100%;
+
+    &::after {
+      background-color: $basic-green;
+      content: "";
+      height: 2px;
+      left: 0;
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      z-index: -1;
+    }
   }
 
   @media (min-width: $desktop-width) {
     align-items: flex-end;
     display: flex;
     justify-content: space-between;
-    padding: 0 110px 0;
   }
 }
