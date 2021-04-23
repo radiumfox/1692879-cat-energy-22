@@ -20,7 +20,7 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 64px;
-    padding: 0 110px 0;
+    padding: 0 110px 0 0;
   }
 }
 
@@ -29,8 +29,8 @@
   border-style: none;
   cursor: pointer;
   font-family: "Oswald", "Arial", sans-serif;
-  text-transform: uppercase;
   padding: 0 0 6px;
+  text-transform: uppercase;
 
   &:hover {
     border-bottom: 1px solid rgba($basic-dark, 0.4);
