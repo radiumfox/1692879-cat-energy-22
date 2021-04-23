@@ -34,10 +34,25 @@
     height: 52px;
     padding: 0;
     width: 174px;
+    justify-content: unset;
   }
 
   @media (min-width: $desktop-width) {
-    height: 60px;
+    height: 52px;
     width: 202px;
+  }
+}
+
+.page-header__logo-image {
+  @media (min-width: $tablet-width) {
+    height: 50px;
+    width: 60px;
+    padding-right: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 52px;
+    width: 70px;
+    padding-right: 14px;
   }
 }
