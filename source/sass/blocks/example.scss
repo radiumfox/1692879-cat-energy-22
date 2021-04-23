@@ -2,11 +2,11 @@
   background-color: $basic-grey2;
 
   @media (min-width: $tablet-width) {
-    background-color: $basic-light;
+    background-color: unset;
   }
 
   @media (min-width: $desktop-width) {
-    background: linear-gradient(to bottom, $basic-light 30%, $basic-grey2 30%, $basic-grey2 80%);
+    background: linear-gradient(to bottom, $basic-light 30%, $basic-grey2 30%, $basic-grey2 70%);
     column-gap: 134px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -21,7 +21,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 0 0 110px;
+    padding: 58px 0 0 110px;
   }
 }
 
@@ -72,16 +72,21 @@
   @media (min-width: $tablet-width) {
     padding-bottom: 54px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 70px;
+  }
 }
 
 .example__item {
   position: relative;
   padding-top: 14px;
   width: 124px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &:nth-child(odd) {
-    padding-right: 30px;
-
     @media (min-width: $tablet-width) {
       margin-right: 42px;
     }
@@ -89,6 +94,7 @@
 
   &::before {
     border: 1px solid $special-grey;
+    border-bottom: none;
     border-radius: 3px;
     content: "";
     height: 56px;
@@ -103,6 +109,21 @@
     }
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 124px;
+    background: linear-gradient(to left, $special-grey 14%, transparent 14% 86%, $special-grey 86% 100%);
+    left: 0;
+    top: 56px;
+
+    @media (min-width: $tablet-width) {
+      top: 70px;
+      width: 162px;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     width: 162px;
   }
@@ -112,6 +133,7 @@
   @include font(24px, 24px, normal);
   margin-bottom: 10px;
   text-transform: uppercase;
+  display: inline-block;
 
   @media (min-width: $tablet-width) {
     @include font(30px, 37px, normal);
@@ -124,7 +146,11 @@
   @include font(12px, 12px, normal);
   color: $secondary-dark;
   font-family: "Arial", sans-serif;
-  padding: 0 22px 0;
+  width: 82px;
+
+  @media (min-width: $tablet-width) {
+    @include font(14px, 14px, normal);
+  }
 }
 
 .example__expenses-text {
@@ -154,7 +180,6 @@
   @media (min-width: $desktop-width) {
     flex-direction: row;
     justify-content: space-between;
-    padding-right: 63px;
-    padding-top: 55px;
+    padding: 55px 63px 0 0;
   }
 }
