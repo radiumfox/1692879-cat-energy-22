@@ -15,8 +15,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 64px;
-    padding: 0;
+    margin-right: auto;
+    padding: 0 0 64px;
+    max-width: 640px;
   }
 }
 
@@ -50,8 +51,7 @@
   justify-content: center;
 
   @media (min-width: $desktop-width) {
-    width: 580px;
-    margin: 0 0 0 72px;
+    max-width: 640px;
   }
 }
 
@@ -160,7 +160,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 54%;
+    width: 56%;
   }
 
   &:nth-child(2) {
@@ -171,7 +171,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      width: 40%;
+      width: 45%;
     }
   }
 }

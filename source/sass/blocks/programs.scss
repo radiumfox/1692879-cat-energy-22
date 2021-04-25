@@ -12,11 +12,12 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 1fr 1fr;
-    margin: 0 0 70px;
-    padding: 0 110px;
+    grid-template-columns: auto auto;
+    margin: 0 auto 70px;
+    padding: 0;
     column-gap: 80px;
     row-gap: 0;
+    max-width: 1220px;
   }
 }
 

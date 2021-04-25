@@ -38,8 +38,9 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
-    margin: 32px 0 136px;
-    padding: 0 190px 0;
+    margin: 32px auto 136px;
+    padding: 0;
+    width: 1220px;
   }
 }
 
@@ -134,7 +135,7 @@
 
   @media (min-width: $desktop-width) {
     height: 500px;
-    margin-left: -65px;
+    margin-left: 30px;
     margin-top: unset;
     width: 552px;
   }
