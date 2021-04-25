@@ -33,18 +33,27 @@
 
   &:first-child {
     border-top: 1px solid $basic-grey;
+
+    @media (min-width: $tablet-width) {
+      border-top: none;
+    }
   }
 
   @media (min-width: $tablet-width) {
-    background-color: $basic-grey2;
     border-style: none;
     box-sizing: border-box;
     padding: 0 36px 40px;
     width: 324px;
 
+    &:not(:last-child) {
+      background: linear-gradient(to bottom, transparent 15%, $basic-grey2 15% 100%);
+    }
+
     &:last-child {
       background-color: unset;
       border: 2px solid $basic-grey2;
+      margin-top: auto;
+      height: max-content;
     }
   }
 
