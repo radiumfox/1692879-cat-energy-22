@@ -21,22 +21,31 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 70px 0;
+
+    &--no-padding {
+      padding: 0;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 110px 0;
+    padding: 0;
+    margin: 0 auto;
+    width: 1220px;
 
-    &--no-padding-right {
-      padding-right: 0;
+    &--auto-width {
+      width: auto;
     }
   }
 }
 
 .select-program__fieldset-group {
   @media (min-width: $desktop-width) {
+    align-items: center;
     column-gap: 80px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    width: 1220px;
   }
 }
 
@@ -52,7 +61,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 110px 65px 0;
+    margin: 0 0 65px;
   }
 }
 
@@ -277,8 +286,9 @@
     width: 30px;
 
     @media (min-width: $tablet-width) {
-      height: 40px;
-      width: 40px;
+      top: -2px;
+      height: 38px;
+      width: 38px;
     }
   }
 
@@ -299,8 +309,8 @@
     @media (min-width: $tablet-width) {
       height: 18px;
       width: 18px;
-      top: 12px;
-      left: 12px;
+      top: 9px;
+      left: 11px;
     }
   }
 
@@ -309,7 +319,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 10px 0 10px 60px;
+    padding: 9px 0 9px 60px;
   }
 }
 

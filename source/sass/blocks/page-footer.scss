@@ -1,5 +1,6 @@
 .page-footer__wrapper {
   @media (min-width: $tablet-width) {
+    background-color: $basic-grey2;
     margin-top: 0;
   }
 
@@ -71,7 +72,7 @@
 .page-footer__city {
   @media (min-width: $tablet-width) {
     display: block;
-    margin-top: 30px;
+    padding-top: 18px;
   }
 }
 
@@ -86,9 +87,8 @@
   }
 }
 
-.page-footer__links-wrapper {
+.page-footer__link-wrapper {
   align-items: center;
-  background-color: $basic-grey2;
   display: flex;
   flex-direction: column;
   padding: 39px 20px 28px;
@@ -101,7 +101,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 57px 110px 58px;
+    margin: 0 auto;
+    padding: 57px 0 58px;
+    width: 1220px;
   }
 }
 
