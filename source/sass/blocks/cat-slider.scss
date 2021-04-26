@@ -1,13 +1,9 @@
 .cat-slider {
-  @media (min-width: $tablet-width) {
-    background: linear-gradient(to bottom, $basic-light 30%, $basic-grey2 30%, $basic-grey2 70%);
-  }
-
   @media (min-width: $desktop-width) {
     align-items: flex-end;
-    background-color: unset;
     display: flex;
     flex-direction: row;
+    z-index: 0;
   }
 }
 
@@ -15,12 +11,13 @@
   padding: 0 0 25px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 30px 67px;
+    padding: 0 0 67px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 64px;
-    padding: 0 110px 0;
+    margin-right: auto;
+    padding: 0 0 64px;
+    max-width: 640px;
   }
 }
 
@@ -29,6 +26,7 @@
   border-style: none;
   cursor: pointer;
   font-family: "Oswald", "Arial", sans-serif;
+  padding: 0 0 6px;
   text-transform: uppercase;
   padding: 0 0 6px;
 
@@ -49,14 +47,13 @@
   }
 }
 
-.cat-slider__list {
-  @include reset-list;
-  padding-bottom: 23px;
-}
-
 .cat-slider__range-wrapper {
   display: flex;
   justify-content: center;
+
+  @media (min-width: $desktop-width) {
+    max-width: 640px;
+  }
 }
 
 .cat-slider__scale {
@@ -128,17 +125,65 @@
   }
 }
 
-.cat-slider__item {
+.cat-slider__list {
+  @include reset-list;
+  padding-bottom: 23px;
   display: flex;
   justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    max-width: 708px;
+    justify-content: center;
+    margin: 0 auto 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 690px;
+    margin: 0;
+  }
+}
+
+.cat-slider__item {
+  display: none;
+
+  &--active {
+    display: block;
+    text-align: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 50%;
+    z-index: 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 56%;
+  }
+
+  &:nth-child(2) {
+    @media (min-width: $tablet-width) {
+      flex-direction: row-reverse;
+      width: 43%;
+      z-index: 1;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 45%;
+    }
+  }
 }
 
 .cat-slider__image {
-  width: auto;
   text-align: center;
   display: inline-block;
+  width: auto;
 
   @media (min-width: $tablet-width) {
     height: 530px;
+    margin-left: 0;
   }
 }

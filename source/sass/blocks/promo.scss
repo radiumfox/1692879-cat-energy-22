@@ -1,8 +1,4 @@
 .promo {
-  background: linear-gradient(rgba(($basic-green), 0.85), rgba(($basic-green), 0.85)), url("../img/promo-bg-mobile.jpg");
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: auto 302px;
   color: $basic-light;
   position: relative;
 
@@ -30,6 +26,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  margin-bottom: 22px;
   text-align: center;
   padding: 0 20px 0;
   margin-bottom: 22px;
@@ -43,8 +40,32 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
-    margin: 32px 0 136px;
-    padding: 0 190px 0;
+    margin: 32px auto 136px;
+    padding: 0;
+    width: 1220px;
+  }
+}
+
+.promo__text {
+  align-items: center;
+  background: linear-gradient(rgba(($basic-green), 0.85), rgba(($basic-green), 0.85)), url("../img/promo-bg-mobile.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 302px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    background: none;
+    padding: 0 80px 0;
+    width: unset;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
   }
 }
 
@@ -68,6 +89,7 @@
     @include font(60px, 60px, normal);
     min-width: 414px;
     max-width: 420px;
+    min-width: 414px;
     padding-bottom: 40px;
   }
 
@@ -79,9 +101,9 @@
 .promo__slogan {
   @include font(14px, 14px, normal);
   margin: 0;
-  text-transform: uppercase;
-  padding-bottom: 30px;
   max-width: 280px;
+  padding-bottom: 30px;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     @include font(20px, 20px, normal);
@@ -94,12 +116,17 @@
 }
 
 .promo__button {
+  order: 2;
   width: 280px;
   order: 2;
 
   @media (min-width: $tablet-width) {
     @include font(20px, 20px, normal);
+    margin: 0 80px 0;
+    order: initial;
     padding: 14px 26px;
+    position: absolute;
+    top: 257px;
     width: 192px;
     order: initial;
     position: absolute;
@@ -111,20 +138,28 @@
     top: 350px;
     margin: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    top: 350px;
+  }
 }
 
 .promo__image {
   display: block;
+  margin-top: -135px;
 
   @media (min-width: $tablet-width) {
-    width: 710px;
+    margin-top: -75px;
     height: 610px;
+    width: 710px;
     z-index: -1;
   }
 
   @media (min-width: $desktop-width) {
-    width: 552px;
     height: 500px;
-    margin-left: -65px;
+    margin-left: 30px;
+    margin-top: unset;
+    width: 552px;
   }
 }
