@@ -1,23 +1,49 @@
+.promo-stock {
+  background-image: url("../img/promo-stock-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: auto;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/promo-stock-mobile@2x.jpg");
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/promo-stock-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-stock-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/promo-stock-desktop.jpg");
+    height: 290px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-stock-desktop@2x.jpg");
+    }
+  }
+}
+
 .promo-stock__wrapper {
-  background-color: $basic-green;
   display: flex;
   flex-direction: column-reverse;
   height: 290px;
-  margin: 0 20px 0;
+  margin-top: 40px;
 
   @media (min-width: $tablet-width) {
     align-items: center;
     flex-direction: row;
     height: 200px;
     justify-content: flex-end;
-    margin: 0 30px 0;
+    margin-top: 70px;
   }
 
   @media (min-width: $desktop-width) {
     flex-direction: column;
-    height: 290px;
     justify-content: flex-end;
-    margin-right: 110px;
   }
 }
 
