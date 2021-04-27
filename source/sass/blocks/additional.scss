@@ -27,8 +27,13 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 0;
-    padding: 0 0 0 110px;
+    margin: 0 auto;
+    padding: 0;
+
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    width: 1220px;
   }
 }
 
@@ -66,7 +71,7 @@
     column-gap: 48px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 15px 0 18px;
+    padding: 15px 0 17px;
   }
 }
 
