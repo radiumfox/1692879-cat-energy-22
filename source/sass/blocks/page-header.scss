@@ -39,7 +39,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    height: 52px;
+    height: 60px;
     width: 202px;
   }
 }
@@ -52,8 +52,15 @@
   }
 
   @media (min-width: $desktop-width) {
-    height: 52px;
+    height: 60px;
     width: 70px;
     padding-right: 14px;
+  }
+}
+
+.page-header__logo-text {
+  @media (min-width: $desktop-width) {
+    height: 22px;
+    width: 118px;
   }
 }

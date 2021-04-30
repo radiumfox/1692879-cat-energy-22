@@ -8,10 +8,10 @@
 }
 
 .cat-slider__wrapper {
-  padding: 0 0 25px;
+  padding: 0 0 30px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 0 67px;
+    padding: 62px 0 67px;
   }
 
   @media (min-width: $desktop-width) {
@@ -50,8 +50,13 @@
   display: flex;
   justify-content: center;
 
+  @media (min-width: $tablet-width) {
+    width: 600px;
+    margin: 0 auto;
+  }
+
   @media (min-width: $desktop-width) {
-    max-width: 640px;
+    padding-left: 42px;
   }
 }
 
@@ -69,6 +74,7 @@
     border-style: none;
     height: 6px;
     width: 428px;
+    margin: 5px px;
   }
 }
 
@@ -126,20 +132,22 @@
 
 .cat-slider__list {
   @include reset-list;
-  padding-bottom: 23px;
+  padding-bottom: 25px;
   display: flex;
   justify-content: center;
 
   @media (min-width: $tablet-width) {
     display: flex;
     max-width: 708px;
-    justify-content: center;
+    justify-content: left;
+    padding-left: 10px;
     margin: 0 auto 0;
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 690px;
-    margin: 0;
+    width: 690px;
+    margin: 0 0 0 -10px;
+    padding-left: 0;
   }
 }
 
@@ -160,7 +168,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 56%;
+    width: 54%;
   }
 
   &:nth-child(2) {
@@ -171,7 +179,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      width: 45%;
+      width: 40%;
     }
   }
 }

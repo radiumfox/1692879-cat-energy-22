@@ -7,8 +7,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 470px;
-    min-width: 442px;
+    max-width: 480px;
+    min-width: 465px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 500px;
+    max-width: 550px;
   }
 }
 
@@ -22,7 +27,7 @@
 
   @media (min-width: $tablet-width) {
     margin-top: auto;
-    margin-left: 15px;
+    margin-left: 25px;
     padding-top: 0;
     padding-bottom: 12px;
 

@@ -14,7 +14,7 @@
   padding: 27px 20px 0;
 
   @media (min-width: $tablet-width) {
-    padding: 0 30px 0;
+    padding: 43px 30px 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -34,7 +34,7 @@
 
 .example__features {
   @media (min-width: $tablet-width) {
-    align-items: baseline;
+    align-items: flex-start;
     display: flex;
     justify-content: space-between;
   }
@@ -66,7 +66,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 58px;
+    padding-top: 56px;
     padding-bottom: 145px;
   }
 }
@@ -78,6 +78,7 @@
   padding-bottom: 25px;
 
   @media (min-width: $tablet-width) {
+    @include font(16px, 24px, normal);
     padding-bottom: 54px;
   }
 
@@ -159,6 +160,10 @@
   @media (min-width: $tablet-width) {
     @include font(14px, 14px, normal);
   }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+  }
 }
 
 .example__expenses-text {
@@ -168,6 +173,7 @@
 
   @media (min-width: $tablet-width) {
     @include font(20px, 20px, normal);
+    text-align: right;
 
     &:not(:last-child) {
       padding-bottom: 10px;
@@ -178,11 +184,12 @@
 .example__expenses {
   display: flex;
   justify-content: center;
-  padding: 28px 0 42px;
+  padding: 20px 0 42px;
 
   @media (min-width: $tablet-width) {
     width: 24vw;
     flex-direction: column;
+    padding: 10px 0 0;
   }
 
   @media (min-width: $desktop-width) {

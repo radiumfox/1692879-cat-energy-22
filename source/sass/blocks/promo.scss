@@ -9,7 +9,7 @@
 
   @media (min-width: $desktop-width) {
     &::before {
-      background: linear-gradient(rgba(($basic-green), 0.85), rgba(($basic-green), 0.85)), url("../img/promo-bg.jpg");
+      background: linear-gradient(rgba(($basic-green), 0.85), rgba(($basic-green), 0.85)), url("../img/promo-bg-desktop.jpg");
       background-repeat: no-repeat;
       content: "";
       height: 694px;
@@ -38,8 +38,8 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
-    margin: 32px auto 136px;
-    padding: 0;
+    margin: 26px auto 136px;
+    padding: 0 0 0 10vw;
     width: 1220px;
   }
 }
@@ -55,10 +55,20 @@
   height: 302px;
   width: 100%;
 
+  @media (min-resolution: 2dppx) {
+    background: linear-gradient(rgba(($basic-green), 0.85), rgba(($basic-green), 0.85)), url("../img/promo-bg-mobile@2x.jpg");
+    background-position: center top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 302px;
+    width: 100%;
+  }
+
   @media (min-width: $tablet-width) {
     display: block;
     background: none;
-    padding: 0 80px 0;
+    padding: 0 87px 0;
     width: unset;
   }
 
@@ -77,7 +87,7 @@
     @include font(60px, 60px, normal);
     min-width: 414px;
     max-width: 420px;
-    padding-bottom: 40px;
+    padding: 0 0 40px;
   }
 
   @media (min-width: $desktop-width) {
@@ -109,21 +119,16 @@
   @media (min-width: $tablet-width) {
     @include font(20px, 20px, normal);
     margin: 0 80px 0;
-    padding: 14px 26px;
+    padding: 16px 26px;
     position: absolute;
-    top: 257px;
+    top: 230px;
     width: 192px;
     order: initial;
   }
 
   @media (min-width: $desktop-width) {
-    top: 350px;
+    top: 310px;
     margin: 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin: 0;
-    top: 350px;
   }
 }
 
@@ -132,7 +137,7 @@
   margin-top: -135px;
 
   @media (min-width: $tablet-width) {
-    margin-top: -75px;
+    margin-top: -100px;
     height: 610px;
     width: 710px;
     z-index: -1;
@@ -140,8 +145,8 @@
 
   @media (min-width: $desktop-width) {
     height: 500px;
-    margin-left: 30px;
-    margin-top: unset;
+    margin-left: -40px;
+    margin-top: 0;
     width: 552px;
   }
 }
