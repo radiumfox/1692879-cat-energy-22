@@ -39,7 +39,7 @@
   @media (min-width: $desktop-width) {
     flex-direction: row;
     margin: 26px auto 136px;
-    padding: 0 0 0 10vw;
+    padding: 0 0 0 80px;
     width: 1220px;
   }
 }
@@ -59,17 +59,13 @@
     background: linear-gradient(rgba(($basic-green), 0.85), rgba(($basic-green), 0.85)), url("../img/promo-bg-mobile@2x.jpg");
     background-position: center top;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    height: 302px;
-    width: 100%;
   }
 
   @media (min-width: $tablet-width) {
     display: block;
     background: none;
     padding: 0 87px 0;
-    width: unset;
+    width: initial;
   }
 
   @media (min-width: $desktop-width) {

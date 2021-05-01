@@ -6,6 +6,8 @@
 
   @media (min-width: $desktop-width) {
     position: relative;
+    // width: 1220px;
+    margin: 0 auto 0;
   }
 }
 
@@ -110,7 +112,7 @@
   padding: 0 0 32px;
   border-bottom: 1px solid $basic-grey;
   display: block;
-  width: 88vw;
+  width: 100%;
   text-align: center;
 
   @media (min-width: $tablet-width) {
@@ -141,23 +143,25 @@
   text-decoration: none;
   display: flex;
   align-items: center;
-  width: 88vw;
+  width: 100%;
   justify-content: space-between;
   border-top: 1px solid $basic-grey;
-
-  &-text {
-    font-family: "Arial", sans-serif;
-  }
 
   @media (min-width: $tablet-width) {
     padding: 0;
     border-style: none;
     justify-content: flex-end;
     width: auto;
+  }
+}
 
-    &-icon {
-      padding-left: 22px;
-    }
+.page-footer__copyright-text {
+  font-family: "Arial", sans-serif;
+}
+
+.page-footer__copyright-icon {
+  @media (min-width: $tablet-width) {
+    padding-left: 22px;
   }
 }
 

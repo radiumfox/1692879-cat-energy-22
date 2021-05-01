@@ -35,6 +35,8 @@
   font-family: "Arial", sans-serif;
   justify-content: space-between;
 
+  counter-reset: section;
+
   @media (min-width: $tablet-width) {
     width: 82vw;
     display: grid;
@@ -53,49 +55,22 @@
   display: flex;
   position: relative;
 
-  &--term::after,
-  &--natural::after,
-  &--powder::after,
-  &--meal::after {
-    @media (min-width: $tablet-width) {
-      position: absolute;
-      content: "";
-      background-repeat: no-repeat;
-      top: 0;
-      left: 120px;
-      z-index: -1;
-    }
-  }
-
-  &--natural::after {
-    background-image: url("../img/icons/features-number1.svg");
-    width: 71px;
-    height: 221px;
-  }
-
-  &--powder::after {
-    background-image: url("../img/icons/features-number2.svg");
-    width: 113px;
-    height: 229px;
-  }
-
-  &--meal::after {
-    background-image: url("../img/icons/features-number3.svg");
-    width: 112px;
-    height: 232px;
-  }
-
-  &--term::after {
-    background-image: url("../img/icons/features-number4.svg");
-    width: 121px;
-    height: 227px;
-  }
-
   @media (min-width: $tablet-width) {
     @include font (16px, 24px, normal);
-    display: flex;
     flex-direction: column;
     padding-left: 0;
+
+    &::before {
+      @include font (280px, auto, normal);
+      font-family: "Oswald", "Arial", sans-serif;
+      color: $basic-grey2;
+      position: absolute;
+      counter-increment: section;
+      content: counter(section);
+      z-index: -1;
+      top: 90px;
+      left: 118px;
+    }
   }
 }
 
