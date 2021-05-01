@@ -11,13 +11,12 @@
   padding: 0 0 30px;
 
   @media (min-width: $tablet-width) {
-    padding: 62px 0 67px;
+    padding: 0 0 67px;
   }
 
   @media (min-width: $desktop-width) {
     margin-right: auto;
     padding: 0 0 64px;
-    width: 640px;
   }
 }
 
@@ -50,13 +49,8 @@
   display: flex;
   justify-content: center;
 
-  @media (min-width: $tablet-width) {
-    width: 600px;
-    margin: 0 auto;
-  }
-
   @media (min-width: $desktop-width) {
-    padding-left: 42px;
+    max-width: 640px;
   }
 }
 
@@ -74,7 +68,7 @@
     border-style: none;
     height: 6px;
     width: 428px;
-    margin: 5px px;
+    margin: 5px;
   }
 }
 
@@ -132,22 +126,20 @@
 
 .cat-slider__list {
   @include reset-list;
-  padding-bottom: 25px;
+  padding-bottom: 23px;
   display: flex;
   justify-content: center;
 
   @media (min-width: $tablet-width) {
     display: flex;
     max-width: 708px;
-    justify-content: left;
-    padding-left: 10px;
+    justify-content: center;
     margin: 0 auto 0;
   }
 
   @media (min-width: $desktop-width) {
-    width: 690px;
-    margin: 0 0 0 -10px;
-    padding-left: 0;
+    min-width: 640px;
+    margin: 0;
   }
 }
 
@@ -168,7 +160,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 54%;
+    width: 53%;
   }
 
   &:nth-child(2) {
