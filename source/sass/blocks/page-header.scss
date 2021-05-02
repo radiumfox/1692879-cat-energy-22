@@ -31,6 +31,14 @@
   text-decoration: none;
   width: 60%;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @media (min-width: $tablet-width) {
     height: 52px;
     padding: 0;
@@ -39,7 +47,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    height: 52px;
+    height: 60px;
     width: 202px;
   }
 }
@@ -52,8 +60,15 @@
   }
 
   @media (min-width: $desktop-width) {
-    height: 52px;
+    height: 60px;
     width: 70px;
     padding-right: 14px;
+  }
+}
+
+.page-header__logo-text {
+  @media (min-width: $desktop-width) {
+    height: 22px;
+    width: 118px;
   }
 }

@@ -138,7 +138,7 @@
   white-space: nowrap;
 
   @media (min-width: $tablet-width) {
-    @include font(20px, auto, normal);
+    @include font(20px, 1, normal);
   }
 }
 

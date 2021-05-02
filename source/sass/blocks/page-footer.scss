@@ -58,8 +58,6 @@
   @include font(14px, 20px, normal);
   color: $secondary-dark;
   font-family: "Arial", sans-serif;
-  font-style: normal;
-  line-height: 20px;
   width: 140px;
 
   @media (min-width: $tablet-width) {
@@ -92,6 +90,7 @@
   display: flex;
   flex-direction: column;
   padding: 39px 20px 28px;
+  background-color: $basic-grey2;
 
   @media (min-width: $tablet-width) {
     align-items: baseline;
@@ -109,35 +108,110 @@
 
 .page-footer__logo {
   padding: 0 0 32px;
+  border-bottom: 1px solid $basic-grey;
+  display: block;
+  width: 100%;
+  text-align: center;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 0;
+    border-style: none;
+    width: auto;
   }
 }
 
 .page-footer__social-list {
   @include reset-list;
-  border-bottom: 1px solid $basic-grey;
-  border-top: 1px solid $basic-grey;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 20px 0;
   position: relative;
-  width: 280px;
+  width: 130px;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
-    border-style: none;
     padding: 0;
   }
 }
 
 .page-footer__copyright {
-  @include font(16px, auto, normal);
+  @include font(16px, 1, normal);
   color: $secondary-dark;
   padding: 22px 0 0;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  border-top: 1px solid $basic-grey;
 
   @media (min-width: $tablet-width) {
     padding: 0;
+    border-style: none;
+    justify-content: flex-end;
+    width: auto;
+  }
+}
+
+.page-footer__copyright:hover .page-footer__copyright-text {
+  opacity: 0.8;
+}
+
+.page-footer__copyright:active .page-footer__copyright-text {
+  opacity: 0.6;
+}
+
+.page-footer__copyright:hover .page-footer__copyright-icon {
+  fill: $basic-green;
+}
+
+.page-footer__copyright:active .page-footer__copyright-icon {
+  fill: $basic-green;
+  opacity: 0.3;
+}
+
+.page-footer__copyright-icon {
+  fill: $secondary-dark4;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 22px;
+  }
+}
+
+.page-footer__social-link:hover .page-footer__social-icon {
+  fill: $basic-green;
+}
+
+.page-footer__social-link:active .page-footer__social-icon {
+  fill: $basic-green;
+  opacity: 0.3;
+}
+
+.page-footer__social-icon {
+  fill: $secondary-dark4;
+
+  @media (min-width: $tablet-width) {
+    &--vkontakte {
+      width: 29px;
+      height: 17px;
+    }
+
+    &--instagram {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--facebook {
+      width: 20px;
+      height: 29px;
+    }
   }
 }

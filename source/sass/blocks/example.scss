@@ -20,15 +20,11 @@
   @media (min-width: $desktop-width) {
     padding: 0;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    width: 1220px;
-  }
-}
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 134px;
 
-.example__container {
-  @media (min-width: $desktop-width) {
-    padding-right: 134px;
+    width: 1220px;
   }
 }
 

@@ -1,15 +1,16 @@
 .features__wrapper {
-  margin-bottom: 42px;
+  margin-bottom: 26px;
   padding: 0 20px 0;
 
   @media (min-width: $tablet-width) {
     border-bottom: 1px solid $basic-grey;
-    padding: 0 30px 47px;
+    padding: 0 30px 56px;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
     border-style: none;
-    margin: 0 auto 11px;
+    margin: 0 auto;
     padding: 0;
     width: 1220px;
   }
@@ -22,7 +23,7 @@
 
   @media (min-width: $tablet-width) {
     @include font(60px, 60px, normal);
-    margin-bottom: 70px;
+    padding: 0 0 72px;
   }
 }
 
@@ -33,47 +34,76 @@
   flex-direction: column;
   font-family: "Arial", sans-serif;
   justify-content: space-between;
+  counter-reset: section;
 
   @media (min-width: $tablet-width) {
+    width: 82vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 135px;
-    row-gap: 37px;
+    row-gap: 90px;
   }
 
   @media (min-width: $desktop-width) {
-    column-gap: 90px;
-    justify-content: space-between;
+    column-gap: 100px;
     grid-template-columns: repeat(4, 1fr);
+    width: 1220px;
   }
 }
 
 .features__item {
-  width: 200px;
-  padding-left: 80px;
+  display: flex;
   position: relative;
-
-  &:not(:last-child) {
-    padding-bottom: 30px;
-  }
-
-  &::before {
-    background-color: $basic-green;
-    content: "";
-    height: 60px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 60px;
-
-    @media (min-width: $tablet-width) {
-      width: 80px;
-      height: 80px;
-    }
-  }
 
   @media (min-width: $tablet-width) {
     @include font (16px, 24px, normal);
-    padding: 112px 0 0 0;
+    flex-direction: column;
+    padding-left: 0;
+
+    &::before {
+      @include font (280px, 1, normal);
+      font-family: "Oswald", "Arial", sans-serif;
+      color: $basic-grey2;
+      position: absolute;
+      counter-increment: section;
+      content: counter(section);
+      z-index: -1;
+      top: -38px;
+      left: 118px;
+    }
+  }
+}
+
+.features__text {
+  margin: 0;
+  width: 62vw;
+  padding-left: 20px;
+  min-height: 54px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 31px;
+    padding-left: 0;
+    padding-bottom: 44px;
+    width: 32vw;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 220px;
+  }
+}
+
+.features__icon-wrapper {
+  background-color: $basic-green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+    margin: 0;
   }
 }
