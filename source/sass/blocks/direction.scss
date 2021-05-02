@@ -1,0 +1,136 @@
+.direction {
+  background-color: $basic-grey2;
+  padding: 30px 20px 22px 18px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 100;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &--pro::before {
+    background-image: url("../img/icons/icon-pro.svg");
+    width: 67px;
+    height: 50px;
+    top: 24px;
+    left: 12px;
+
+    @media (min-width: $tablet-width) {
+      width: 268px;
+      height: 200px;
+      top: 90px;
+      left: calc(50% + 58px);
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 135px;
+      height: 100px;
+      top: 46px;
+      left: 32px;
+    }
+  }
+
+  &--slim::before {
+    background-image: url("../img/icons/icon-slim.svg");
+    top: 22px;
+    left: 22px;
+    width: 50px;
+    height: 53px;
+
+    @media (min-width: $tablet-width) {
+      width: 200px;
+      height: 212px;
+      top: 80px;
+      left: calc(50% + 92px);
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 100px;
+      height: 106px;
+      top: 42px;
+      left: 52px;
+    }
+  }
+
+
+  @media (min-width: $tablet-width) {
+    padding: 80px 62px 57px 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 40px 50px 55px;
+  }
+}
+
+.direction__title {
+  @include font(24px, 36px, normal);
+  margin: 0;
+  padding-bottom: 30px;
+  padding-left: 72px;
+  position: relative;
+  text-align: left;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include font(36px, 36px, normal);
+    padding: 0 0 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 36px 0 0 162px;
+  }
+}
+
+.direction__description {
+  border-bottom: 1px solid $basic-grey;
+  color: $secondary-dark;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    @include font(16px, 24px, normal);
+    border-style: none;
+    padding: 0 0 56px;
+    width: 377px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 73px 0 22px 0;
+    width: 460px;
+  }
+}
+
+.direction__link {
+  @include font(16px, 16px, normal);
+  color: $basic-dark;
+  display: flex;
+  align-items: center;
+  padding: 18px 0 0 0;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include font(20px, 1, normal);
+    padding: 0 48px 0 0;
+  }
+}
+
+.direction__arrow {
+  width: 24px;
+  padding-left: 20px;
+  transition: transform 0.2s ease;
+}
+
+.direction__link:hover .direction__arrow {
+  transform: scale(1.3, 1);
+  padding-left: 21px;
+}

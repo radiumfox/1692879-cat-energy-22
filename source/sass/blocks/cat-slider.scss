@@ -39,7 +39,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    @include font(20px, auto, normal);
+    @include font(20px, 1, normal);
     border-bottom: 1px dotted $special-grey;
     padding: 0 0 6px;
   }

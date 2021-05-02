@@ -63,7 +63,7 @@
 
   @media (min-width: $desktop-width) {
     &--white-font {
-      @include font(20px, auto, 400);
+      @include font(20px, 1, 400);
       color: $basic-light;
     }
   }

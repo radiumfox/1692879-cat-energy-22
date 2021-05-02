@@ -6,8 +6,6 @@
 
   @media (min-width: $desktop-width) {
     position: relative;
-    // width: 1220px;
-    margin: 0 auto 0;
   }
 }
 
@@ -145,7 +143,7 @@
 }
 
 .page-footer__copyright {
-  @include font(16px, auto, normal);
+  @include font(16px, 1, normal);
   color: $secondary-dark;
   padding: 22px 0 0;
   text-decoration: none;
@@ -163,46 +161,42 @@
   }
 }
 
-.page-footer__copyright-text {
-  font-family: "Arial", sans-serif;
+.page-footer__copyright:hover .page-footer__copyright-text {
+  opacity: 0.8;
+}
 
-  &:hover {
-    opacity: 0.8;
-  }
+.page-footer__copyright:active .page-footer__copyright-text {
+  opacity: 0.6;
+}
 
-  &:active {
-    opacity: 0.6;
-  }
+.page-footer__copyright:hover .page-footer__copyright-icon {
+  fill: $basic-green;
+}
+
+.page-footer__copyright:active .page-footer__copyright-icon {
+  fill: $basic-green;
+  opacity: 0.3;
 }
 
 .page-footer__copyright-icon {
   fill: $secondary-dark4;
-
-  &:hover {
-    fill: $basic-green;
-  }
-
-  &:active {
-    fill: $basic-green;
-    opacity: 0.3;
-  }
 
   @media (min-width: $tablet-width) {
     padding-left: 22px;
   }
 }
 
+.page-footer__social-link:hover .page-footer__social-icon {
+  fill: $basic-green;
+}
+
+.page-footer__social-link:active .page-footer__social-icon {
+  fill: $basic-green;
+  opacity: 0.3;
+}
+
 .page-footer__social-icon {
   fill: $secondary-dark4;
-
-  &:hover {
-    fill: $basic-green;
-  }
-
-  &:active {
-    fill: $basic-green;
-    opacity: 0.3;
-  }
 
   @media (min-width: $tablet-width) {
     &--vkontakte {
