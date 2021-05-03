@@ -19,8 +19,8 @@
   height: 18px;
   padding: 0;
   position: absolute;
-  right: 23px;
-  top: -40px;
+  right: 20px;
+  top: -42px;
   width: 24px;
 
   @media (min-width: $tablet-width) {
@@ -29,14 +29,14 @@
 }
 
 .main-nav--opened .main-nav__toggle {
-  background-image: url("../img/toggle-cross.svg");
+  background-image: url("../img/icons/toggle-cross.svg");
   background-repeat: no-repeat;
   height: 20px;
   right: 23px;
 }
 
 .main-nav--closed .main-nav__toggle {
-  background-image: url("../img/toggle-burger.svg");
+  background-image: url("../img/icons/toggle-burger.svg");
   background-repeat: no-repeat;
   height: 18px;
   width: 24px;
