@@ -1,8 +1,8 @@
 .select-program__wrapper {
-  margin: 40px 0 32px;
+  margin: 36px 0 32px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 66px;
+    margin: 66px 0 72px;
   }
 }
 
@@ -13,6 +13,16 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 65px;
+
+    &--additional {
+      margin-bottom: 50px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--additional {
+      margin-bottom: 60px;
+    }
   }
 }
 
@@ -52,7 +62,7 @@
 .select-program__fieldset--grey-border {
   border-bottom: 1px solid $special-grey3;
   border-top: 1px solid $special-grey3;
-  padding: 20px;
+  padding: 20px 0;
 
   @media (min-width: $tablet-width) {
     border: 1px solid $special-grey3;
@@ -73,6 +83,8 @@
   align-items: center;
   display: flex;
   margin-bottom: 14px;
+
+  position: relative;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 20px;
@@ -95,7 +107,7 @@
   display: inline-block;
   margin: 0;
   max-width: 187px;
-  padding: 0 23px 34px 20px;
+  padding: 0 18px 33px 20px;
   vertical-align: middle;
   width: auto;
 
@@ -105,6 +117,10 @@
     margin-left: 30px;
     max-width: fit-content;
     padding: 0 40px 76px;
+
+    &--padding-less {
+      padding: 0 40px 56px;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -127,6 +143,10 @@
     top: 14px;
     width: 100%;
     z-index: -1;
+
+    @media (min-width: $tablet-width) {
+      top: 20px;
+    }
   }
 }
 
@@ -165,30 +185,24 @@
     border-color: $status-error;
   }
 
-  &--email {
-    background: url("../img/icon-email.svg") no-repeat;
-    background-size: 18px 13px;
-    background-position: 92%;
-
-    @media (min-width: $tablet-width) {
-      background-position: 95%;
-    }
-  }
-
-  &--phone {
-    background: url("../img/icon-phone.svg") no-repeat;
-    background-size: 19px 19px;
-    background-position: 92%;
-
-    @media (min-width: $tablet-width) {
-      background-position: 95%;
-    }
-  }
-
   @media (min-width: $tablet-width) {
     height: 52px;
     margin-left: 20px;
   }
+}
+
+.select-program__icon {
+  position: absolute;
+  right: 13px;
+  fill: $secondary-dark3;
+}
+
+.select-program__text-input:focus + .select-program__icon {
+  fill: $basic-green;
+}
+
+.select-program__text-input--invalid + .select-program__icon {
+  fill: $status-error;
 }
 
 .select-program__textarea {
@@ -234,11 +248,12 @@
 }
 
 .select-program__button {
-  padding: 10px 0 10px;
+  padding: 10px 0;
   width: 280px;
 
   @media (min-width: $tablet-width) {
     @include font(20px, 20px, normal);
+    padding: 15px 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -272,7 +287,7 @@
 }
 
 .select-program__label--radio {
-  padding: 8px 0 8px 45px;
+  padding: 6px 0 6px 45px;
   position: relative;
 
   &::before {
@@ -321,9 +336,13 @@
   @media (min-width: $tablet-width) {
     padding: 9px 0 9px 60px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 7px 0 7px 60px;
+  }
 }
 
-.select-program__control-list--additional {
+.select-program__fieldset--additional .select-program__control-list {
   display: flex;
   flex-direction: column;
 
@@ -333,6 +352,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     row-gap: 32px;
+    width: 74vw;
   }
 
   @media (min-width: $desktop-width) {
@@ -342,26 +362,30 @@
   }
 }
 
-.select-program__control-item--additional {
+.select-program__fieldset--additional .select-program__control-item {
   margin-bottom: 12px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 222px;
+  }
 }
 
 .select-program__label--checkbox {
   position: relative;
-  padding: 10px 0 10px 60px;
+  padding: 3px 0 10px 46px;
 
   &::before {
     border: 1px solid $special-grey;
     content: "";
-    height: 30px;
+    height: 29px;
     left: 0;
     position: absolute;
-    width: 30px;
-    top: 4px;
+    width: 29px;
+    top: 0;
 
     @media (min-width: $tablet-width) {
       top: 0;
@@ -375,7 +399,7 @@
   }
 
   .select-program__checkbox:checked + &::after {
-    background-image: url("../img/icon-checkbox.svg");
+    background-image: url("../img/icons/icon-checkbox.svg");
     content: "";
     height: 14px;
     left: 7px;
