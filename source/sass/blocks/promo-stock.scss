@@ -4,6 +4,25 @@
   background-position: center;
   background-size: cover;
   width: auto;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icons/icon-gift.svg");
+    width: 58px;
+    height: 62px;
+    top: 64px;
+    left: calc(50% - 29px);
+
+    @media (min-width: $tablet-width) {
+      left: 90px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: calc(50% - 29px);
+    }
+  }
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/promo-stock-mobile@2x.jpg");
@@ -54,6 +73,7 @@
   margin: 0;
   padding: 0 60px 43px;
   text-align: center;
+  min-width: 164px;
 
   @media (min-width: $tablet-width) {
     padding: 0 124px 0 0;

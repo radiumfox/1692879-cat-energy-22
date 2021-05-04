@@ -18,7 +18,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    row-gap: 60px;
+    row-gap: 68px;
   }
 
   @media (min-width: $desktop-width) {
@@ -44,7 +44,7 @@
   @media (min-width: $tablet-width) {
     border-style: none;
     box-sizing: border-box;
-    padding: 0 36px 40px;
+    padding: 0 38px 40px;
     width: 324px;
 
     &:not(:last-child) {
@@ -52,15 +52,19 @@
     }
 
     &:last-child {
-      background-color: unset;
+      background-color: none;
       border: 2px solid $basic-grey2;
-      margin-top: auto;
-      height: max-content;
+      margin-top: 74px;
     }
   }
 
   @media (min-width: $desktop-width) {
     width: 245px;
+
+    &:last-child {
+      margin-top: 78px;
+      padding: 0 36px 38px;
+    }
   }
 }
 
@@ -100,6 +104,14 @@
       top: 20px;
       width: 100%;
       z-index: -1;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 72px 0 86px;
+
+    &::after {
+      top: 24px;
     }
   }
 }
