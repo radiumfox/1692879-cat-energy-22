@@ -35,7 +35,7 @@
   @include font(16px, 20px, normal);
   margin: 0;
   max-width: 80px;
-  padding: 0 0 18px;
+  padding: 0 0 15px;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
@@ -43,7 +43,7 @@
     margin: 0 auto;
     max-width: 155px;
     text-align: center;
-    padding-bottom: 0 0 18px;
+    padding: 0 0 18px;
   }
 
   @media (min-width: $desktop-width) {
@@ -54,21 +54,19 @@
 .product-card__link-image {
   grid-area: img;
   justify-self: center;
+  padding: 0;
+  margin: 0;
 }
 
 .product-card__image {
   @media (min-width: $tablet-width) {
-    padding: 0 0 34px;
+    padding: 0 0 30px;
     height: auto;
     width: auto;
+  }
 
-    &--small {
-      padding-top: 28px;
-
-      @media (min-width: $desktop-width) {
-        padding-top: 30px;
-      }
-    }
+  @media (min-width: $desktop-width) {
+    padding: 0 0 38px;
   }
 }
 
@@ -78,12 +76,12 @@
   color: $secondary-dark;
   font-family: "Arial", sans-serif;
   margin: 0;
-  padding: 0 0 22px;
+  padding: 0 0 20px;
 
   @media (min-width: $tablet-width) {
     @include font(16px, 16px, normal);
     margin: 0 auto 0;
-    padding-bottom: 32px;
+    padding-bottom: 28px;
   }
 }
 
@@ -93,8 +91,9 @@
   grid-template-columns: 1fr 1fr;
 
   @media (min-width: $tablet-width) {
-    column-gap: 147px;
-    padding-bottom: 10px;
+    column-gap: 140px;
+    padding-bottom: 11px;
+    padding-top: 5px;
     position: relative;
 
     &::before {
@@ -108,7 +107,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    column-gap: 65px;
+    column-gap: 60px;
   }
 }
 

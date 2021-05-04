@@ -16,6 +16,7 @@
   @include font(14px, 18px, normal);
   margin: 0;
   text-transform: uppercase;
+  width: 72vw;
 
   @media (min-width: $tablet-width) {
     @include font(20px, 30px, normal);
@@ -31,11 +32,11 @@
   @media (min-width: $tablet-width) {
     @include font(60px, 60px, normal);
     border-style: none;
-    padding: 65px 30px 84px;
+    padding: 65px 30px 90px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 74px 0 84px;
+    padding: 74px 0 86px;
     margin: 0 auto;
     width: 1220px;
   }
