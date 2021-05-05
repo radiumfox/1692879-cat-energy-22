@@ -19,10 +19,14 @@
   stroke-width: 2px;
 
   @media (min-width: $tablet-width) {
-    padding: 50px 0 50px;
+    padding: 50px 0;
     width: 60px;
     height: 60px;
     stroke-width: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 50px 0 49px;
   }
 }
 
@@ -53,5 +57,9 @@
     max-width: 170px;
     padding-bottom: 87px;
     text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 167px;
   }
 }
