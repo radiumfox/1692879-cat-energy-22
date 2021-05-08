@@ -6,12 +6,37 @@
   &::before {
     content: "";
     position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: $basic-green;
+    border-radius: 50%;
+    top: 24px;
+    left: 22px;
+
+    @media (min-width: $tablet-width) {
+      width: 200px;
+      height: 200px;
+      top: 86px;
+      left: calc(50% + 86px);
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 52px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
     z-index: 100;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-  &--pro::before {
+  &--pro::after {
     background-image: url("../img/icon-pro.svg");
     width: 67px;
     height: 50px;
@@ -22,18 +47,18 @@
       width: 268px;
       height: 200px;
       top: 90px;
-      left: calc(50% + 58px);
+      left: calc(50% + 50px);
     }
 
     @media (min-width: $desktop-width) {
       width: 135px;
-      height: 100px;
+      height: 101px;
       top: 46px;
       left: 32px;
     }
   }
 
-  &--slim::before {
+  &--slim::after {
     background-image: url("../img/icon-slim.svg");
     top: 22px;
     left: 22px;
@@ -41,20 +66,19 @@
     height: 53px;
 
     @media (min-width: $tablet-width) {
-      width: 200px;
+      width: 201px;
       height: 212px;
       top: 80px;
       left: calc(50% + 92px);
     }
 
     @media (min-width: $desktop-width) {
-      width: 100px;
-      height: 106px;
+      width: 101px;
+      height: 107px;
       top: 42px;
       left: 52px;
     }
   }
-
 
   @media (min-width: $tablet-width) {
     padding: 80px 62px 57px 52px;

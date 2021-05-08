@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Интернет-магазин функционального питания для котов">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="preload" type="font/woff2" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" type="font/woff2" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
     <link rel="icon" sizes="any" href="img/favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/32.png">
@@ -96,35 +99,27 @@
         <div class="features__wrapper">
           <h2 class="features__title">Как это работает</h2>
           <ul class="features__list">
-            <li class="features__item features__item--natural">
+            <li class="features__item">
               <div class="features__icon-wrapper">
-                <svg class="features__icon" width="60" height="60">
-                  <use xlink:href="img/icons/sprite.svg#leaf"></use>
-                </svg>
+                <object type="image/svg+xml" data="img/features-leaf.svg"></object>
               </div>
               <p class="features__text">Функциональное питание содержит только полезные питательные вещества.</p>
             </li>
-            <li class="features__item features__item--powder">
+            <li class="features__item">
               <div class="features__icon-wrapper">
-                <svg class="features__icon" width="60" height="60">
-                  <use xlink:href="img/icons/sprite.svg#powder"></use>
-                </svg>
+                <object type="image/svg+xml" data="img/features-powder.svg"></object>
               </div>
               <p class="features__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
             </li>
-            <li class="features__item features__item--meal">
+            <li class="features__item">
               <div class="features__icon-wrapper">
-                <svg class="features__icon" width="60" height="60">
-                  <use xlink:href="img/icons/sprite.svg#meal"></use>
-                </svg>
+                <object type="image/svg+xml" data="img/features-meal.svg"></object>
               </div>
               <p class="features__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
             </li>
-            <li class="features__item features__item--term">
+            <li class="features__item">
               <div class="features__icon-wrapper">
-                <svg class="features__icon" width="60" height="60">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
+                <object type="image/svg+xml" data="img/features-clock.svg"></object>
               </div>
               <p class="features__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
             </li>
@@ -178,9 +173,7 @@
                 <button class="cat-slider__button cat-slider__button--before" type="button">Было</button>
                 <div class="cat-slider__scale">
                   <div class="cat-slider__bar cat-slider__bar--before"></div>
-                  <svg class="cat-slider__toggle" width="34" height="34">
-                    <use xlink:href="img/icons/sprite.svg#slider-toggle"></use>
-                  </svg>
+                  <object class="cat-slider__toggle" type="image/svg+xml" data="img/cat-slider/slider-control.svg"></object>
                 </div>
                 <button class="cat-slider__button cat-slider__button--after" type="button">Стало</button>
               </div>

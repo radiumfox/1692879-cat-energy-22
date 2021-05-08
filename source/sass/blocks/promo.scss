@@ -11,6 +11,7 @@
     &::before {
       background: linear-gradient(rgba(($basic-green), 0.85), rgba(($basic-green), 0.85)), url("../img/promo-bg-desktop.jpg");
       background-repeat: no-repeat;
+      background-size: cover;
       content: "";
       height: 694px;
       position: absolute;
@@ -47,7 +48,7 @@
 .promo__text {
   align-items: center;
   background: linear-gradient(rgba(($basic-green), 0.85), rgba(($basic-green), 0.85)), url("../img/promo-bg-mobile.jpg");
-  background-position: center top;
+  background-position: 64% top;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
