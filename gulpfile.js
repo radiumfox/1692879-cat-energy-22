@@ -13,7 +13,7 @@ const del = require("del");
 const sync = require("browser-sync").create();
 const sass = require("gulp-sass");
 const concat = require("gulp-concat");
-const uglify = require("gulp-uglify");
+const uglify = require("gulp-uglify")
 
 // Styles
 
@@ -51,6 +51,7 @@ const scripts = () => {
     .pipe(plumber())
     .pipe(concat("main.js"))
     .pipe(gulp.dest("build/js/"))
+    .pipe(babel({presets: ['es2015']}))
     .pipe(uglify({
       mangle: false
     }))

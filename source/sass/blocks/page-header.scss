@@ -31,6 +31,10 @@
   text-decoration: none;
   width: 60%;
 
+  &:focus {
+    outline: 1px dotted $secondary-dark3;
+  }
+
   &:hover {
     opacity: 0.8;
   }

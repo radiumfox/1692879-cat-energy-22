@@ -22,6 +22,10 @@
   grid-area: title;
   text-decoration: none;
 
+  &:focus {
+    outline: 1px dotted $secondary-dark3;
+  }
+
   &:hover {
     opacity: 0.6;
   }
@@ -56,6 +60,10 @@
   justify-self: center;
   padding: 0;
   margin: 0;
+
+  &:focus {
+    outline: 1px dotted $secondary-dark3;
+  }
 }
 
 .product-card__image {

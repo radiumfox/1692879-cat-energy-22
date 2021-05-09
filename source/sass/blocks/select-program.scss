@@ -311,6 +311,10 @@
     border: 1px solid $basic-grey3;
   }
 
+  .select-program__radio:focus + &::before {
+    box-shadow: 0 1px 3px rgba($secondary-dark3, 0.3);
+  }
+
   .select-program__radio:checked + &::after {
     background-color: $basic-green;
     border-radius: 50%;
@@ -396,6 +400,10 @@
 
   .select-program__checkbox:hover + &::before {
     border: 1px solid $basic-grey3;
+  }
+
+  .select-program__checkbox:focus + &::before {
+    box-shadow: 0 1px 3px rgba($secondary-dark3, 0.3);
   }
 
   .select-program__checkbox:checked + &::after {

@@ -117,6 +117,10 @@
   width: 100%;
   text-align: center;
 
+  &:focus {
+    outline: 1px dotted $secondary-dark3;
+  }
+
   &:hover {
     opacity: 0.8;
   }
@@ -156,6 +160,10 @@
   justify-content: space-between;
   border-top: 1px solid $basic-grey;
 
+  &:focus {
+    outline: 1px dotted $secondary-dark3;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 0;
     border-style: none;
@@ -168,15 +176,15 @@
   font-family: "Arial", sans-serif;
 }
 
-.page-footer__copyright:hover .page-footer__copyright-text {
+.page-footer__copyright-link:hover .page-footer__copyright-text {
   opacity: 0.8;
 }
 
-.page-footer__copyright:active .page-footer__copyright-text {
+.page-footer__copyright-link:active .page-footer__copyright-text {
   opacity: 0.6;
 }
 
-.page-footer__copyright:hover .page-footer__copyright-icon {
+.page-footer__copyright-link:hover .page-footer__copyright-icon {
   fill: $basic-green;
 }
 
@@ -191,6 +199,10 @@
   @media (min-width: $tablet-width) {
     padding-left: 22px;
   }
+}
+
+.page-footer__social-link:focus {
+  outline: 1px dotted $secondary-dark3;
 }
 
 .page-footer__social-link:hover .page-footer__social-icon {

@@ -138,6 +138,10 @@
   text-decoration: none;
   text-transform: uppercase;
 
+  &:focus {
+    outline: 1px dotted $secondary-dark3;
+  }
+
   &:active {
     opacity: 0.3;
   }

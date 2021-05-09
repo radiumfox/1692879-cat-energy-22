@@ -49,6 +49,10 @@
   color: $basic-dark;
   text-decoration: none;
 
+  &:focus {
+    outline: 1px dotted $secondary-dark3;
+  }
+
   &:hover {
     opacity: 0.6;
   }

@@ -12,6 +12,10 @@
   vertical-align: middle;
   text-align: center;
 
+  &:focus {
+    outline: 1px dotted $secondary-dark3;
+  }
+
   &:hover {
     background-color: $basic-green-hover;
   }
