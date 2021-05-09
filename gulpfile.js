@@ -51,7 +51,6 @@ const scripts = () => {
     .pipe(plumber())
     .pipe(concat("main.js"))
     .pipe(gulp.dest("build/js/"))
-    .pipe(babel({presets: ['es2015']}))
     .pipe(uglify({
       mangle: false
     }))
