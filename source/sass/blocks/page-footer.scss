@@ -26,7 +26,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
-    padding: 60px 70px;
+    padding: 66px 70px 58px;
   }
 
   @media (min-width: $desktop-width) {
@@ -42,11 +42,10 @@
 }
 
 .page-footer__proposal {
-  @include font(16px, 18px, normal);
+  @include font(16px, 19px, normal);
   color: $secondary-dark2;
-  margin: 0 4px 0 0;
+  margin: 0 15px 0 0;
   text-transform: uppercase;
-  width: 140px;
 
   @media (min-width: $tablet-width) {
     @include font(20px, 25px, normal);
@@ -58,7 +57,6 @@
   @include font(14px, 20px, normal);
   color: $secondary-dark;
   font-family: "Arial", sans-serif;
-  width: 140px;
   font-style: normal;
 
   @media (min-width: $tablet-width) {
@@ -111,7 +109,7 @@
 }
 
 .page-footer__logo {
-  padding: 0 0 32px;
+  padding: 0 0 28px;
   border-bottom: 1px solid $basic-grey;
   display: block;
   width: 100%;
@@ -152,7 +150,7 @@
 .page-footer__copyright {
   @include font(16px, 1, normal);
   color: $secondary-dark;
-  padding: 22px 0 0;
+  padding: 20px 0 0;
   text-decoration: none;
   display: flex;
   align-items: center;

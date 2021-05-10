@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: row;
     z-index: 0;
+    max-width: 650px;
   }
 }
 
@@ -44,7 +45,8 @@
   @media (min-width: $tablet-width) {
     @include font(20px, 1, normal);
     border-bottom: 1px dotted $special-grey;
-    padding: 0 0 6px;
+    height: 30px;
+    padding: 0 4px 4px;
   }
 }
 
@@ -52,8 +54,16 @@
   display: flex;
   justify-content: center;
 
+  @media (min-width: $tablet-width) {
+    width: 78vw;
+    margin: 0 auto;
+  }
+
   @media (min-width: $desktop-width) {
-    max-width: 640px;
+    align-items: center;
+    width: 584px;
+    margin: 0;
+    margin-left: 70px;
   }
 }
 
@@ -62,7 +72,7 @@
   border: 1px solid $special-grey;
   border-radius: 6px;
   height: 14px;
-  margin: 5px 12px;
+  margin: 2px 14px 5px;
   position: relative;
   width: 84px;
 
@@ -71,7 +81,11 @@
     border-style: none;
     height: 6px;
     width: 428px;
-    margin: 5px;
+    margin: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 20px;
   }
 }
 
@@ -120,7 +134,6 @@
   }
 
   @media (min-width: $tablet-width) {
-    display: block;
     position: absolute;
     left: calc(50% - 17px);
     top: -16px;
@@ -129,20 +142,23 @@
 
 .cat-slider__list {
   @include reset-list;
-  padding-bottom: 23px;
+  padding-bottom: 21px;
   display: flex;
   justify-content: center;
 
   @media (min-width: $tablet-width) {
     display: flex;
-    max-width: 708px;
+    width: 708px;
     justify-content: center;
     margin: 0 auto 0;
+    padding: 56px 33px 18px 0;
+    box-sizing: border-box;
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 640px;
+    width: 650px;
     margin: 0;
+    padding: 22px 0 24px 0;
   }
 }
 
@@ -163,18 +179,19 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 53%;
+    width: 56%;
   }
 
   &:nth-child(2) {
     @media (min-width: $tablet-width) {
       flex-direction: row-reverse;
-      width: 43%;
+      width: 44%;
       z-index: 1;
+      overflow: hidden;
     }
 
     @media (min-width: $desktop-width) {
-      width: 40%;
+      width: 42%;
     }
   }
 }
@@ -185,7 +202,14 @@
   width: auto;
 
   @media (min-width: $tablet-width) {
-    height: 530px;
-    margin-left: 0;
+    height: 520px;
+
+    &:nth-child(1) {
+      width: 677px;
+    }
+
+    &:nth-child(2) {
+      width: 545px;
+    }
   }
 }

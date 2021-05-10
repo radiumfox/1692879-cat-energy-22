@@ -3,6 +3,8 @@
   padding: 30px 20px 22px 18px;
   position: relative;
 
+  box-sizing: border-box;
+
   &::before {
     content: "";
     position: absolute;
@@ -16,8 +18,8 @@
     @media (min-width: $tablet-width) {
       width: 200px;
       height: 200px;
-      top: 86px;
-      left: calc(50% + 86px);
+      top: 90px;
+      left: calc(50% + 92px);
     }
 
     @media (min-width: $desktop-width) {
@@ -46,8 +48,8 @@
     @media (min-width: $tablet-width) {
       width: 268px;
       height: 200px;
-      top: 90px;
-      left: calc(50% + 50px);
+      top: 93px;
+      left: calc(50% + 60px);
     }
 
     @media (min-width: $desktop-width) {
@@ -69,7 +71,7 @@
       width: 201px;
       height: 212px;
       top: 80px;
-      left: calc(50% + 92px);
+      left: calc(50% + 93px);
     }
 
     @media (min-width: $desktop-width) {
@@ -81,11 +83,11 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 80px 62px 57px 52px;
+    padding: 76px 62px 59px 52px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 40px 50px 55px;
+    padding: 40px 50px 64px;
   }
 }
 
@@ -100,7 +102,7 @@
 
   @media (min-width: $tablet-width) {
     @include font(36px, 36px, normal);
-    padding: 0 0 24px;
+    padding: 0 0 26px;
   }
 
   @media (min-width: $desktop-width) {
@@ -123,8 +125,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 73px 0 22px 0;
-    width: 460px;
+    padding: 73px 0 34px 0;
+    width: 467px;
   }
 }
 
@@ -133,7 +135,7 @@
   color: $basic-dark;
   display: flex;
   align-items: center;
-  padding: 18px 0 0 0;
+  padding: 19px 0 0 0;
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
@@ -152,13 +154,43 @@
   }
 }
 
+.direction__link-text {
+  max-width: 175px;
+}
+
+.direction--pro .direction__description {
+  @media (min-width: $tablet-width) {
+    width: 340px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 457px;
+  }
+}
+
 .direction__arrow {
   width: 24px;
-  padding-left: 20px;
+  padding-left: 18px;
   transition: transform 0.2s ease;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 26px;
+  }
 }
 
 .direction__link:hover .direction__arrow {
   transform: scale(1.3, 1);
-  padding-left: 21px;
+  padding-left: 18px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 26px;
+  }
 }

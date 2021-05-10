@@ -1,5 +1,5 @@
 .features__wrapper {
-  margin-bottom: 26px;
+  margin-bottom: 23px;
   padding: 0 20px 0;
 
   @media (min-width: $tablet-width) {
@@ -45,7 +45,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    column-gap: 100px;
+    column-gap: 78px;
     grid-template-columns: repeat(4, 1fr);
     width: 1220px;
   }
@@ -69,14 +69,13 @@
       content: counter(section);
       z-index: -1;
       top: -38px;
-      left: 118px;
+      left: 110px;
     }
   }
 }
 
 .features__text {
   margin: 0;
-  width: 62vw;
   padding-left: 20px;
   min-height: 54px;
 
@@ -88,7 +87,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 220px;
+    width: 245px;
   }
 }
 

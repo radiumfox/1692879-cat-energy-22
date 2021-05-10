@@ -13,10 +13,10 @@
       background-repeat: no-repeat;
       background-size: cover;
       content: "";
-      height: 694px;
+      height: 691px;
       position: absolute;
       right: 0;
-      top: -140px;
+      top: -142px;
       width: 50vw;
       z-index: -1;
     }
@@ -39,9 +39,10 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
-    margin: 26px auto 136px;
-    padding: 0;
+    margin: 26px auto 134px;
+    padding: 0 0 0 80px;
     width: 1220px;
+    box-sizing: border-box;
   }
 }
 
@@ -53,8 +54,9 @@
   background-size: cover;
   display: flex;
   flex-direction: column;
-  height: 302px;
+  min-height: 302px;
   width: 100%;
+  word-wrap: break-word;
 
   @media (min-resolution: 2dppx) {
     background: linear-gradient(rgba(($basic-green), 0.85), rgba(($basic-green), 0.85)), url("../img/promo-bg-mobile@2x.jpg");
@@ -66,7 +68,7 @@
     display: block;
     background: none;
     padding: 0 87px 0;
-    width: initial;
+    max-width: 420px;
   }
 
   @media (min-width: $desktop-width) {
@@ -77,13 +79,10 @@
 .promo__title {
   @include font(36px, 36px, normal);
   margin: 0;
-  max-width: 280px;
   padding: 27px 0 25px;
 
   @media (min-width: $tablet-width) {
     @include font(60px, 60px, normal);
-    min-width: 414px;
-    max-width: 420px;
     padding: 0 0 40px;
   }
 
@@ -95,13 +94,12 @@
 .promo__slogan {
   @include font(14px, 14px, normal);
   margin: 0;
-  max-width: 280px;
   padding-bottom: 30px;
   text-transform: uppercase;
+  z-index: 100;
 
   @media (min-width: $tablet-width) {
     @include font(20px, 20px, normal);
-    max-width: 285px;
   }
 
   @media (min-width: $desktop-width) {
@@ -110,8 +108,11 @@
 }
 
 .promo__button {
+  @include font(14px, 18px, normal);
   order: 2;
-  width: 280px;
+  width: 87vw;
+  max-width: 400px;
+  padding: 11px 0 11px;
 
   @media (min-width: $tablet-width) {
     @include font(20px, 20px, normal);
@@ -124,7 +125,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: 310px;
+    padding: 17px 26px;
+    top: 313px;
     margin: 0;
   }
 }
@@ -135,14 +137,14 @@
 
   @media (min-width: $tablet-width) {
     margin-top: -100px;
-    height: 610px;
-    width: 710px;
+    height: 609px;
+    width: 708px;
     z-index: -1;
   }
 
   @media (min-width: $desktop-width) {
-    height: 500px;
-    margin-left: -40px;
+    height: 499px;
+    margin-left: -50px;
     margin-top: 0;
     width: 552px;
   }
