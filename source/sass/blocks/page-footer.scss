@@ -137,6 +137,7 @@
 .page-footer__social-list {
   @include reset-list;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 20px 0;
   width: 130px;
@@ -174,15 +175,15 @@
   font-family: "Arial", sans-serif;
 }
 
-.page-footer__copyright-link:hover .page-footer__copyright-text {
+.page-footer__copyright:hover .page-footer__copyright-text {
   opacity: 0.8;
 }
 
-.page-footer__copyright-link:active .page-footer__copyright-text {
+.page-footer__copyright:active .page-footer__copyright-text {
   opacity: 0.6;
 }
 
-.page-footer__copyright-link:hover .page-footer__copyright-icon {
+.page-footer__copyright:hover .page-footer__copyright-icon {
   fill: $basic-green;
 }
 

@@ -27,7 +27,10 @@
   cursor: pointer;
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
-  padding: 0 0 6px;
+  padding: 0 0 3px;
+  border-bottom: 1px solid transparent;
+  max-width: 70px;
+  word-wrap: break-word;
 
   &:focus {
     outline: 1px dotted $secondary-dark3;
@@ -146,6 +149,7 @@
   display: flex;
   justify-content: center;
   width: 280px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -201,7 +205,6 @@
   text-align: center;
   display: inline-block;
   width: auto;
-
 
   @media (min-width: $tablet-width) {
     height: 520px;

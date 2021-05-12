@@ -20,18 +20,15 @@
 }
 
 .site-list__item {
-  padding-bottom: 24px;
-  padding-top: 24px;
+  padding: 24px 0;
 
   @media (max-width: $mobile-width-only) {
     border-bottom: 1px solid $basic-grey;
   }
 
   @media (min-width: $tablet-width) {
-    margin-top: auto;
-    margin-left: 23px;
-    padding-top: 0;
-    padding-bottom: 12px;
+    margin: auto 0 10px 23px;
+    padding: 0 0 12px;
 
     &--active {
       border-bottom: 2px solid $basic-green;

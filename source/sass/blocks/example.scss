@@ -173,7 +173,7 @@
   padding: 33px 0 42px;
 
   @media (min-width: $tablet-width) {
-    width: 24vw;
+    width: 180px;
     flex-direction: column;
     padding-top: 10px;
     align-self: flex-start;
@@ -184,5 +184,6 @@
     flex-direction: row;
     justify-content: flex-start;
     padding: 46px 0 0 0;
+    width: 330px;
   }
 }
