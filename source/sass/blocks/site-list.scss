@@ -29,7 +29,7 @@
 
   @media (min-width: $tablet-width) {
     margin-top: auto;
-    margin-left: 25px;
+    margin-left: 23px;
     padding-top: 0;
     padding-bottom: 12px;
 
@@ -68,8 +68,9 @@
   }
 
   @media (min-width: $desktop-width) {
+    @include font(20px, 1, 400);
+
     &--white-font {
-      @include font(20px, 1, 400);
       color: $basic-light;
     }
   }

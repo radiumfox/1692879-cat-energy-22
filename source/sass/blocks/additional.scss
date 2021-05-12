@@ -7,12 +7,12 @@
     @include font(36px, 36px, normal);
     background-color: $basic-light;
     max-width: fit-content;
-    margin-left: 30px;
     padding: 0 36px 80px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 66px;
+    grid-area: title;
+    margin-left: -36px;
   }
 }
 
@@ -28,9 +28,11 @@
   @media (min-width: $desktop-width) {
     margin: 0 auto;
     padding: 0;
-    align-items: flex-end;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-areas:
+      "title title"
+      "goods promo";
+    grid-template-columns: 1fr auto;
     width: 1220px;
   }
 }
@@ -50,6 +52,7 @@
     display: flex;
     flex-direction: column;
     width: 895px;
+    grid-area: goods;
   }
 }
 

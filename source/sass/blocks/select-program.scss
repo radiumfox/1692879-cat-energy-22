@@ -1,57 +1,138 @@
 .select-program__wrapper {
-  margin: 36px 0 32px;
+  margin: 38px 0 32px;
 
   @media (min-width: $tablet-width) {
-    margin: 66px 0 72px;
+    margin: 65px 0 72px;
   }
 }
 
 .select-program__fieldset {
   border-style: none;
-  margin-bottom: 24px;
   padding: 0;
+  position: relative;
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 65px;
+  &--green-line {
+    &::after {
+      background-color: $basic-green;
+      content: "";
+      height: 2px;
+      left: 0;
+      position: absolute;
+      top: 16px;
+      width: 100%;
+      z-index: -1;
 
-    &--additional {
-      margin-bottom: 50px;
+      @media (min-width: $tablet-width) {
+        top: 20px;
+      }
     }
   }
 
-  @media (min-width: $desktop-width) {
-    margin: 0;
-    padding: 0;
+  &--grey-border {
+    border-bottom: 1px solid $special-grey3;
+    border-top: 1px solid $special-grey3;
+    padding: 20px 0;
 
-    &--additional {
-      margin-bottom: 60px;
+    @media (min-width: $tablet-width) {
+      border: 1px solid $special-grey3;
+      margin: 0 70px 0;
+      padding: 25px 28px;
     }
+
+    @media (min-width: $desktop-width) {
+      margin: 0;
+      padding: 30px 28px;
+    }
+  }
+}
+
+.select-program__fieldset--additional .select-program__control-list {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    column-gap: 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 28px;
+    width: 74vw;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 104px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: unset;
+  }
+}
+
+.select-program__fieldset--additional .select-program__control-item {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 11px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 222px;
   }
 }
 
 .select-program__fieldset-wrapper {
   padding: 0 20px 0;
+  margin-bottom: 24px;
+
+  &--no-indentation {
+    margin: 0;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 0 70px 0;
+    margin-bottom: 70px;
 
-    &--no-padding {
+    &--no-indentation {
       padding: 0;
+      margin: 0;
+    }
+
+    &--margin-less {
+      margin-bottom: 60px;
+    }
+
+    &--no-margin {
+      margin-bottom: 0;
     }
   }
 
   @media (min-width: $desktop-width) {
     padding: 0;
-    margin: 0 auto;
+    margin: 0 auto 69px;
     width: 1220px;
 
     &--auto-width {
       width: auto;
+      margin-bottom: 0;
+    }
+
+    &--contacts {
+      margin-bottom: 66px;
+    }
+
+    &--no-margin {
+      margin-bottom: 0;
     }
   }
 }
 
 .select-program__fieldset-group {
+  padding-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 74px;
+  }
+
   @media (min-width: $desktop-width) {
     align-items: center;
     column-gap: 80px;
@@ -59,47 +140,43 @@
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
     width: 1220px;
-  }
-}
-
-.select-program__fieldset--grey-border {
-  border-bottom: 1px solid $special-grey3;
-  border-top: 1px solid $special-grey3;
-  padding: 20px 0;
-
-  @media (min-width: $tablet-width) {
-    border: 1px solid $special-grey3;
-    margin: 0 70px 70px;
-    padding: 25px 28px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin: 0 0 65px;
+    padding-bottom: 70px;
   }
 }
 
 .select-program__control-list {
   @include reset-list;
+
+  @media (min-width: $desktop-width) {
+    &--contacts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 74px;
+    }
+  }
+}
+
+.select-program__control-list--contacts .select-program__control-item {
+  @media (min-width: $desktop-width) {
+    padding-bottom: 0;
+  }
 }
 
 .select-program__control-item {
   align-items: center;
   display: flex;
-  margin-bottom: 14px;
-
+  padding-bottom: 13px;
   position: relative;
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 20px;
-  }
-
   &:last-child {
-    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
-  &--no-margin-bottom {
-    @media (min-width: $desktop-width) {
-      margin-bottom: 0;
+  @media (min-width: $tablet-width) {
+    padding-bottom: 20px;
+
+    &--radio {
+      padding-bottom: 16px;
     }
   }
 }
@@ -110,7 +187,7 @@
   display: inline-block;
   margin: 0;
   max-width: 187px;
-  padding: 0 18px 33px 20px;
+  padding: 0 20px;
   vertical-align: middle;
   width: auto;
 
@@ -119,37 +196,34 @@
     display: block;
     margin-left: 30px;
     max-width: fit-content;
-    padding: 0 40px 76px;
-
-    &--padding-less {
-      padding: 0 40px 56px;
-    }
+    padding: 0 40px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 70px;
+    margin-left: -40px;
   }
 }
 
 .select-program__title-wrapper {
   margin: 0;
-  padding: 0;
-  position: relative;
   width: 100%;
+  padding: 0 0 36px;
 
-  &::after {
-    background-color: $basic-green;
-    content: "";
-    height: 2px;
-    left: 0;
-    position: absolute;
-    top: 14px;
-    width: 100%;
-    z-index: -1;
+  &--padding-less {
+    padding: 0 0 30px;
+  }
 
-    @media (min-width: $tablet-width) {
-      top: 20px;
+  @media (min-width: $tablet-width) {
+    padding: 0 0 76px;
+
+    &--padding-less {
+      padding: 0 0 56px;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
   }
 }
 
@@ -169,11 +243,10 @@
   @include placeholder;
   border: 2px solid transparent;
   box-sizing: border-box;
-  height: 45px;
   margin-left: 12px;
   outline: 1px solid $special-grey3;
   outline-offset: -2px;
-  padding: 14px;
+  padding: 13px;
   width: 100%;
 
   &:hover {
@@ -185,12 +258,18 @@
   }
 
   &--invalid {
-    border-color: $status-error;
+    outline-color: $status-error;
   }
 
   @media (min-width: $tablet-width) {
     height: 52px;
     margin-left: 20px;
+    padding: 13px;
+
+    &--contacts {
+      padding: 13px 15px;
+      margin-right: -5px;
+    }
   }
 }
 
@@ -231,22 +310,26 @@
   @media (min-width: $tablet-width) {
     height: 174px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 14px;
+  }
 }
 
 .select-program__button-box {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin: 34px 20px 0;
+  margin: 7px 20px 0;
 
   @media (min-width: $tablet-width) {
-    align-items: baseline;
     flex-direction: row;
-    margin: 0 70px 0;
+    margin: 50px 70px 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 48px 110px 82px;
+    margin: 56px auto 82px;
+    width: 1220px;
   }
 }
 
@@ -256,7 +339,7 @@
 
   @media (min-width: $tablet-width) {
     @include font(20px, 20px, normal);
-    padding: 15px 0;
+    padding: 16px 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -273,19 +356,11 @@
 
   @media (min-width: $tablet-width) {
     @include font(16px, 16px, normal);
-    margin: 0 0 0 60px;
+    margin: 0 0 0 64px;
   }
 
-  @media (min-width: $tablet-width) {
-    margin: 0 0 0 80px;
-  }
-}
-
-.select-program__control-list--contacts {
   @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 78px;
+    margin: 0 0 0 80px;
   }
 }
 
@@ -349,55 +424,23 @@
   }
 }
 
-.select-program__fieldset--additional .select-program__control-list {
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: $tablet-width) {
-    column-gap: 123px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 32px;
-    width: 74vw;
-  }
-
-  @media (min-width: $desktop-width) {
-    column-gap: 104px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: unset;
-  }
-}
-
-.select-program__fieldset--additional .select-program__control-item {
-  margin-bottom: 12px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 222px;
-  }
-}
-
 .select-program__label--checkbox {
   position: relative;
-  padding: 3px 0 10px 46px;
+  padding: 7px 0 7px 46px;
 
   &::before {
     border: 1px solid $special-grey;
     content: "";
-    height: 29px;
+    height: 28px;
     left: 0;
     position: absolute;
-    width: 29px;
+    width: 28px;
     top: 0;
 
     @media (min-width: $tablet-width) {
       top: 0;
-      height: 40px;
-      width: 40px;
+      height: 38px;
+      width: 38px;
     }
   }
 
@@ -413,9 +456,9 @@
     background-image: url("../img/icon-checkbox.svg");
     content: "";
     height: 14px;
-    left: 7px;
+    left: 5px;
     position: absolute;
-    top: 12px;
+    top: 9px;
     width: 18px;
 
     @media (min-width: $tablet-width) {

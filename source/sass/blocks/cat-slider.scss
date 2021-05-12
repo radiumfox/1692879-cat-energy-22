@@ -145,6 +145,7 @@
   padding-bottom: 21px;
   display: flex;
   justify-content: center;
+  width: 280px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -200,6 +201,7 @@
   text-align: center;
   display: inline-block;
   width: auto;
+
 
   @media (min-width: $tablet-width) {
     height: 520px;

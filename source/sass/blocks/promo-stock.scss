@@ -39,6 +39,7 @@
   @media (min-width: $desktop-width) {
     background-image: url("../img/promo-stock-desktop.jpg");
     width: 245px;
+    grid-area: promo;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/promo-stock-desktop@2x.jpg");
