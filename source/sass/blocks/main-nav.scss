@@ -19,8 +19,8 @@
   height: 18px;
   padding: 0;
   position: absolute;
-  right: 20px;
-  top: -44px;
+  right: 18px;
+  top: -46px;
   width: 24px;
 
   @media (min-width: $tablet-width) {
@@ -31,8 +31,9 @@
 .main-nav--opened .main-nav__toggle {
   background-image: url("../img/toggle-cross.svg");
   background-repeat: no-repeat;
+  right: 22px;
+  width: 20px;
   height: 20px;
-  right: 23px;
 }
 
 .main-nav--closed .main-nav__toggle {

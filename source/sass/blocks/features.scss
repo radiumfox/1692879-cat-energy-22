@@ -4,7 +4,7 @@
 
   @media (min-width: $tablet-width) {
     border-bottom: 1px solid $basic-grey;
-    padding: 0 30px 56px;
+    padding: 0 30px 60px;
     margin-bottom: 0;
   }
 
@@ -69,7 +69,7 @@
       content: counter(section);
       z-index: -1;
       top: -38px;
-      left: 110px;
+      left: 118px;
     }
   }
 }

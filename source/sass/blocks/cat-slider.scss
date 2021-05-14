@@ -9,7 +9,7 @@
 }
 
 .cat-slider__wrapper {
-  padding: 0 0 30px;
+  padding: 0 0 33px;
 
   @media (min-width: $tablet-width) {
     padding: 0 0 67px;
@@ -27,7 +27,7 @@
   cursor: pointer;
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
-  padding: 0 0 3px;
+  padding: 0;
   border-bottom: 1px solid transparent;
   max-width: 70px;
   word-wrap: break-word;
@@ -49,13 +49,13 @@
     @include font(20px, 1, normal);
     border-bottom: 1px dotted $special-grey;
     height: 30px;
-    padding: 0 4px 4px;
   }
 }
 
 .cat-slider__range-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
     width: 78vw;
@@ -66,7 +66,7 @@
     align-items: center;
     width: 584px;
     margin: 0;
-    margin-left: 70px;
+    margin-left: 78px;
   }
 }
 
@@ -74,17 +74,19 @@
   background-color: $basic-light;
   border: 1px solid $special-grey;
   border-radius: 6px;
-  height: 14px;
-  margin: 2px 14px 5px;
+  height: 12px;
+  margin: 0 16px 3px;
   position: relative;
-  width: 84px;
+  width: 82px;
+  display: flex;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
     background-color: $special-grey;
     border-style: none;
     height: 6px;
     width: 428px;
-    margin: 15px;
+    margin: 15px 22px;
   }
 
   @media (min-width: $desktop-width) {
@@ -97,7 +99,6 @@
     background-color: $basic-green;
     border-radius: 6px;
     height: 6px;
-    margin-top: 4px;
     width: 35px;
 
     &--before {
@@ -145,7 +146,7 @@
 
 .cat-slider__list {
   @include reset-list;
-  padding-bottom: 21px;
+  padding-bottom: 30px;
   display: flex;
   justify-content: center;
   width: 280px;
@@ -156,19 +157,20 @@
     width: 708px;
     justify-content: center;
     margin: 0 auto 0;
-    padding: 56px 33px 18px 0;
+    padding: 52px 33px 8px 0;
     box-sizing: border-box;
   }
 
   @media (min-width: $desktop-width) {
     width: 650px;
     margin: 0;
-    padding: 22px 0 24px 0;
+    padding: 22px 0 24px 10px;
   }
 }
 
 .cat-slider__item {
   display: none;
+  padding-right: 3px;
 
   &--active {
     display: block;

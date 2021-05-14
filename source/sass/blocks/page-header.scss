@@ -5,6 +5,7 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
+    justify-content: center;
     margin-top: 27px;
     padding: 0 30px 0;
   }
@@ -26,7 +27,7 @@
   align-items: center;
   display: flex;
   height: 38px;
-  padding: 12px 20px 16px;
+  padding: 11px 20px 16px;
   text-decoration: none;
 
   &:focus {
@@ -72,6 +73,10 @@
 
 .page-header__logo-text {
   padding-top: 8px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+  }
 
   @media (min-width: $desktop-width) {
     height: 22px;

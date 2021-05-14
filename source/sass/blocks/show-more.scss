@@ -4,12 +4,9 @@
   padding: 0;
   position: relative;
 
-  @media (min-width: $tablet-width) {
-    vertical-align: bottom;
-  }
-
   @media (min-width: $desktop-width) {
     text-align: center;
+    margin-top: auto;
   }
 }
 
@@ -19,7 +16,7 @@
   stroke-width: 2px;
 
   @media (min-width: $tablet-width) {
-    padding: 50px 0;
+    padding: 48px 0;
     width: 60px;
     height: 60px;
     stroke-width: 1px;

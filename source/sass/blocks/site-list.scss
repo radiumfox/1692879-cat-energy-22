@@ -9,6 +9,7 @@
     justify-content: space-between;
     max-width: 480px;
     min-width: 465px;
+    align-items: baseline;
   }
 
   @media (min-width: $desktop-width) {
@@ -20,25 +21,29 @@
 }
 
 .site-list__item {
-  padding: 24px 0;
+  padding: 22px 0;
 
   @media (max-width: $mobile-width-only) {
     border-bottom: 1px solid $basic-grey;
   }
 
   @media (min-width: $tablet-width) {
-    margin: auto 0 10px 23px;
+    margin: 0 0 0 23px;
     padding: 0 0 12px;
 
     &--active {
       border-bottom: 2px solid $basic-green;
-      padding-bottom: 10px;
+      padding-bottom: 4px;
     }
   }
 
   @media (min-width: $desktop-width) {
     &--white-font {
       border-color: $basic-light;
+    }
+
+    &--active {
+      padding-bottom: 9px;
     }
   }
 }

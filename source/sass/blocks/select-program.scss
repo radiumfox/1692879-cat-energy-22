@@ -36,12 +36,12 @@
     @media (min-width: $tablet-width) {
       border: 1px solid $special-grey3;
       margin: 0 70px 0;
-      padding: 25px 28px;
+      padding: 27px 28px;
     }
 
     @media (min-width: $desktop-width) {
       margin: 0;
-      padding: 30px 28px;
+      padding: 28px 28px;
     }
   }
 }
@@ -90,7 +90,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 70px 0;
-    margin-bottom: 70px;
+    margin-bottom: 68px;
 
     &--no-indentation {
       padding: 0;
@@ -117,11 +117,15 @@
     }
 
     &--contacts {
-      margin-bottom: 66px;
+      margin-bottom: 68px;
     }
 
     &--no-margin {
       margin-bottom: 0;
+    }
+
+    &--margin-less {
+      margin-bottom: 64px;
     }
   }
 }
@@ -151,7 +155,7 @@
     &--contacts {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      column-gap: 74px;
+      column-gap: 80px;
     }
   }
 }
@@ -163,8 +167,8 @@
 }
 
 .select-program__control-item {
-  align-items: center;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   padding-bottom: 13px;
   position: relative;
 
@@ -196,7 +200,7 @@
     display: block;
     margin-left: 30px;
     max-width: fit-content;
-    padding: 0 40px;
+    padding: 0 38px;
   }
 
   @media (min-width: $desktop-width) {
@@ -214,10 +218,10 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 0 0 76px;
+    padding: 0 0 74px;
 
     &--padding-less {
-      padding: 0 0 56px;
+      padding: 0 0 57px;
     }
   }
 
@@ -230,12 +234,13 @@
 .select-program__label {
   @include font(16px, 18px, normal);
   color: $secondary-dark;
-  max-width: 120px;
   text-transform: uppercase;
-  white-space: nowrap;
+  max-width: 130px;
+  align-self: center;
 
   @media (min-width: $tablet-width) {
     @include font(20px, 1, normal);
+    max-width: 160px;
   }
 }
 
@@ -247,7 +252,6 @@
   outline: 1px solid $special-grey3;
   outline-offset: -2px;
   padding: 13px;
-  width: 100%;
 
   &:hover {
     outline-color: $special-grey;
@@ -267,7 +271,7 @@
     padding: 13px;
 
     &--contacts {
-      padding: 13px 15px;
+      padding: 13px 16px;
       margin-right: -5px;
     }
   }
@@ -275,8 +279,19 @@
 
 .select-program__icon {
   position: absolute;
-  right: 13px;
+  right: 15px;
+  top: 14px;
   fill: $secondary-dark3;
+
+  @media (min-width: $tablet-width) {
+    top: 17px;
+    right: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 17px;
+    right: 16px;
+  }
 }
 
 .select-program__text-input:focus + .select-program__icon {
@@ -309,6 +324,7 @@
 
   @media (min-width: $tablet-width) {
     height: 174px;
+    padding: 14px;
   }
 
   @media (min-width: $desktop-width) {
@@ -324,7 +340,7 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    margin: 50px 70px 0;
+    margin: 54px 70px 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -357,6 +373,7 @@
   @media (min-width: $tablet-width) {
     @include font(16px, 16px, normal);
     margin: 0 0 0 64px;
+    max-width: 200px;
   }
 
   @media (min-width: $desktop-width) {
@@ -367,6 +384,7 @@
 .select-program__label--radio {
   padding: 6px 0 6px 45px;
   position: relative;
+  max-width: 240px;
 
   &::before {
     border: 1px solid $special-grey;
@@ -417,6 +435,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 9px 0 9px 60px;
+    max-width: 500px;
   }
 
   @media (min-width: $desktop-width) {
@@ -472,6 +491,6 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 12px 0 12px 60px;
+    padding: 12px 0 12px 58px;
   }
 }

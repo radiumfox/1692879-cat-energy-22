@@ -31,8 +31,8 @@
 .page-main__title {
   @include font(36px, 36px, normal);
   margin: 0;
-  padding: 27px 0 38px;
-  width: 180px;
+  padding: 27px 0 39px;
+  width: 280px;
 
   &--no-border {
     border-style: none;
@@ -44,11 +44,20 @@
     @include font(60px, 60px, normal);
     border-style: none;
     padding: 62px 0 54px;
+    width: 450px;
+
+    &--padding-big {
+      padding-bottom: 90px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    padding: 72px 0 58px;
+    padding: 72px 0 56px;
     margin: 0 auto;
     width: 1220px;
+
+    &--padding-big {
+      padding-bottom: 86px;
+    }
   }
 }
