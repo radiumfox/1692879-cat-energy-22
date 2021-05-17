@@ -110,7 +110,6 @@ exports.sprite = sprite;
 const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff2,woff}",
-    "source/*.png",
     "source/img/**/*.svg",
     "!source/img/icons/*.svg",
     "source/manifest.webmanifest",
@@ -136,7 +135,6 @@ const server = (done) => {
     server: {
       baseDir: 'build'
     },
-    browser: 'C:/Program Files/Google/Chrome/Application/chrome.exe',
     cors: true,
     notify: false,
     ui: false,

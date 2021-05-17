@@ -34,12 +34,11 @@
     margin-left: -610px;
     margin-top: 95px;
     left: 50%;
-    padding: 65px 88px 62px 75px;
+    padding: 64px 84px 62px 75px;
     position: absolute;
     top: 0;
     width: 570px;
-    height: 200px;
-    overflow-y: scroll;
+    min-height: 200px;
   }
 }
 
@@ -104,12 +103,12 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    padding: 55px 30px 61px;
+    padding: 56px 30px 61px;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0 auto;
-    padding: 57px 0 58px;
+    padding: 58px 0 58px;
     width: 1220px;
   }
 }
@@ -154,25 +153,31 @@
   @include reset-list;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  min-width: 130px;
-  max-width: 180px;
+  justify-content: right;
+  min-width: 170px;
+  max-width: 200px;
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    min-width: 140px;
-    max-width: 190px;
+    max-width: 300px;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 400px;
     justify-content: flex-end;
   }
 }
 
 .page-footer__social-item {
-  &:not(:nth-child(3)) {
-    margin-right: 35px;
+  margin: 0 18px;
 
-    @media (min-width: $tablet-width) {
-      margin-right: 25px;
-    }
+  @media (min-width: $tablet-width) {
+    margin: 0 13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 13px;
   }
 }
 
@@ -191,13 +196,10 @@
 .page-footer__copyright {
   @include font(16px, 1, normal);
   color: $secondary-dark;
-
   text-decoration: none;
   display: flex;
   align-items: center;
-
   justify-content: space-between;
-
 
   &:focus {
     outline: 1px dotted $secondary-dark3;

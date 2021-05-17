@@ -9,7 +9,7 @@
 }
 
 .cat-slider__wrapper {
-  padding: 0 0 33px;
+  padding: 0 0 35px;
 
   @media (min-width: $tablet-width) {
     padding: 0 0 67px;
@@ -66,7 +66,7 @@
     align-items: center;
     width: 584px;
     margin: 0;
-    margin-left: 78px;
+    margin-left: 84px;
   }
 }
 
@@ -90,7 +90,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 20px;
+    margin: 20px 22px;
   }
 }
 
@@ -146,7 +146,7 @@
 
 .cat-slider__list {
   @include reset-list;
-  padding-bottom: 30px;
+  padding-bottom: 32px;
   display: flex;
   justify-content: center;
   width: 280px;
@@ -164,7 +164,7 @@
   @media (min-width: $desktop-width) {
     width: 650px;
     margin: 0;
-    padding: 22px 0 24px 10px;
+    padding: 22px 0 26px 10px;
   }
 }
 

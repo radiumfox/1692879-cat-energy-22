@@ -8,7 +8,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 480px;
-    min-width: 465px;
+    min-width: 462px;
     align-items: baseline;
   }
 
@@ -16,7 +16,6 @@
     padding-top: 10px;
     min-width: 500px;
     max-width: 520px;
-    align-items: baseline;
   }
 }
 
@@ -28,12 +27,12 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 0 23px;
+    margin: 0 0 0 21px;
     padding: 0 0 12px;
 
     &--active {
       border-bottom: 2px solid $basic-green;
-      padding-bottom: 4px;
+      padding-bottom: 6px;
     }
   }
 

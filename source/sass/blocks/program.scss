@@ -1,7 +1,7 @@
 .program__wrapper {
   display: grid;
   grid-template-rows: auto auto;
-  margin: 0 0 28px;
+  margin: 0 0 26px;
   padding: 0 20px;
   row-gap: 20px;
 
@@ -13,7 +13,7 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr;
-    margin: 0 auto 72px;
+    margin: 0 auto 70px;
     padding: 0;
     column-gap: 80px;
     row-gap: 0;

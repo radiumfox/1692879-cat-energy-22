@@ -8,7 +8,7 @@
     <link rel="preload" type="font/woff2" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" type="font/woff2" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
     <link rel="icon" sizes="any" href="img/favicon/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/16.png">
     <link rel="manifest" href="manifest.webmanifest">
@@ -64,15 +64,15 @@
                 <ul class="select-program__control-list">
                   <li class="select-program__control-item">
                     <label class="select-program__label" for="pet-name">
-                      Имя:<sup>*</sup>
+                      Имя:*
                     </label>
                     <input class="select-program__text-input" type="text" id="pet-name" placeholder="Барсик" name="pet-name" required>
                   </li>
                   <li class="select-program__control-item">
                     <label class="select-program__label" for="pet-weight">
-                      Вес (кг):<sup>*</sup>
+                      Вес (кг):*
                     </label>
-                      <input class="select-program__text-input" type="text" id="pet-weight" placeholder="7" name="pet-weight" required>
+                    <input class="select-program__text-input" type="text" id="pet-weight" placeholder="7" name="pet-weight" required>
                   </li>
                   <li class="select-program__control-item">
                     <label class="select-program__label" for="pet-age">
@@ -90,17 +90,20 @@
                   <li class="select-program__control-item select-program__control-item--radio">
                     <input class="select-program__radio visually-hidden" type="radio" id="slim" name="direction" value="slim" checked>
                     <label class="select-program__label select-program__label--radio" for="slim">
-                    Похудение</label>
+                      Похудение
+                    </label>
                   </li>
                   <li class="select-program__control-item select-program__control-item--radio">
                     <input class="select-program__radio visually-hidden" type="radio" id="pro" name="direction" value="pro">
                     <label class="select-program__label select-program__label--radio" for="pro">
-                    Набор массы</label>
+                      Набор массы
+                    </label>
                   </li>
                   <li class="select-program__control-item select-program__control-item--radio">
                     <input class="select-program__radio visually-hidden" type="radio" id="unclear" name="direction" value="unclear">
                     <label class="select-program__label select-program__label--radio" for="unclear">
-                    Не знаю (нужен ваш совет)</label>
+                      Не знаю (нужен ваш совет)
+                    </label>
                   </li>
                 </ul>
               </div>
@@ -114,21 +117,21 @@
             </div>
             <div class="select-program__fieldset-wrapper select-program__fieldset-wrapper--contacts">
               <ul class="select-program__control-list select-program__control-list--contacts">
-                <li class="select-program__control-item select-program__control-item">
+                <li class="select-program__control-item select-program__control-item--contacts">
                   <label class="select-program__label" for="owner-email">
-                    E-mail:<sup>*</sup>
+                    E-mail:*
                   </label>
-                  <input class="select-program__text-input select-program__text-input--contacts" type="email" id="owner-email" placeholder="kuklachev@gmail.com" required>
-                  <svg class="select-program__icon" width="19" height="14">
+                  <input class="select-program__text-input select-program__text-input--email" type="email" id="owner-email" placeholder="kuklachev@gmail.com" required>
+                  <svg class="select-program__icon select-program__icon--email" width="19" height="14">
                     <use xlink:href="img/icons/sprite.svg#email"></use>
                   </svg>
                 </li>
-                <li class="select-program__control-item select-program__control-item">
+                <li class="select-program__control-item select-program__control-item--contacts">
                   <label class="select-program__label" for="owner-phone">
-                    Телефон:<sup>*</sup>
+                    Телефон:*
                   </label>
-                  <input class="select-program__text-input select-program__text-input--contacts" type="tel" id="owner-phone" placeholder="8 (960) 900-60-90" name="phone" required>
-                  <svg class="select-program__icon" width="20" height="21">
+                  <input class="select-program__text-input select-program__text-input--phone" type="tel" id="owner-phone" placeholder="8 (960) 900-60-90" name="phone" required>
+                  <svg class="select-program__icon select-program__icon--phone" width="20" height="21">
                     <use xlink:href="img/icons/sprite.svg#phone"></use>
                   </svg>
                 </li>
@@ -142,43 +145,48 @@
             </div>
             <div class="select-program__fieldset-wrapper select-program__fieldset-wrapper--margin-less">
               <label class="select-program__label visually-hidden" for="textarea">
-              Комментарий</label>
+                Комментарий
+              </label>
               <textarea class="select-program__textarea" id="textarea" name="message" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
           </div>
 
-          <fieldset class="select-program__fieldset select-program__fieldset--additional">
+          <fieldset class="select-program__fieldset select-program__fieldset--green-line select-program__fieldset--additional">
             <div class="select-program__title-wrapper select-program__title-wrapper--padding-less">
-              <h2 class="select-program__title select-program__fieldset--green-line">Дополнительно</h2>
+              <h2 class="select-program__title ">Дополнительно</h2>
             </div>
-            <div class="select-program__fieldset-wrapper select-program__fieldset-wrapper--no-margin">
+            <div class="select-program__fieldset-wrapper">
               <ul class="select-program__control-list select-program__control-list">
-                <li class="select-program__control-item">
+                <li class="select-program__control-item select-program__control-item--checkbox">
                   <input class="select-program__checkbox visually-hidden" type="checkbox" id="sugar-substitute" name="extra" value="sugar-substitute" checked>
                   <label class="select-program__label select-program__label--checkbox" for="sugar-substitute">
-                  Сахарозаменитель</label>
+                    Сахарозаменитель
+                  </label>
                 </li>
-                <li class="select-program__control-item">
+                <li class="select-program__control-item select-program__control-item--checkbox">
                   <input class="select-program__checkbox visually-hidden" type="checkbox" id="clean-water" name="extra" value="clean-water">
                   <label class="select-program__label select-program__label--checkbox" for="clean-water">
-                  Питьевая вода</label>
+                    Питьевая вода
+                  </label>
                 </li>
-                <li class="select-program__control-item select-program__control-item">
+                <li class="select-program__control-item select-program__control-item--checkbox">
                   <input class="select-program__checkbox visually-hidden" type="checkbox" id="milk" name="extra" value="milk">
                   <label class="select-program__label select-program__label--checkbox" for="milk">
-                  Молоко</label>
+                    Молоко
+                  </label>
                 </li>
-                <li class="select-program__control-item select-program__control-item">
+                <li class="select-program__control-item select-program__control-item--checkbox">
                   <input class="select-program__checkbox visually-hidden" type="checkbox" id="vitamins" name="extra" value="vitamins">
                   <label class="select-program__label select-program__label--checkbox" for="vitamins">
-                  Витамины</label>
+                    Витамины
+                  </label>
                 </li>
               </ul>
             </div>
           </fieldset>
           <div class="select-program__button-box">
             <button class="select-program__button button" type="submit">Отправить заявку</button>
-            <p class="select-program__legend"><sup>*</sup> — Обязательные поля</p>
+            <p class="select-program__legend">* — Обязательные поля</p>
           </div>
         </div>
       </form>
@@ -187,7 +195,7 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <div class="page-footer__contacts">
+        <div class="page-footer__contacts page-footer__contacts--grey">
           <p class="page-footer__proposal">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <address class="page-footer__address">ул. Большая Конюшенная, д. 19/8 <span class="page-footer__city">Санкт-Петербург</span></address>
         </div>
