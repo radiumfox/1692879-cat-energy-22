@@ -56,12 +56,12 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    @include font (16px, 24px, normal);
+    @include font(16px, 24px, normal);
     flex-direction: column;
     padding-left: 0;
 
     &::before {
-      @include font (280px, 1, normal);
+      @include font(280px, 1, normal);
       font-family: "Oswald", "Arial", sans-serif;
       color: $basic-grey2;
       position: absolute;
@@ -96,9 +96,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
   width: 60px;
   height: 60px;
-  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     width: 80px;
