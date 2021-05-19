@@ -30,7 +30,7 @@
 
 .catalog__item {
   border-bottom: 1px solid $special-grey3;
-  padding: 20px 20px 23px;
+  padding: 19px 20px 24px;
   display: flex;
   flex-direction: column;
   margin-top: auto;
@@ -57,6 +57,7 @@
     }
 
     &:last-child {
+      padding: 0 38px 38px;
       background-color: initial;
       border: 2px solid $basic-grey2;
     }
@@ -114,7 +115,7 @@
       top: 20px;
     }
 
-    margin: 68px 0;
+    margin: 67px 0;
   }
 
   @media (min-width: $desktop-width) {

@@ -1,3 +1,13 @@
+.page-header--absolute {
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 610px);
+    z-index: 100;
+  }
+}
+
 .page-header__wrapper {
   display: flex;
   flex-direction: column;
@@ -11,9 +21,17 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 56px auto 0;
     padding: 0;
     width: 1220px;
+    margin: 57px auto 0;
+    justify-content: center;
+  }
+}
+
+.page-header--absolute .page-header__wrapper {
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    margin: 55px auto 0;
   }
 }
 
@@ -27,7 +45,7 @@
   align-items: center;
   display: flex;
   height: 38px;
-  padding: 11px 20px 16px;
+  padding: 10px 20px 16px;
   text-decoration: none;
 
   &:focus {

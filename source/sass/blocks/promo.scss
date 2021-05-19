@@ -13,10 +13,10 @@
       background-repeat: no-repeat;
       background-size: cover;
       content: "";
-      height: 691px;
+      min-height: 694px;
       position: absolute;
       right: 0;
-      top: -142px;
+      top: 0;
       width: 50vw;
       z-index: -1;
     }
@@ -39,8 +39,8 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
-    margin: 26px auto 134px;
-    padding: 0 0 0 80px;
+    margin: 0 auto 137px;
+    padding: 141px 0 0 80px;
     width: 1220px;
     box-sizing: border-box;
     display: grid;

@@ -40,7 +40,7 @@
   @include font(16px, 20px, normal);
   margin: 0;
   max-width: 80px;
-  padding: 0 0 12px;
+  padding: 0 0 9px;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
@@ -48,7 +48,7 @@
     margin: 0 auto 0 48px;
     max-width: 155px;
     text-align: center;
-    padding: 0 0 18px;
+    padding: 0 0 17px;
   }
 
   @media (min-width: $desktop-width) {
@@ -88,11 +88,11 @@
   color: $secondary-dark;
   font-family: "Arial", sans-serif;
   margin: 0;
-  padding: 0 0 21px;
+  padding: 0 0 20px;
 
   @media (min-width: $tablet-width) {
     @include font(16px, 16px, normal);
-    padding-bottom: 28px;
+    padding-bottom: 29px;
   }
 
   @media (min-width: $desktop-width) {

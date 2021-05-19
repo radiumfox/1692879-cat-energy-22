@@ -13,10 +13,9 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr;
-    margin: 0 auto 70px;
+    margin: 0 auto 40px;
     padding: 0;
     column-gap: 80px;
-    row-gap: 0;
     width: 1220px;
   }
 }

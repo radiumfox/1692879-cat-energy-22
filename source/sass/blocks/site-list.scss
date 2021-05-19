@@ -13,9 +13,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 10px;
     min-width: 500px;
     max-width: 520px;
+    justify-content: flex-end;
+    margin-top: 11px;
   }
 }
 
@@ -37,6 +38,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin: 0 0 0 35px;
+
     &--white-font {
       border-color: $basic-light;
     }

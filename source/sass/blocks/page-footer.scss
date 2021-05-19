@@ -30,11 +30,15 @@
   }
 
   @media (min-width: $desktop-width) {
+    &--padding-less {
+      padding: 62px 84px 60px 75px;
+    }
+
     box-sizing: border-box;
     margin-left: -610px;
     margin-top: 95px;
     left: 50%;
-    padding: 64px 84px 62px 75px;
+    padding: 66px 84px 60px 75px;
     position: absolute;
     top: 0;
     width: 570px;
@@ -97,7 +101,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 37px 20px 28px;
+  padding: 36px 20px 28px;
   background-color: $basic-grey2;
 
   @media (min-width: $tablet-width) {
@@ -107,8 +111,12 @@
   }
 
   @media (min-width: $desktop-width) {
+    &--padding-less {
+      padding: 56px 0 58px;
+    }
+
     margin: 0 auto;
-    padding: 58px 0 58px;
+    padding: 60px 0 58px;
     width: 1220px;
   }
 }
@@ -257,8 +265,8 @@
 
   @media (min-width: $tablet-width) {
     &--vkontakte {
-      width: 29px;
-      height: 17px;
+      width: 30px;
+      height: 18px;
     }
 
     &--instagram {

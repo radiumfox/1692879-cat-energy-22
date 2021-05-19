@@ -15,7 +15,7 @@
   stroke-width: 2px;
 
   @media (min-width: $tablet-width) {
-    padding: 51px 0 38px;
+    padding: 51px 0 39px;
     width: 60px;
     height: 60px;
     stroke-width: 1px;
@@ -36,7 +36,7 @@
   @media (min-width: $tablet-width) {
     @include font(20px, 22px, normal);
     max-width: 150px;
-    padding-bottom: 23px;
+    padding-bottom: 24px;
     text-align: center;
   }
 
@@ -55,7 +55,7 @@
   @media (min-width: $tablet-width) {
     @include font(16px, 18px, normal);
     max-width: 170px;
-    padding-bottom: 84px;
+    padding-bottom: 83px;
     text-align: center;
   }
 

@@ -1,6 +1,6 @@
 .direction {
   background-color: $basic-grey2;
-  padding: 30px 20px 22px 18px;
+  padding: 30px 20px 22px 19px;
   position: relative;
   box-sizing: border-box;
 
@@ -86,7 +86,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 40px 50px 64px;
+    padding: 40px 52px 64px;
   }
 }
 
@@ -128,7 +128,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 75px 0 34px 0;
+    padding: 75px 0 31px 0;
     width: 467px;
   }
 }
@@ -159,7 +159,7 @@
 
 .direction__link-text {
   max-width: 175px;
-  padding-right: 15px;
+  padding-right: 16px;
 
   @media (min-width: $tablet-width) {
     padding-right: 25px;

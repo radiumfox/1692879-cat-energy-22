@@ -3,7 +3,7 @@
     align-items: flex-end;
     display: flex;
     flex-direction: row;
-    z-index: 0;
+    z-index: 1;
     max-width: 650px;
   }
 }
@@ -50,16 +50,24 @@
     border-bottom: 1px dotted $special-grey;
     height: 30px;
   }
+
+  @media (min-width: $desktop-width) {
+    &--after {
+      background-color: $basic-grey4;
+    }
+  }
 }
 
 .cat-slider__range-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 4px;
 
   @media (min-width: $tablet-width) {
     width: 78vw;
     margin: 0 auto;
+    padding-left: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -75,9 +83,9 @@
   border: 1px solid $special-grey;
   border-radius: 6px;
   height: 12px;
-  margin: 0 16px 3px;
+  margin: 0 17px 3px;
   position: relative;
-  width: 82px;
+  width: 81px;
   display: flex;
   align-items: center;
 
@@ -90,7 +98,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 20px 22px;
+    margin: 20px 23px;
   }
 }
 
@@ -106,13 +114,13 @@
     }
 
     &--after {
-      float: right;
+      margin-left: auto;
       margin-right: 6px;
     }
   }
 }
 
-.cat-slider__toggle {
+.cat-slider__toggle-icon {
   box-shadow: 0 1px 3px rgba($basic-dark, 0.16);
   border-radius: 50%;
   cursor: pointer;
@@ -129,10 +137,6 @@
     box-shadow: 0 3px 5px rgba($basic-dark, 0.16);
   }
 
-  &-circle:active {
-    stroke: $basic-green;
-  }
-
   @media (max-width: $mobile-width-only) {
     display: none;
   }
@@ -144,9 +148,31 @@
   }
 }
 
+.cat-slider__toggle-icon:active .cat-slider__toggle-circle {
+  stroke: $basic-green;
+}
+
+.cat-slider__toggle {
+  @media (min-width: $desktop-width) {
+    position: relative;
+    width: 100%;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 300px;
+      height: 464px;
+      background-color: $basic-grey4;
+      z-index: -1;
+      top: -377px;
+      left: 50%;
+    }
+  }
+}
+
 .cat-slider__list {
   @include reset-list;
-  padding-bottom: 32px;
+  padding-bottom: 31px;
   display: flex;
   justify-content: center;
   width: 280px;
@@ -164,7 +190,7 @@
   @media (min-width: $desktop-width) {
     width: 650px;
     margin: 0;
-    padding: 22px 0 26px 10px;
+    padding: 25px 0 25px 8px;
   }
 }
 
