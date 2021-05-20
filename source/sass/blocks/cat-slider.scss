@@ -31,6 +31,7 @@
   border-bottom: 1px solid transparent;
   max-width: 70px;
   word-wrap: break-word;
+  background-color: $basic-grey4;
 
   &:focus {
     outline: 1px dotted $secondary-dark3;
@@ -52,6 +53,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    background-color: $basic-grey2;
+
     &--after {
       background-color: $basic-grey4;
     }
@@ -124,30 +127,23 @@
   @media (min-width: $tablet-width) {
     position: relative;
     margin: 0 auto;
+    width: 32px;
+    height: 32px;
+    background-color: $basic-light;
+    border-radius: 50%;
+    border: 1px solid $special-grey;
+    box-shadow: 0 1px 3px rgba($basic-dark, 0.16);
+    cursor: pointer;
 
     &::after {
       content: "";
       position: absolute;
-      width: 32px;
-      height: 32px;
-      border: 1px solid $special-grey;
+      width: 8px;
+      height: 8px;
+      background-color: $basic-green;
       border-radius: 50%;
-      top: 0;
-      left: 0;
-      box-shadow: 0 1px 3px rgba($basic-dark, 0.16);
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    &::before {
-      position: absolute;
-      content: "";
-      width: 300px;
-      height: 464px;
-      background-color: $basic-grey4;
-      z-index: -1;
-      top: -359px;
-      left: 50%;
+      top: 12px;
+      left: 12px;
     }
   }
 }
@@ -156,11 +152,11 @@
   outline: 1px dotted $secondary-dark3;
 }
 
-.cat-slider__toggle:hover::after {
+.cat-slider__toggle:hover {
   box-shadow: 0 2px 4px rgba($basic-dark, 0.19);
 }
 
-.cat-slider__toggle:active::after {
+.cat-slider__toggle:active {
   border-color: $basic-green;
   box-shadow: 0 3px 5px rgba($basic-dark, 0.2);
 }
@@ -178,7 +174,7 @@
     width: 708px;
     justify-content: center;
     margin: 0 auto 0;
-    padding: 52px 33px 8px 0;
+    padding: 52px 33px 7px 0;
     box-sizing: border-box;
   }
 

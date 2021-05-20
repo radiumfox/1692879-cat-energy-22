@@ -46,7 +46,7 @@
 
     @media (min-width: $desktop-width) {
       margin: 0;
-      padding: 29px 28px 26px;
+      padding: 31px 28px 26px;
     }
   }
 }
@@ -69,7 +69,7 @@
     column-gap: 103px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: unset;
-    max-width: 1220px;
+    width: 1200px;
   }
 }
 
@@ -171,7 +171,7 @@
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
     width: 1220px;
-    padding-bottom: 68px;
+    padding-bottom: 67px;
   }
 }
 
@@ -188,10 +188,9 @@
 }
 
 .select-program__control-item {
-  display: grid;
-  grid-template-columns: auto 1fr;
   padding-bottom: 11px;
   position: relative;
+  display: flex;
 
   &--contacts {
     padding-bottom: 10px;
@@ -253,7 +252,8 @@
     @include font(36px, 36px, normal);
     display: block;
     margin-left: 30px;
-    max-width: fit-content;
+    min-width: fit-content;
+    max-width: auto;
     padding: 0 38px;
   }
 
@@ -295,6 +295,7 @@
   text-transform: uppercase;
   max-width: 130px;
   align-self: center;
+  flex-grow: 0;
 
   @media (min-width: $tablet-width) {
     @include font(20px, 1, normal);
@@ -314,6 +315,8 @@
   outline-offset: -2px;
   padding: 11px 16px;
   height: 48px;
+  width: 100px;
+  flex-grow: 1;
 
   &--email,
   &--phone {
@@ -372,12 +375,11 @@
   fill: $secondary-dark3;
 
   &--email {
-    right: 13px;
-    top: 17px;
+    right: 14px;
+    top: 15px;
 
     @media (min-width: $tablet-width) {
-      top: 18px;
-      right: 12px;
+      top: 19px;
     }
 
     @media (min-width: $desktop-width) {
@@ -387,13 +389,12 @@
   }
 
   &--phone {
-    right: 11px;
+    right: 12px;
     top: 14px;
-    z-index: 100;
 
     @media (min-width: $tablet-width) {
-      top: 17px;
-      right: 12px;
+      top: 15px;
+      right: 13px;
     }
 
     @media (min-width: $desktop-width) {
@@ -423,6 +424,7 @@
   width: 100%;
   padding: 8px 12px;
   resize: none;
+  text-transform: uppercase;
 
   &:hover {
     outline-color: $special-grey;

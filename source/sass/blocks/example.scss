@@ -1,5 +1,5 @@
 .example {
-  background-color: $basic-grey2;
+  background-color: $basic-grey4;
 
   @media (min-width: $tablet-width) {
     background: linear-gradient(to bottom, $basic-light 57%, $basic-grey4 57%, $basic-grey4 100%);
@@ -12,12 +12,23 @@
     &::after {
       position: absolute;
       content: "";
-      height: 464px;
-      background-color: $basic-grey4;
+      height: 100%;
+      background: linear-gradient(to bottom, $basic-light 32%, $basic-grey4 32%, $basic-grey4 70%);
       z-index: 0;
       bottom: 0;
       right: 0;
       width: calc(50vw - 610px);
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 300px;
+      height: 100%;
+      background: linear-gradient(to bottom, $basic-light 32%, $basic-grey4 32%, $basic-grey4 70%);
+      bottom: 0;
+      right: calc(50vw - 624px);
+      z-index: 0;
     }
   }
 }
@@ -146,7 +157,7 @@
   font-family: "Arial", sans-serif;
   width: 82px;
   margin-bottom: -16px;
-  background-color: $basic-grey2;
+  background-color: $basic-grey4;
 
   @media (min-width: $tablet-width) {
     @include font(14px, 14px, normal);
@@ -190,6 +201,10 @@
   margin: 0;
   text-transform: uppercase;
 
+  &:not(:last-child) {
+    padding-right: 2px;
+  }
+
   @media (min-width: $tablet-width) {
     @include font(20px, 20px, normal);
 
@@ -200,7 +215,7 @@
 
   @media (min-width: $desktop-width) {
     &:not(:last-child) {
-      padding-right: 58px;
+      padding-right: 64px;
     }
   }
 }
