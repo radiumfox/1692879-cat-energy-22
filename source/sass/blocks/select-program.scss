@@ -315,14 +315,10 @@
   padding: 11px 16px;
   height: 48px;
 
-  &--email {
-    margin-left: 9px;
-    padding: 12px 32px 14px 14px;
-  }
-
+  &--email,
   &--phone {
     margin-left: 9px;
-    padding: 12px 32px 14px 14px;
+    padding: 12px 42px 14px 14px;
   }
 
   &:hover {
@@ -344,7 +340,7 @@
     height: 54px;
 
     &--email {
-      padding: 10px 37px 10px 21px;
+      padding: 10px 50px 10px 21px;
       margin-right: -5px;
       margin-left: 21px;
     }
@@ -352,21 +348,21 @@
     &--phone {
       margin-right: -5px;
       margin-left: 15px;
-      padding: 10px 37px 10px 21px;
+      padding: 10px 54px 10px 21px;
     }
   }
 
   @media (min-width: $desktop-width) {
     &--email {
       margin-left: 22px;
-      padding: 10px 38px 10px 16px;
+      padding: 10px 50px 10px 16px;
       margin-right: 0;
     }
 
     &--phone {
       margin-left: 12px;
       margin-right: 0;
-      padding: 10px 38px 10px 19px;
+      padding: 10px 54px 10px 19px;
     }
   }
 }

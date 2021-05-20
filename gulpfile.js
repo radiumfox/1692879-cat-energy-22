@@ -8,12 +8,12 @@ const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
-const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
 const sass = require("gulp-sass");
 const concat = require("gulp-concat");
-const uglify = require("gulp-uglify")
+const uglify = require("gulp-uglify");
+const svgSymbols = require('gulp-svg-symbols');
 
 // Styles
 
@@ -96,8 +96,8 @@ exports.createWebp = createWebp;
 
 const sprite = () => {
   return gulp.src("source/img/icons/*.svg")
-    .pipe(svgstore({
-      inlineSvg: true
+    .pipe(svgSymbols({
+      templates: ['default-svg']
     }))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img/icons"));
