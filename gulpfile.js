@@ -12,8 +12,8 @@ const del = require("del");
 const sync = require("browser-sync").create();
 const sass = require("gulp-sass");
 const concat = require("gulp-concat");
-const uglify = require("gulp-uglify");
-const svgSymbols = require('gulp-svg-symbols');
+const svgSymbols = require("gulp-svg-symbols");
+const terser = require("gulp-terser")
 
 // Styles
 
@@ -51,9 +51,7 @@ const scripts = () => {
     .pipe(plumber())
     .pipe(concat("main.js"))
     .pipe(gulp.dest("build/js/"))
-    .pipe(uglify({
-      mangle: false
-    }))
+    .pipe(terser())
     .pipe(concat("main.min.js"))
     .pipe(gulp.dest("build/js/"))
     .pipe(sync.stream());

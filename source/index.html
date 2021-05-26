@@ -162,15 +162,15 @@
           <div class="example__slider cat-slider">
             <div class="cat-slider__wrapper">
               <ul class="cat-slider__list">
-                <li class="cat-slider__item cat-slider__item--active">
+                <li class="cat-slider__item cat-slider__item--before cat-slider__item--active">
                   <picture>
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-slider/before-tablet.webp 1x, img/cat-slider/before-tablet@2x.webp 2x">
                     <source type="image/webp" srcset="img/cat-slider/before-mobile.webp 1x, img/cat-slider/before-mobile@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/cat-slider/before-tablet.png 1x, img/cat-slider/before-tablet@2x.png 2x">
-                    <img class="cat-slider__image" src="img/cat-slider/before-mobile.png" srcset="img/cat-slider/before-mobile@2x.png 2x" width="311" height="232" alt="Пушистая картоха, питающаяся обычным кормом">
+                    <img class="cat-slider__image cat-slider__image--before" src="img/cat-slider/before-mobile.png" srcset="img/cat-slider/before-mobile@2x.png 2x" width="311" height="232" alt="Пушистая картоха, питающаяся обычным кормом">
                   </picture>
                 </li>
-                <li class="cat-slider__item">
+                <li class="cat-slider__item cat-slider__item--after">
                   <picture>
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-slider/after-tablet.webp 1x, img/cat-slider/after-tablet@2x.webp 2x">
                     <source type="image/webp" srcset="img/cat-slider/after-mobile.webp 1x, img/cat-slider/after-mobile@2x.webp 2x">
@@ -180,14 +180,14 @@
                 </li>
               </ul>
               <div class="cat-slider__range-wrapper">
-                <button class="cat-slider__button" type="button">Было</button>
+                <button class="cat-slider__button cat-slider__button--before" onclick="showSlideBefore()" type="button">Было</button>
                 <div class="cat-slider__scale">
                   <div class="cat-slider__bar cat-slider__bar--before"></div>
                   <div class="cat-slider__toggle" tabindex="0">
                     <span class="visually-hidden">Переключить слайд</span>
                   </div>
                 </div>
-                <button class="cat-slider__button cat-slider__button--after" type="button">Стало</button>
+                <button class="cat-slider__button cat-slider__button--after" onclick="showSlideAfter()" type="button">Стало</button>
               </div>
             </div>
           </div>

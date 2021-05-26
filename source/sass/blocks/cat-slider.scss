@@ -85,12 +85,14 @@
   background-color: $basic-light;
   border: 1px solid $special-grey;
   border-radius: 6px;
-  height: 12px;
+  height: 14px;
   margin: 0 17px 3px;
   position: relative;
   width: 81px;
   display: flex;
   align-items: center;
+  padding: 3px 6px;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
     background-color: $special-grey;
@@ -98,6 +100,7 @@
     height: 6px;
     width: 428px;
     margin: 15px 22px;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -111,14 +114,14 @@
     border-radius: 6px;
     height: 6px;
     width: 35px;
+    transition: 0.5s ease;
 
     &--before {
-      margin-left: 6px;
+      margin-left: 0;
     }
 
     &--after {
-      margin-left: auto;
-      margin-right: 6px;
+      margin-left: 50%;
     }
   }
 }
@@ -192,6 +195,7 @@
   &--active {
     display: block;
     text-align: center;
+    opacity: 1;
   }
 
   @media (min-width: $tablet-width) {
@@ -224,6 +228,12 @@
   text-align: center;
   display: inline-block;
   width: auto;
+
+  @media (max-width: $mobile-width-only) {
+    &--before {
+      padding-bottom: 8px;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     height: 520px;
