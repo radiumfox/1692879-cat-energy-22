@@ -2,7 +2,11 @@
   padding: 0 20px 0;
 
   @media (min-width: $tablet-width) {
-    padding: 0 70px 0;
+    padding: 0 30px 0;
+
+    &--padding-bigger {
+      padding: 0 70px 0;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -27,23 +31,33 @@
 .page-main__title {
   @include font(36px, 36px, normal);
   margin: 0;
-  padding: 27px 20px 40px;
+  padding: 27px 0 39px;
+  width: 280px;
+
+  &--no-border {
+    border-style: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   @media (min-width: $tablet-width) {
     @include font(60px, 60px, normal);
     border-style: none;
-    padding: 65px 30px 90px;
+    padding: 62px 0 54px;
+    width: 450px;
+
+    &--padding-big {
+      padding-bottom: 90px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    padding: 74px 0 86px;
+    padding: 72px 0 54px;
     margin: 0 auto;
     width: 1220px;
-  }
-}
 
-.page-main__title--no-border {
-  border-style: none;
-  padding-left: 0;
-  padding-right: 0;
+    &--padding-big {
+      padding-bottom: 85px;
+    }
+  }
 }

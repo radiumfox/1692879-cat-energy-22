@@ -13,7 +13,7 @@
   background-color: $basic-light;
   display: flex;
   justify-content: space-between;
-  padding: 28px 20px;
+  padding: 27px 20px;
 
   &--grey {
     background-color: $basic-grey2;
@@ -26,31 +26,37 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
-    padding: 60px 70px;
+    padding: 64px 70px 58px;
   }
 
   @media (min-width: $desktop-width) {
+    &--padding-less {
+      padding: 62px 84px 60px 75px;
+    }
+
     box-sizing: border-box;
     margin-left: -610px;
     margin-top: 95px;
     left: 50%;
-    padding: 62px 88px 62px 76px;
+    padding: 66px 84px 60px 75px;
     position: absolute;
     top: 0;
     width: 570px;
+    min-height: 200px;
   }
 }
 
 .page-footer__proposal {
-  @include font(16px, 18px, normal);
+  @include font(16px, 21px, normal);
   color: $secondary-dark2;
-  margin: 0 4px 0 0;
+  margin: 0 15px 0 0;
   text-transform: uppercase;
-  width: 140px;
+  max-width: 140px;
 
   @media (min-width: $tablet-width) {
     @include font(20px, 25px, normal);
     width: 172px;
+    max-width: 200px;
   }
 }
 
@@ -58,13 +64,14 @@
   @include font(14px, 20px, normal);
   color: $secondary-dark;
   font-family: "Arial", sans-serif;
-  width: 140px;
   font-style: normal;
+  max-width: 140px;
 
   @media (min-width: $tablet-width) {
     @include font(16px, 20px, normal);
     text-align: right;
     width: 160px;
+    max-width: 200px;
   }
 
   @media (min-width: $desktop-width) {
@@ -94,28 +101,44 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 39px 20px 28px;
+  padding: 36px 20px 28px;
   background-color: $basic-grey2;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    padding: 55px 30px 61px;
+    padding: 56px 30px 61px;
   }
 
   @media (min-width: $desktop-width) {
+    &--padding-less {
+      padding: 56px 0 58px;
+    }
+
     margin: 0 auto;
-    padding: 57px 0 58px;
+    padding: 60px 0 58px;
     width: 1220px;
   }
 }
 
-.page-footer__logo {
-  padding: 0 0 32px;
+.page-footer__logo-wrapper {
   border-bottom: 1px solid $basic-grey;
   display: block;
   width: 100%;
   text-align: center;
+  padding: 0 0 28px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    border-style: none;
+    width: auto;
+  }
+}
+
+.page-footer__logo {
+  &:focus {
+    outline: 1px dotted $secondary-dark3;
+  }
 
   &:hover {
     opacity: 0.8;
@@ -124,43 +147,74 @@
   &:active {
     opacity: 0.6;
   }
+}
+
+.page-footer__social-wrapper {
+  padding: 20px 0;
 
   @media (min-width: $tablet-width) {
     padding: 0;
-    border-style: none;
-    width: auto;
   }
 }
 
 .page-footer__social-list {
   @include reset-list;
   display: flex;
-  justify-content: space-between;
-  padding: 20px 0;
-  width: 130px;
+  flex-wrap: wrap;
+  justify-content: right;
+  min-width: 170px;
+  max-width: 200px;
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    padding: 0 0 0 18px;
+    max-width: 300px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 400px;
+  }
+}
+
+.page-footer__social-item {
+  margin: 0 18px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 13px;
+  }
+}
+
+.page-footer__copyright-wrapper {
+  padding: 20px 0 0;
+  width: 100%;
+  border-top: 1px solid $basic-grey;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    border-style: none;
+    width: auto;
   }
 }
 
 .page-footer__copyright {
   @include font(16px, 1, normal);
   color: $secondary-dark;
-  padding: 22px 0 0;
   text-decoration: none;
   display: flex;
   align-items: center;
-  width: 100%;
   justify-content: space-between;
-  border-top: 1px solid $basic-grey;
+
+  &:focus {
+    outline: 1px dotted $secondary-dark3;
+  }
 
   @media (min-width: $tablet-width) {
-    padding: 0;
-    border-style: none;
     justify-content: flex-end;
-    width: auto;
   }
 }
 
@@ -193,6 +247,10 @@
   }
 }
 
+.page-footer__social-link:focus {
+  outline: 1px dotted $secondary-dark3;
+}
+
 .page-footer__social-link:hover .page-footer__social-icon {
   fill: $basic-green;
 }
@@ -207,8 +265,8 @@
 
   @media (min-width: $tablet-width) {
     &--vkontakte {
-      width: 29px;
-      height: 17px;
+      width: 30px;
+      height: 18px;
     }
 
     &--instagram {

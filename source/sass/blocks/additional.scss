@@ -1,37 +1,38 @@
 .additional__title {
   @include font(24px, 24px, normal);
   margin: 0;
-  padding: 0 20px 34px;
+  padding: 0 20px 35px 0;
+  background-color: $basic-light;
+  max-width: fit-content;
 
   @media (min-width: $tablet-width) {
     @include font(36px, 36px, normal);
-    background-color: $basic-light;
-    max-width: fit-content;
-    margin-left: 30px;
-    padding: 0 36px 80px;
+    padding: 0 36px 79px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 66px;
+    grid-area: title;
+    margin-left: -36px;
   }
 }
 
 .additional__wrapper {
-  margin-bottom: 36px;
+  margin-bottom: 35px;
   padding: 0 20px 0;
 
-
   @media (min-width: $tablet-width) {
-    margin-bottom: 76px;
+    margin-bottom: 74px;
     padding: 0 30px 0;
   }
 
   @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-areas:
+      "title title"
+      "goods promo";
+    grid-template-columns: 1fr auto;
     margin: 0 auto;
     padding: 0;
-    align-items: flex-end;
-    display: flex;
-    justify-content: space-between;
     width: 1220px;
   }
 }
@@ -46,37 +47,46 @@
   }
 
   @media (min-width: $desktop-width) {
+    grid-area: goods;
     border-left: none;
     border-right: none;
     display: flex;
     flex-direction: column;
-    width: 896px;
+    width: 895px;
   }
 }
 
 .additional__item {
   border-bottom: 1px solid $special-grey;
-  padding: 14px 0 18px;
+  padding: 13px 0 18px;
 
   @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 26px 38px;
+    display: grid;
+    grid-template-areas:
+      "link desc"
+      "btn btn";
+    grid-template-columns: 1fr 250px;
+    column-gap: 50px;
+    padding: 25px 38px 28px;
   }
 
   @media (min-width: $desktop-width) {
     align-items: baseline;
     column-gap: 32px;
     display: grid;
+    grid-template-areas: "link desc btn";
     grid-template-columns: 1fr 1fr 244px;
-    padding: 15px 0 17px;
+    padding: 16px 0 15px;
   }
 }
 
 .additional__link {
   color: $secondary-dark3;
   text-decoration: none;
+
+  &:focus {
+    outline: 1px dotted $secondary-dark3;
+  }
 
   &:hover {
     opacity: 0.6;
@@ -88,10 +98,12 @@
 
   @media (min-width: $tablet-width) {
     margin-right: auto;
+    grid-area: link;
   }
 
   @media (min-width: $desktop-width) {
     margin-right: 0;
+    max-width: 190px;
   }
 }
 
@@ -104,7 +116,7 @@
   @media (min-width: $tablet-width) {
     @include font(20px, 20px, normal);
     margin: 0;
-    padding: 0 0 26px;
+    padding: 0 0 25px;
   }
 
   @media (min-width: $desktop-width) {
@@ -115,15 +127,17 @@
 .additional__description {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 12px;
+  flex-wrap: wrap;
+  padding-bottom: 13px;
 
   @media (min-width: $tablet-width) {
+    align-items: center;
     justify-content: flex-end;
-    padding-bottom: 26px;
+    grid-area: desc;
   }
 
   @media (min-width: $desktop-width) {
-    column-gap: 70px;
+    column-gap: 85px;
     display: grid;
     grid-template-columns: 3fr 1fr;
     padding-bottom: 0;
@@ -141,19 +155,37 @@
   }
 }
 
+.additional__key {
+  max-width: 118px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 135px;
+  }
+}
+
 .additional__value {
+  max-width: 54px;
+
   @media (min-width: $tablet-width) {
     padding-left: 50px;
+    max-width: 50px;
+    min-width: 44px;
+    text-align: right;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0;
+    text-align: left;
   }
 }
 
 .additional__button {
+  @media (min-width: $tablet-width) {
+    grid-area: btn;
+  }
+
   @media (min-width: $desktop-width) {
-    grid-area: unset;
+    grid-area: initial;
     margin-top: 0;
     width: unset;
   }

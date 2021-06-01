@@ -14,6 +14,7 @@
       "desc"
       "btn";
     grid-template-columns: 1fr;
+    margin-top: auto;
   }
 }
 
@@ -21,6 +22,10 @@
   color: $secondary-dark3;
   grid-area: title;
   text-decoration: none;
+
+  &:focus {
+    outline: 1px dotted $secondary-dark3;
+  }
 
   &:hover {
     opacity: 0.6;
@@ -35,19 +40,20 @@
   @include font(16px, 20px, normal);
   margin: 0;
   max-width: 80px;
-  padding: 0 0 15px;
+  padding: 0 0 9px;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     @include font(20px, 24px, normal);
-    margin: 0 auto;
+    margin: 0 auto 0 48px;
     max-width: 155px;
     text-align: center;
-    padding: 0 0 18px;
+    padding: 0 0 17px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 145px;
+    width: 147px;
+    margin: 0 0 0 15px;
   }
 }
 
@@ -56,17 +62,23 @@
   justify-self: center;
   padding: 0;
   margin: 0;
+
+  &:focus {
+    outline: 1px dotted $secondary-dark3;
+  }
 }
 
 .product-card__image {
+  padding: 0 0 10px;
+
   @media (min-width: $tablet-width) {
-    padding: 0 0 30px;
-    height: auto;
-    width: auto;
+    padding: 0 0 32px;
+    height: 200px;
+    width: 168px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 0 38px;
+    padding: 0 0 36px;
   }
 }
 
@@ -80,8 +92,12 @@
 
   @media (min-width: $tablet-width) {
     @include font(16px, 16px, normal);
-    margin: 0 auto 0;
-    padding-bottom: 28px;
+    padding-bottom: 29px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 30px;
+    margin: 0 0 0 3px;
   }
 }
 
@@ -91,7 +107,7 @@
   grid-template-columns: 1fr 1fr;
 
   @media (min-width: $tablet-width) {
-    column-gap: 140px;
+    width: 100%;
     padding-bottom: 11px;
     padding-top: 5px;
     position: relative;
@@ -104,10 +120,6 @@
       bottom: 4px;
       left: 0;
     }
-  }
-
-  @media (min-width: $desktop-width) {
-    column-gap: 60px;
   }
 }
 

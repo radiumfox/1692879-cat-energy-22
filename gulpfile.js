@@ -6,16 +6,14 @@ const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
 const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
-const terser = require("gulp-terser");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
-const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
 const sass = require("gulp-sass");
 const concat = require("gulp-concat");
-const uglify = require("gulp-uglify");
-const babel = require("gulp-babel")
+const svgSymbols = require("gulp-svg-symbols");
+const terser = require("gulp-terser")
 
 // Styles
 
@@ -53,9 +51,7 @@ const scripts = () => {
     .pipe(plumber())
     .pipe(concat("main.js"))
     .pipe(gulp.dest("build/js/"))
-    .pipe(uglify({
-      mangle: false
-    }))
+    .pipe(terser())
     .pipe(concat("main.min.js"))
     .pipe(gulp.dest("build/js/"))
     .pipe(sync.stream());
@@ -98,8 +94,8 @@ exports.createWebp = createWebp;
 
 const sprite = () => {
   return gulp.src("source/img/icons/*.svg")
-    .pipe(svgstore({
-      inlineSvg: true
+    .pipe(svgSymbols({
+      templates: ['default-svg']
     }))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img/icons"));
@@ -112,7 +108,6 @@ exports.sprite = sprite;
 const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff2,woff}",
-    "source/*.png",
     "source/img/**/*.svg",
     "!source/img/icons/*.svg",
     "source/manifest.webmanifest",
@@ -138,7 +133,6 @@ const server = (done) => {
     server: {
       baseDir: 'build'
     },
-    browser: 'C:/Program Files/Google/Chrome/Application/chrome.exe',
     cors: true,
     notify: false,
     ui: false,

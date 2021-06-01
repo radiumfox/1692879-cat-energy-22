@@ -1,10 +1,10 @@
 .features__wrapper {
-  margin-bottom: 26px;
+  margin-bottom: 23px;
   padding: 0 20px 0;
 
   @media (min-width: $tablet-width) {
     border-bottom: 1px solid $basic-grey;
-    padding: 0 30px 56px;
+    padding: 0 30px 60px;
     margin-bottom: 0;
   }
 
@@ -19,7 +19,7 @@
 .features__title {
   @include font(36px, 40px, normal);
   margin: 0;
-  padding: 0 0 38px;
+  padding: 0 0 39px;
 
   @media (min-width: $tablet-width) {
     @include font(60px, 60px, normal);
@@ -45,7 +45,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    column-gap: 100px;
+    column-gap: 78px;
     grid-template-columns: repeat(4, 1fr);
     width: 1220px;
   }
@@ -56,12 +56,12 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    @include font (16px, 24px, normal);
+    @include font(16px, 24px, normal);
     flex-direction: column;
     padding-left: 0;
 
     &::before {
-      @include font (280px, 1, normal);
+      @include font(280px, 1, normal);
       font-family: "Oswald", "Arial", sans-serif;
       color: $basic-grey2;
       position: absolute;
@@ -69,14 +69,13 @@
       content: counter(section);
       z-index: -1;
       top: -38px;
-      left: 118px;
+      left: 115px;
     }
   }
 }
 
 .features__text {
   margin: 0;
-  width: 62vw;
   padding-left: 20px;
   min-height: 54px;
 
@@ -88,7 +87,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 220px;
+    width: 245px;
   }
 }
 
@@ -97,9 +96,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
   width: 60px;
   height: 60px;
-  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     width: 80px;
